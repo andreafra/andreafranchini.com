@@ -1,0 +1,14 @@
+{
+	"posts":[
+		{	"title":"It's the first test post!",
+			"content":"posts/testPost.html",
+			"createdOn":"10/8/2014",
+			"author":"John Doe"
+		}, {
+			"title":"It's the second test post!",
+			"content":"posts/testPost.html",
+			"createdOn":"11/8/2014",
+			"author":"Mary Poppins"
+		}
+		]
+}

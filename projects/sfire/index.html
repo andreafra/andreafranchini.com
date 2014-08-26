@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Sfire.js - a mobile menu</title>
+    
+    <link rel="stylesheet" href="sfire.css">
+    <link rel="stylesheet" href="animate.css">
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+    <style>
+@media screen and (max-width: 991px) {
+	    header {
+		    display: none;
+	    }
+    }
+    	body {
+	    	-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+    	}
+    	header > ul {
+    		margin-top: 2em;
+    		display: block;
+	    	height: 5em;
+    	}
+    	header > ul > li {
+	    	display: inline-block;
+	    	line-height: 3em;
+	    	margin-left: 1em;
+	    	margin-right: 1em;
+	    	height: 3em;
+	    	transition: all 0.3s linear;
+	    	width: 7em;
+	    	background-color: #eeeeee;
+	    	border-radius: 50px;
+    	}
+    	header > ul > li:hover,
+    	header > ul > li:focus {
+			background-color: #ff6700;
+			border-bottom: 3px solid #c04e00;
+			color: white;
+    	}
+    	header > ul > li:active {
+	    	background-color: #a84400;
+	    	border-top: 5px solid white;
+	    	border-bottom: 1px solid #a84400;
+	    	color: white;
+    	}
+    	header > ul > li > a {
+    		height: 100%;
+    		width: 100%;
+	    	text-decoration: none;
+	    	color: black;
+    	}
+    	header > ul > li > a:hover {
+	    	text-decoration: none;
+	    	color: white;
+    	}
+		header > ul > li > a:active {
+	    	text-decoration: none;
+	    	color: white;
+    	}
+    	.logo {
+	    	height: 7em;
+	    	margin-top: 2em;
+	    	width: 100%;
+    	}
+    	.content {
+    		text-align: left;
+    		display: block;
+	    	color: #414141;
+    	}
+    	.example {
+	    	margin-top: 10em;
+    	}
+    	.pushy-btn {
+    		color: white;
+    		text-decoration: none;
+    		font-weight: 600;
+    		font-size: larger;
+    		font-family: Arial, sans-serif;
+    		text-align: center;
+			line-height: 4em;
+    		display: inline-block;
+	    	height: 4em;
+	    	width: 12em;
+	    	background-color: #ff6700;
+	    	border-bottom: 5px solid #bd4d00;
+	    	transition: 0.4s;
+    	}
+    	.pushy-btn:hover {
+    		color: white;
+    		text-decoration: none;
+	    	background-color: #ec5f00;
+	    	border-bottom: 4px solid #b44c00;
+	    	border-top: 1px solid white;
+    	}
+    	.pushy-btn:active {
+    	    color: white;
+    		text-decoration: none;
+	    	background-color: #de5a00;
+	    	border-bottom: 1px solid #a34500;
+	    	border-top: 4px solid white;
+    	}
+    	#mobile-preview {
+	    	height: 500px;
+	    	position: relative;
+    	}
+    	.preview {
+	    	background-image: url('iphone-5c-frame.png');
+	    	background-repeat: no-repeat;
+	    	background-size: contain;
+	    	background-position-x: 50%;
+	    	height: 600px;
+    	}
+    	.preview-desc {
+	    	text-align: right;
+    	}
+    	.iframe-preview {
+    		background: white;
+	    	position: relative;
+	    	top: 86px;
+	    	left: 0;
+	    	height: 435px;
+	    	width: 250px;
+    	}
+    	code {
+	    	-webkit-touch-callout: auto;
+			-webkit-user-select: auto;
+			-khtml-user-select: auto;
+			-moz-user-select: auto;
+			-ms-user-select: auto;
+			user-select: auto;
+    	}
+    	li {
+	    	margin-top: 1em;
+    	}
+    	footer {
+	    	height: 7em;
+	    	line-height: 7em;
+    	}
+    	.iconmelon {
+	    	height: 2em;
+	    	width: 2em;
+	    	display: inline-block;
+	    	line-height: 4em;
+    	}
+    </style>
+    <!-- Just fonts -->
+	<script src="http://use.edgefonts.net/patrick-hand;passion-one.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="sfire.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="sfire-navbar">
+  		<div class="sfire-btn sfire-btn-fixed sfire-btn-left"></div>
+  		<ul class="sfire-menu">
+    		<li><a href="#">Home</a></li>
+			<li><a href="#example">Example</a></li>
+			<li><a href="#install">Install</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+  	</div>
+  	<div class="container text-center">
+		<div class="logo">
+			<img src="logo.png" alt="sfire.js" height="100%">
+		</div>
+  		<header>
+		    	<ul>
+			    	<li><a href="#">Home</a></li>
+			    	<li><a href="#example">Example</a></li>
+			    	<li><a href="#install">Installation</a></li>
+			    	<li><a href="#contact">Contact me</a></li>
+		    	</ul>
+  		</header>
+  		<div class="content row">
+	  		<div class="col-md-12 col-sm-12 col-xs-12">
+	  			<h2>Intro</h2>
+	  			<p>Sfire.js is a simple to use mobile menu based on jQuery and CSS Animations.<br>
+	  		   It's still in development, so there might be some bug.<br>
+	  		   Scroll to check out an example, then implent it!
+	  		   </p>
+	  		</div>
+	  		<div class="col-md-12 col-xs-12">
+	  			<a class="pushy-btn" href="#"><span class="glyphicon glyphicon-download-alt"></span>  Download</a>
+	  		</div>
+  		</div>
+  			<div class="example content">
+  			<a id="example"></a>
+	  		<div class="row">
+	  			<div class="col-md-6 col-sm-6 col-xs-12 text-right">
+	  				<h2>Example</h2>
+		  			<p>If you are viewing this page on a computer with a big screen, resize this page to see how the menu looks like.<br>
+		  		   If you are on mobile you should see the menu button in the top left corner.<br>
+		  		   Anyway, here an image to show you how it looks on a phone.
+		  		   	</p>
+	  			</div>
+	  			<div class="col-md-6 col-sm-6 col-xs-12 text-center preview">
+		  			<iframe class="iframe-preview" src="demo/index.html" frameborder="0" scrolling="no"></iframe>
+	  			</div>		  		
+	  		</div>
+  		</div>
+	  		<div class="col-md-12 col-sm-12 col-xs-12 text-left">
+	  		  	<a id="install"></a>
+		  		<h2>Install</h2>
+		  		It's really simple and fast the installation of this plugin.
+			  		<ol>
+				  		<li>
+					  		First, add these few lines of code to the <code>&lt;head&gt;</code>:<br>
+					  		<code >
+					  		    &lt;link rel=&quot;stylesheet&quot; href=&quot;sfire.css&quot;&gt;<br>
+					  			&lt;link rel=&quot;stylesheet&quot; href=&quot;animate.css&quot;&gt;<br>
+					  		    &lt;script src=&quot;sfire.js&quot;&gt;&lt;/script&gt;
+					  		</code><br>
+					  		Be sure the link is correct! This should work if files are in the same directory of your html file.
+				  		</li>
+				  		<li>
+					  		Then, add this to your body, in the top:<br>
+					  		<code>
+					  		      	&lt;div class=&quot;sfire-navbar&quot;&gt;<br>
+  		&nbsp;&lt;div class=&quot;sfire-btn sfire-btn-fixed sfire-btn-left&quot;&gt;&lt;/div&gt;<br>
+  		&nbsp;&lt;ul class=&quot;sfire-menu&quot;&gt;<br>
+    	&nbsp;	&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+		&nbsp;	&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;<br>
+		&nbsp;	&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
+		&nbsp;	&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Other stuff&lt;/a&gt;&lt;/li&gt;<br>
+		&nbsp;	&nbsp;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Stuff stuff stuff&lt;/a&gt;&lt;/li&gt;<br>
+		&nbsp;&lt;/ul&gt;<br>
+  	&lt;/div&gt;<br>
+					  		</code><br>
+					  		Place in <code>.sfire-navbar</code> what you want to show <em><u>only</u></em> on mobile phones or tablets (or every screen with witdh &lt; 991px.<br>Replace menu links ("home, about, ecc.").
+				  		</li>
+				  		<li>
+					  		Add a <code>&lt;script&gt;$('.sfire-btn').sfireBtn()&lt;/script&gt;</code> in the bottom of the body. Eventually, you could place all the script tags in the bottom of the body, because page might load faster (I learned this looking at Twitter Bootstrap example page).
+				  		</li>
+				  		<li>Replace <code>&lt;div class=&quot;.sfire-btn&quot;&gt;&lt;/div&gt;</code> with whatever trigger you want (just remember to remove that div from the html page), or keep the default menu leaving it.<br>If you use the default menu icon, in the same element with the class <code>.sfire-btn</code> add these classes to change the style of the button:
+					  		<dl class="dl-horizontal">
+							  <dt><code>.sfire-btn-left</code></dt>
+							  <dd>Align the button in the top-left corner.</dd>
+							  <dt><code>.sfire-btn-right</code></dt>
+							  <dd>Align the button in the top-right corner.</dd>
+							  <dt><code>.sfire-btn-fixed</code></dt>
+							  <dd>Fix the button in the selected corner to show it when page is scrolled.</dd>
+							  <dt><code>.sfire-btn-static</code></dt>
+							  <dd>The button won't move when the page is scrolled.</dd>
+							 </dl>
+				  		</li>
+				  		<h5>And that's it. You've done!</h5>
+			  		</ol>
+	  		</div>
+	  		<footer class="row">
+		  			<div class="col-md-4">
+		  				&copy; 2014 - Andrea Franchini
+		  			</div>
+		  			<div class="col-md-4">
+		  				<a href="http://www.iubenda.com/privacy-policy/447862" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a>
+		  			</div>
+		  			<div class="col-md-4">
+			  			<a href="https://www.twitter.com/Qubex_" class="social" data-toggle="tooltip" data-placement="bottom" title="Twitter">
+			  				<div class="iconmelon">
+				  				<svg viewBox="0 0 32 32">
+					  				<g filter="">
+					  					<use xlink:href="#twitter"></use>
+					  				</g>
+				  				</svg>
+				  			</div>
+				  		</a>
+				  		<a href="https://plus.google.com/u/0/+AndreaFranchiniQubex_" class="social" data-toggle="tooltip" data-placement="bottom" title="Google+">
+				  		<div class="iconmelon">
+		                  <svg viewBox="0 0 32 32">
+		                    <g filter="">
+		                      <use xlink:href="#google-plus"></use>
+		                    </g>
+		                  </svg>
+				  		</div>
+				  		</a>
+				  		<a href="http://www.dribbble.com/Qubex_" class="social" data-toggle="tooltip" data-placement="bottom" title="Dribbble">
+				  		<div class="iconmelon">
+		                  <svg viewBox="0 0 32 32">
+		                    <g filter="">
+		                      <use xlink:href="#dribbble"></use>
+		                    </g>
+		                  </svg>
+				  		</div>
+				  		</a>
+		  			</div>
+	  		</footer>
+  	</div>
+    <script>
+	    $('.sfire-btn').sfireBtn("bounce");
+	    $('.social').tooltip();
+    </script>
+    <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+    <script>
+      var url ='icons.svg';
+      var c=new XMLHttpRequest(); c.open('GET', url, false); c.setRequestHeader('Content-Type', 'text/xml'); c.send();
+      document.body.insertBefore(c.responseXML.firstChild, document.body.firstChild)
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47565418-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "my_blog",
+  "version": "0.0.1",
+  "description": "A blogging platform based on Angular JS and with no DB.",
+  "main": "index.js",
+  "dependencies": {
+    "grunt-cli": "^0.1.13",
+    "bower": "^1.3.9"
+  },
+  "devDependencies": {
+    "grunt-markdown": "^0.6.1",
+    "pagedown": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrea Franchini (@Qubex_)",
+  "license": "MIT",
+  "keywords": [
+    "blog",
+    "angularjs",
+    "JS",
+    "HTML5",
+    "DB"
+  ]
+}

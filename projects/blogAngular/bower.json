@@ -1,0 +1,28 @@
+{
+  "name": "my_website",
+  "version": "0.0.1",
+  "authors": [
+    "Andrea Franchini <f.andrea1602@gmail.com>"
+  ],
+  "description": "A blogging system with no DB",
+  "main": "index.html",
+  "keywords": [
+    "blog"
+  ],
+  "license": "MIT",
+  "homepage": "http://qub3x.github.io/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-sanitize": "~1.2.21",
+    "angular": "~1.2.21",
+    "bootstrap": "~3.2.0",
+    "lemonade": "*"
+  }
+}

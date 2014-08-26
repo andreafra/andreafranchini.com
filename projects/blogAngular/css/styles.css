@@ -1,0 +1,10 @@
+/* Variables */
+body  {
+  font-family: Helvetica;
+  color: #2f2f2f; }
+
+header > h1, header > ul {
+  display: inline-block; }
+
+header > ul > li {
+  display: inline-block; }

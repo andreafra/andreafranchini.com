@@ -1,0 +1,405 @@
+/* My awesome GUI! */
+* {
+	padding: 0px;
+	margin: 0px;
+}
+body {
+	background-color: #50555c;
+/* 	box-shadow: inset 0px 1px 100px #494949; */
+}
+header {
+	height: 7em;
+	color: white;
+}
+/* --------------------------------------- */
+.content-panel {
+	background-color: transparent;
+	border-radius: 5px;
+	width: 100%;
+	height: 100%;
+}
+/* --------------------------------------- */
+.content-title {
+	background-image: url('/admin/Resources/ribbonLines/ribbon-2lines_s1.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	width: 100%;
+	height: 7em;
+	position: relative;
+	display: block;
+}
+.content-title > h3 {
+	color: white;
+	text-align: center;
+	line-height: 5em;
+	text-shadow: 1px 1px 1px black;
+}
+.content-body {
+	color: white;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	font-size: medium;
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.settings {
+	margin-right: auto;
+	margin-left: auto;
+	padding: 2em 2em 0.5em 2em;
+	background-color: white;
+	box-shadow: 1px 3px 3px black;
+	border-radius: 5px;
+}
+/* --------------------------------------- */
+.nav-pills > li > a {
+	color: white;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+.nav-pills > li > a:hover {
+	background-color: #ff6700;
+	color: white;
+}
+.nav-pills>li.active>a {
+	background-color: #ff5a00;
+}
+.nav-pills>li.active>a:hover {
+	background-color: #ce4900;
+}
+/* --------------------------------------- */
+.btn {
+	border-radius: 0px;
+}
+.form-control {
+	border-radius: 0px;
+}
+.has-success .form-control:focus {
+	box-shadow: 0px 0px 0px 2px green;
+}
+.has-warning .form-control:focus {
+	box-shadow: 0px 0px 0px 2px yellow;
+}
+.has-danger .form-control:focus {
+	box-shadow: 0px 0px 0px 2px red;
+}
+.form-control:focus {
+	box-shadow: 0px 0px 0px 2px rgba(0,124,255,0.9);
+}
+/* --------------------------------------- */
+/* CANCEL BUTTON */
+.q-btn-cancel {
+	height: 2.5em;
+	width: 2.5em;
+	background-image: url('/admin/Resources/cancel/cancel_s1.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: transparent;
+	border: none;
+}
+.q-btn-cancel:disabled {
+	background-image: url('/admin/Resources/cancel/cancelDisabled_s1.png');
+}
+.q-btn-cancel:focus {
+	background-image: url('/admin/Resources/cancel/cancelFocused_s1.png');
+}
+.q-btn-cancel:active {
+	background-image: url('/admin/Resources/cancel/cancelPressed_s1.png');
+}
+
+/* INFO BUTTON */
+.q-btn-info {
+	height: 2.5em;
+	width: 2.5em;
+	background-image: url('/admin/Resources/information/information.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: transparent;
+	border: none;
+}
+.q-btn-info:disabled {
+	background-image: url('/admin/Resources/information/informationDisabled.png');
+}
+.q-btn-info:focus {
+	background-image: url('/admin/Resources/information/informationFocused.png');
+}
+.q-btn-info:active {
+	background-image: url('/admin/Resources/information/informationPressed.png');
+}
+
+/* RESTART BUTTON */
+.q-btn-restart {
+	height: 2.5em;
+	width: 2.5em;
+	background-image: url('/admin/Resources/restart/restart_s1.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: transparent;
+	border: none;
+}
+.q-btn-restart:disabled {
+	background-image: url('/admin/Resources/restart/restartDisabled_s1.png');
+}
+.q-btn-restart:focus {
+	background-image: url('/admin/Resources/restart/restartFocused_s1.png');
+}
+.q-btn-restart:active {
+	background-image: url('/admin/Resources/restart/restartPressed_s1.png');
+}
+
+/* SHUTDOWN BUTTON */
+.q-btn-shutdown {
+	height: 2.5em;
+	width: 2.5em;
+	background-image: url('/admin/Resources/shutDown/shutDown_s1.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: transparent;
+	border: none;
+}
+.q-btn-shutdown:disabled {
+	background-image: url('/admin/Resources/shutDown/shutDownDisabled_s1.png');
+}
+.q-btn-shutdown:focus {
+	background-image: url('/admin/Resources/shutDown/shutDownFocused_s1.png');
+}
+.q-btn-shutdown:active {
+	background-image: url('/admin/Resources/shutDown/shutDownPressed_s1.png');
+}
+
+/* SLEEP */
+.q-btn-sleep {
+	height: 2.5em;
+	width: 2.5em;
+	background-image: url('/admin/Resources/sleep/sleep_s1.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: transparent;
+	border: none;
+}
+.q-btn-sleep:disabled {
+	background-image: url('/admin/Resources/sleep/sleepDisabled_s1.png');
+}
+.q-btn-sleep:focus {
+	background-image: url('/admin/Resources/sleep/sleepFocused_s1.png');
+}
+.q-btn-sleep:active {
+	background-image: url('/admin/Resources/sleep/sleepPressed_s1.png');
+}
+
+/* ARROW BUTTONS */
+.q-btn-left {
+	height: 2em;
+	width: 2em;
+	background-image: url('/admin/Resources/shift_keys/shiftLeft.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: transparent;
+	border: none;
+}
+.q-btn-left:active {
+	background-image: url('/admin/Resources/shift_keys/shiftLeftPressed.png');
+}
+.q-btn-right {
+	height: 2em;
+	width: 2em;
+	background-image: url('/admin/Resources/shift_keys/shiftRight.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: transparent;
+	border: none;
+}
+.q-btn-right:active {
+	background-image: url('/admin/Resources/shift_keys/shiftRightPressed.png');
+}
+
+/* GO BUTTONS */
+.q-go-right {
+	height: 2em;
+	width: 2em;
+	background-image: url('/admin/Resources/go/go_s4.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: transparent;
+	border: none;
+}
+.q-go-right:active {
+	background-image: url('/admin/Resources/go/goPressed_s4.png');
+}
+.q-go-left {
+	height: 2em;
+	width: 2em;
+	background-image: url('/admin/Resources/go/goRTL_s4.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: transparent;
+	border: none;
+}
+.q-go-left:active {
+	background-image: url('/admin/Resources/go/goRTLPressed_s4.png');
+}
+
+/* LOGIN BADGE */
+.q-badge-login {
+	height: 2em;
+	width: 2em;
+	background-image: url('/admin/Resources/loggedInBadge/loggedInBadge.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: transparent;
+	border: none;
+}
+/* --------------------------------------- */
+/* retina images */
+@media (-webkit-min-device-pixel-ratio: 1.5), (-moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 195dpi) {
+	.content-title {
+		background-image: url('/admin/Resources/ribbonLines/ribbon-2lines_s1@2x.png');
+	}
+		/* CANCEL BUTTON */
+	.q-btn-cancel {
+		height: 2.5em;
+		width: 2.5em;
+		background-image: url('/admin/Resources/cancel/cancel_s1@2x.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.q-btn-cancel:disabled {
+		background-image: url('/admin/Resources/cancel/cancelDisabled_s1@2x.png');
+	}
+	.q-btn-cancel:focus {
+		background-image: url('/admin/Resources/cancel/cancelFocused_s1@2x.png');
+	}
+	.q-btn-cancel:active {
+		background-image: url('/admin/Resources/cancel/cancelPressed_s1@2x.png');
+	}
+	
+	/* INFO BUTTON */
+	.q-btn-info {
+		height: 2.5em;
+		width: 2.5em;
+		background-image: url('/admin/Resources/information/information@2x.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.q-btn-info:disabled {
+		background-image: url('/admin/Resources/information/informationDisabled@2x.png');
+	}
+	.q-btn-info:focus {
+		background-image: url('/admin/Resources/information/informationFocused@2x.png');
+	}
+	.q-btn-info:active {
+		background-image: url('/admin/Resources/information/informationPressed@2x.png');
+	}
+	
+	/* RESTART BUTTON */
+	.q-btn-restart {
+		height: 2.5em;
+		width: 2.5em;
+		background-image: url('/admin/Resources/restart/restart_s1@2x.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.q-btn-restart:disabled {
+		background-image: url('/admin/Resources/restart/restartDisabled_s1@2x.png');
+	}
+	.q-btn-restart:focus {
+		background-image: url('/admin/Resources/restart/restartFocused_s1@2x.png');
+	}
+	.q-btn-restart:active {
+		background-image: url('/admin/Resources/restart/restartPressed_s1@2x.png');
+	}
+	
+	/* SHUTDOWN */
+	.q-btn-shutdown {
+		height: 2.5em;
+		width: 2.5em;
+		background-image: url('/admin/Resources/shutDown/shutDown_s1@2x.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.q-btn-shutdown:disabled {
+		background-image: url('/admin/Resources/shutDown/shutDownDisabled_s1@2x.png');
+	}
+	.q-btn-shutdown:focus {
+		background-image: url('/admin/Resources/shutDown/shutDownFocused_s1@2x.png');
+	}
+	.q-btn-shutdown:active {
+		background-image: url('/admin/Resources/shutDown/shutDownPressed_s1@2x.png');
+	}
+	
+	/* SLEEP */
+	.q-btn-sleep {
+		height: 2.5em;
+		width: 2.5em;
+		background-image: url('/admin/Resources/sleep/sleep_s1@2x.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.q-btn-sleep:disabled {
+		background-image: url('/admin/Resources/sleep/sleepDisabled_s1@2x.png');
+	}
+	.q-btn-sleep:focus {
+		background-image: url('/admin/Resources/sleep/sleepFocused_s1@2x.png');
+	}
+	.q-btn-sleep:active {
+		background-image: url('/admin/Resources/sleep/sleepPressed_s1@2x.png');
+	}
+	
+	/* ARROW BUTTONS */
+	.q-btn-left {
+		height: 2em;
+		width: 2em;
+		background-image: url('/admin/Resources/shift_keys/shiftLeft@2x.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.q-btn-left:active {
+		background-image: url('/admin/Resources/shift_keys/shiftLeftPressed@2x.png');
+	}
+	.q-btn-right {
+		height: 2em;
+		width: 2em;
+		background-image: url('/admin/Resources/shift_keys/shiftRight@2x.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.q-btn-right:active {
+		background-image: url('/admin/Resources/shift_keys/shiftRightPressed@2x.png');
+	}	
+	/* LOGIN BADGE */
+	.q-badge-login {
+		height: 2em;
+		width: 2em;
+		background-image: url('/admin/Resources/loggedInBadge/loggedInBadge@2x.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	
+	/* GO BUTTONS */
+	.q-go-right {
+		height: 2em;
+		width: 2em;
+		background-image: url('/admin/Resources/go/go_s4@2x.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-color: transparent;
+		border: none;
+	}
+	.q-go-right:active {
+		background-image: url('/admin/Resources/go/goPressed_s4@2x.png');
+	}
+	.q-go-left {
+		height: 2em;
+		width: 2em;
+		background-image: url('/admin/Resources/go/goRTL_s4@2x.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-color: transparent;
+		border: none;
+	}
+	.q-go-left:active {
+		background-image: url('/admin/Resources/go/goRTLPressed_s4@2x.png');
+	}
+}
