@@ -1,4 +1,5 @@
 /*Misc Variables*/
+/*Color*/
 /* Responsive settings */
 /*Mixins*/
 /*—————————————————————*/
@@ -26,6 +27,7 @@ header nav > ul {
     transition-duration: 1s;
     transition-timing-function: ease-in;
     transition-delay: 0s;
+    width: 100%;
     /*Normal*/
     /*Hover, focus*/
     /*Active*/ }

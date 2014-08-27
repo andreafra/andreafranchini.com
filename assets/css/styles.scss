@@ -3,6 +3,10 @@ $title-font: sans-serif;
 $paragraph-font: serif;
 $font-color: #333333;
 $font-size: 100%;
+	/*Color*/
+	$blue: #5677fc;
+	$red: #e51c23;
+	$yellow: #ffc107;
 /* Responsive settings */
 $header-height: 9em;
 /*Mixins*/
@@ -27,7 +31,6 @@ header {
 		span {
 			font-family: "Helvetica Neue", $title-font, Helvetica, sans-serif;
 			font-size: 9em;
-			
 		}
 	}
 	nav > ul {
@@ -38,6 +41,7 @@ header {
 		li {
 			display: inline-block;
 			@include transition(1s);
+			width: 100%;
 			/*Normal*/
 			.md-bubble {
 				height: 100%;
@@ -50,9 +54,9 @@ header {
 					text-decoration: none;
 					font-family: "Roboto";
 					font-size: 2em;
-					&#link-blue {color: #5677fc}
-					&#link-red {color: #e51c23}
-					&#link-yellow {color: #ffc107}
+					&#link-blue {color: $blue}
+					&#link-red {color: $red}
+					&#link-yellow {color: $yellow}
 				}
 				
 			}
