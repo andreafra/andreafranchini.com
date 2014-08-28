@@ -3,22 +3,23 @@
 /* Responsive settings */
 /*Mixins*/
 /*—————————————————————*/
-/* line 27, ../scss/styles.scss */
+body {
+  padding: 0;
+  border: 0;
+  margin: 0; }
+
 header .greets {
   display: block;
   text-align: center;
   padding-top: 10%; }
-  /* line 31, ../scss/styles.scss */
   header .greets span {
     font-family: "Helvetica Neue", sans-serif, Helvetica, sans-serif;
     font-size: 9em; }
-/* line 36, ../scss/styles.scss */
 header nav > ul {
   list-style: none;
   display: block;
   text-align: center;
   padding: 0; }
-  /* line 41, ../scss/styles.scss */
   header nav > ul li {
     display: inline-block;
     /* For Safari 3.1 to 6.0 */
@@ -35,7 +36,6 @@ header nav > ul {
     /*Normal*/
     /*Hover, focus*/
     /*Active*/ }
-    /* line 46, ../scss/styles.scss */
     header nav > ul li .md-bubble {
       height: 100%;
       width: 100%;
@@ -50,63 +50,52 @@ header nav > ul {
       transition-duration: 0.5s;
       transition-timing-function: ease-in;
       transition-delay: 0s; }
-      /* line 51, ../scss/styles.scss */
       header nav > ul li .md-bubble a {
         height: 100%;
         width: 100%;
         text-decoration: none;
         font-family: "Roboto";
         font-size: 2em; }
-        /* line 57, ../scss/styles.scss */
         header nav > ul li .md-bubble a#link-blue {
           color: #5677fc; }
-        /* line 58, ../scss/styles.scss */
         header nav > ul li .md-bubble a#link-red {
           color: #e51c23; }
-        /* line 59, ../scss/styles.scss */
         header nav > ul li .md-bubble a#link-yellow {
           color: #ffc107; }
-    /* line 65, ../scss/styles.scss */
     header nav > ul li:hover .md-bubble, header nav > ul li:focus .md-bubble {
       height: 100%;
       width: 100%;
       text-align: center;
       border-radius: 3px;
       background-color: #f5f5f5; }
-      /* line 71, ../scss/styles.scss */
       header nav > ul li:hover .md-bubble a, header nav > ul li:focus .md-bubble a {
         text-decoration: none; }
-        /* line 73, ../scss/styles.scss */
         header nav > ul li:hover .md-bubble a #link-blue, header nav > ul li:focus .md-bubble a #link-blue {
           color: #455ede; }
-        /* line 74, ../scss/styles.scss */
         header nav > ul li:hover .md-bubble a #link-red, header nav > ul li:focus .md-bubble a #link-red {
           color: #d11818; }
-        /* line 75, ../scss/styles.scss */
         header nav > ul li:hover .md-bubble a #link-yellow, header nav > ul li:focus .md-bubble a #link-yellow {
           color: #ffa000; }
-    /* line 81, ../scss/styles.scss */
     header nav > ul li:active .md-bubble {
       height: 100%;
       width: 100%;
       text-align: center;
       border-radius: 10px;
       background-color: #eeeeee; }
-      /* line 87, ../scss/styles.scss */
       header nav > ul li:active .md-bubble a  {
         text-decoration: none; }
-        /* line 89, ../scss/styles.scss */
         header nav > ul li:active .md-bubble a  #link-blue {
           color: #2a36b1; }
-        /* line 90, ../scss/styles.scss */
         header nav > ul li:active .md-bubble a  #link-red {
           color: #b0120a; }
-        /* line 91, ../scss/styles.scss */
         header nav > ul li:active .md-bubble a  #link-yellow {
           color: #ff6f00; }
-/* line 98, ../scss/styles.scss */
-header #down-button {
-  height: 500px;
-  width: 500px;
-  display: block;
-  position: relative; }
+
+section {
+  background-color: #ff2f48;
+  text-align: center; }
+  section #who-i-am {
+    height: 4em;
+    line-height: 4em;
+    background-color: #e0e0e0;
+    display: block; }
