@@ -22,6 +22,19 @@ $header-height: 9em;
     transition-timing-function: ease-in;
     transition-delay: 0s;
 }
+/*Animations*/
+@keyframe {
+	from {
+	
+	}
+	to {
+		
+	}
+}
+/* Stuff */
+	.hidden {
+		display: none;
+	}
 /*—————————————————————*/
 body {
 	padding: 0;
@@ -103,10 +116,19 @@ header {
 section {
 	background-color: #ff2f48;
 	text-align: center;
+	padding: 0;
+	.incipit {
+		width: 100%;
+		margin: 0;
+	}
 	#who-i-am {
 		height: 4em;
 		line-height: 4em;
 		background-color: #e0e0e0;
 		display: block;
+	}
+	#my-name {
+		color: white;
+		font-family: "Heiti SC"
 	}
 }

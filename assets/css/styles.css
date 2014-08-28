@@ -2,6 +2,14 @@
 /*Color*/
 /* Responsive settings */
 /*Mixins*/
+/*Animations*/
+@keyframe {
+ }
+
+/* Stuff */
+.hidden {
+  display: none; }
+
 /*—————————————————————*/
 body {
   padding: 0;
@@ -93,9 +101,16 @@ header nav > ul {
 
 section {
   background-color: #ff2f48;
-  text-align: center; }
+  text-align: center;
+  padding: 0; }
+  section .incipit {
+    width: 100%;
+    margin: 0; }
   section #who-i-am {
     height: 4em;
     line-height: 4em;
     background-color: #e0e0e0;
     display: block; }
+  section #my-name {
+    color: white;
+    font-family: "Heiti SC"; }
