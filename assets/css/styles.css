@@ -1,4 +1,10 @@
 /*Misc Variables*/
+/*FONTS
+	font-family: 'Karma', serif; > SERIF
+	font-family: 'Lily Script One', cursive; > TITLE
+	font-family: 'Kite One', sans-serif; > HEADERS
+	font-family: 'Hind', sans-serif;  > SANS SERIF
+*/
 /*Color*/
 /* Responsive settings */
 /*Mixins*/
@@ -14,7 +20,7 @@ header .greets {
   text-align: center;
   padding-top: 10%; }
   header .greets span {
-    font-family: "Helvetica Neue", sans-serif, Helvetica, sans-serif;
+    font-family: 'Lily Script One', cursive;
     font-size: 9em; }
 header nav > ul {
   list-style: none;
@@ -99,16 +105,23 @@ section {
   section .incipit {
     width: 100%;
     margin: 0; }
+    section .incipit span {
+      height: 4em;
+      line-height: 4em;
+      background-color: #e0e0e0;
+      display: block;
+      font-family: 'Kite One', sans-serif;
+      font-size: larger;
+      text-shadow: 3px 3px 1px 3px yellow; }
   section .content {
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 5em;
+    padding-top: 20em;
     padding-bottom: auto; }
-  section #who-i-am {
-    height: 4em;
-    line-height: 4em;
-    background-color: #e0e0e0;
-    display: block; }
-  section #my-name {
+  section .title {
     color: white;
-    font-family: "Heiti SC"; }
+    font-family: 'Hind', sans-serif; }
+  section .paragraph {
+    color: #607d8b;
+    font-family: 'Karma', serif;
+    font-size: 2em; }
