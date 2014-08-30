@@ -3,13 +3,6 @@
 /* Responsive settings */
 /*Mixins*/
 /*Animations*/
-@keyframe {
- }
-
-/* Stuff */
-.hidden {
-  display: none; }
-
 /*—————————————————————*/
 body {
   padding: 0;
@@ -106,6 +99,11 @@ section {
   section .incipit {
     width: 100%;
     margin: 0; }
+  section .content {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5em;
+    padding-bottom: auto; }
   section #who-i-am {
     height: 4em;
     line-height: 4em;
