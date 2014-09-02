@@ -1,5 +1,5 @@
 $('header, section').css("height", window.innerHeight);
-$('header, section, footer').css("width", window.innerWidth);
+//$('header, section, footer').css("width", window.innerWidth);
 
 var lastScrollTop = 0;
 
