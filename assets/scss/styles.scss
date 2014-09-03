@@ -37,7 +37,16 @@ header {
 	.greets {
 		text-align: center;
 		font-family: $mega-title;
+		font-size: 8em;
+	/*Tablet*/
+	@media (min-width: 768px) {
+		font-size: 15em
+	}
+	/*Desktop*/
+	@media (min-width: 992px) {
 		font-size: 20em;
+	}
+	/*-------*/
 	}
 	nav {
 		ul {
@@ -79,6 +88,7 @@ header {
 				text-decoration: none;
 				font-family: $header;
 				border-radius: 5px;
+				margin-top: 1em;
 				
 				@include transition(0.3s);
 				

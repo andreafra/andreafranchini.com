@@ -12,7 +12,16 @@ body {
 header .greets {
   text-align: center;
   font-family: 'Lily Script One', cursive;
-  font-size: 20em; }
+  font-size: 8em;
+  /*Tablet*/
+  /*Desktop*/
+  /*-------*/ }
+  @media (min-width: 768px) {
+    header .greets {
+      font-size: 15em; } }
+  @media (min-width: 992px) {
+    header .greets {
+      font-size: 20em; } }
 header nav ul #link-blue {
   border: 2px solid transparent; }
   header nav ul #link-blue:hover {
@@ -60,6 +69,7 @@ header nav ul li {
   text-decoration: none;
   font-family: 'Kit One', sans-serif;
   border-radius: 5px;
+  margin-top: 1em;
   -o-transition-property: all;
   -o-transition-duration: 0.3s;
   -o-transition-timing-function: ease-in;
