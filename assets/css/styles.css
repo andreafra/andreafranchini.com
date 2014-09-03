@@ -2,98 +2,14 @@
 	font-family: 'Lily Script One', cursive; > TITLE
 	font-family: 'Kite One', sans-serif; > HEADERS
 	font-family: 'Hind', sans-serif;  > SANS SERIF */
-/* Default color */
-/* Mixins */
-/* header */
-body {
-  width: 99%;
-  /* It cause window horizontal scrolling */ }
-
-header .greets {
+header {
   text-align: center;
-  font-family: 'Lily Script One', cursive;
-  font-size: 100px;
-  /*Tablet*/
-  /*Desktop*/
-  /*-------*/ }
-  @media (min-width: 768px) {
-    header .greets {
-      font-size: 200px; } }
-  @media (min-width: 992px) {
-    header .greets {
-      font-size: 300px; } }
-header nav {
-  padding: 0; }
-  header nav ul #link-blue {
-    border: 2px solid transparent; }
-    header nav ul #link-blue:hover {
-      border: 2px solid #4e6cef; }
-      header nav ul #link-blue:hover a {
-        color: #4e6cef; }
-    header nav ul #link-blue:active {
-      border: 2px solid #445ede;
-      background-color: #445ede; }
-      header nav ul #link-blue:active a {
-        color: white; }
-    header nav ul #link-blue a {
-      color: #5677fc; }
-  header nav ul #link-red {
-    border: 2px solid transparent; }
-    header nav ul #link-red:hover {
-      border: 2px solid #dd191d; }
-      header nav ul #link-red:hover a {
-        color: #dd191d; }
-    header nav ul #link-red:active {
-      border: 2px solid #d01726;
-      background-color: #d01726; }
-      header nav ul #link-red:active a {
-        color: white; }
-    header nav ul #link-red a {
-      color: #e51c23; }
-  header nav ul #link-yellow {
-    border: 2px solid transparent; }
-    header nav ul #link-yellow:hover {
-      border: 2px solid #fdd835; }
-      header nav ul #link-yellow:hover a {
-        color: #fdd835; }
-    header nav ul #link-yellow:active {
-      border: 2px solid #fbc02d;
-      background-color: #fbc02d; }
-      header nav ul #link-yellow:active a {
-        color: white; }
-    header nav ul #link-yellow a {
-      color: #ffc107; }
-  header nav ul li {
-    list-style: none;
-    padding: 0;
-    font-size: 2em;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Kit One', sans-serif;
-    border-radius: 5px;
-    margin-top: 1em;
-    -o-transition-property: all;
-    -o-transition-duration: 0.3s;
-    -o-transition-timing-function: ease-in;
-    -o-transition-delay: 0s;
-    /* For Safari 3.1 to 6.0 */
-    -webkit-transition-property: all;
-    -webkit-transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-in;
-    -webkit-transition-delay: 0s;
-    /* Standard syntax */
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in;
-    transition-delay: 0s; }
-    header nav ul li:hover {
-      text-decoration: none;
-      border-radius: 5px; }
-      header nav ul li:hover a {
-        text-decoration: none; }
-    header nav ul li:active {
-      border-radius: 10px; }
-      header nav ul li:active a  {
-        text-decoration: none; }
-  header nav ul .gandalf {
-    width: 33.3%; }
+}
+#greets {
+  font-size: 7em;
+  font-family: 'Lily Script One';
+}
+#title-desc-1, #title-desc-2 {
+  font-family: 'Hind';
+  font-size: 3em;
+}

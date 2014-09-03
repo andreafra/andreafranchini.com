@@ -20,38 +20,28 @@
     <![endif]-->
   </head>
   <body class="animated fadeIn">
-    <header id="page_0">
-	    <div class="greets">
-	    	<span class="animated tada" id="title">Hello!</span>
-	    </div>
-	    <nav>
-		    <ul class="row">
-				<li class="col-md-4" id="link-blue" onclick="scrollToDiv('#page_1')">
-					<a href="#">About</a>
-				</li>
-				<li class="col-md-4" id="link-red" onclick="scrollToDiv('#page_2')">
-					<a href="#">Works</a>
-				</li>
-				<li class="col-md-4" id="link-yellow" onclick="scrollToDiv('#page_3')">
-					<a href="#">Contact</a>
-				</li>
-		    </ul>
-	    </nav>
-    </header>
-    <section id="page_1">
-    	<div class="incipit">
-	    	<span id="who-i-am">Who I am</span>
+    <header>
+    	<div class="animated bounceInDown" id="greets">Hello!</div>
+    	<div>
+    		<h1 class="animated hidden" id="title-desc-1">I'm Andrea Franchini</h1>
+    		<span class="animated hidden" id="title-desc-2">an Italian web developer</span>
     	</div>
-	    <div class="content">
-		    <h1 id="my-name" class="title">I'm Andrea Franchini</h1>
-		    <p class="paragraph">a web designer</p>
-	    </div>
-    </section>
-	<footer>
-		
-	</footer>
+    </header>
+    <content>
+    	
+    </content>
+    <footer>
+    	
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script type="text/javascript">
+    $('#greets').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    	$('#title-desc-1').addClass('bounceInDown').removeClass('hidden');
+    	$('#title-desc-1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    		$('#title-desc-2').addClass('bounceInDown').removeClass('hidden');
+    	});
+    });
+    </script>
   </body>
 </html>
