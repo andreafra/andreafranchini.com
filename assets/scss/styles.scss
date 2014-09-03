@@ -37,14 +37,14 @@ header {
 	.greets {
 		text-align: center;
 		font-family: $mega-title;
-		font-size: 200px;
+		font-size: 100px;
 	/*Tablet*/
 	@media (min-width: 768px) {
 		font-size: 200px;
 	}
 	/*Desktop*/
 	@media (min-width: 992px) {
-		font-size: 200px;
+		font-size: 300px;
 	}
 	/*-------*/
 	}
