@@ -49,6 +49,7 @@ header {
 	/*-------*/
 	}
 	nav {
+		padding: 0;
 		ul {
 			#link-blue {
 				border: 2px solid transparent;
@@ -89,7 +90,6 @@ header {
 				font-family: $header;
 				border-radius: 5px;
 				margin-top: 1em;
-				
 				@include transition(0.3s);
 				
 				&:hover {
@@ -106,6 +106,9 @@ header {
 						text-decoration: none;
 					}
 				}
+			}
+			.gandalf {
+				width: 33.3%;
 			}
 		}
 	}
