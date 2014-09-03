@@ -11,5 +11,22 @@ header {
 }
 #title-desc-1, #title-desc-2 {
   font-family: 'Hind';
+}
+#title-desc-1 {
+  color: #5677fc;
   font-size: 3em;
+  -webkit-animation-duration: .7s;
+  -moz-animation-duration: .7s;
+  -ms-animation-duration: .7s;
+  -o-animation-duration: .7s;
+  animation-duration: .7s;
+}
+#title-desc-2 {
+  color: #e51c23;
+  font-size: 2em;
+  -webkit-animation-duration: .5s;
+  -moz-animation-duration: .5s;
+  -ms-animation-duration: .5s;
+  -o-animation-duration: .5s;
+  animation-duration: .5s;
 }
