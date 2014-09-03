@@ -12,16 +12,16 @@ body {
 header .greets {
   text-align: center;
   font-family: 'Lily Script One', cursive;
-  font-size: 8em;
+  font-size: 200px;
   /*Tablet*/
   /*Desktop*/
   /*-------*/ }
   @media (min-width: 768px) {
     header .greets {
-      font-size: 15em; } }
+      font-size: 200px; } }
   @media (min-width: 992px) {
     header .greets {
-      font-size: 20em; } }
+      font-size: 200px; } }
 header nav ul #link-blue {
   border: 2px solid transparent; }
   header nav ul #link-blue:hover {
