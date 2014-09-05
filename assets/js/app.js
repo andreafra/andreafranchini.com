@@ -1,9 +1,11 @@
-$('header, section').css("height", window.innerHeight);
-//$('header, section, footer').css("width", window.innerWidth);
-
-var lastScrollTop = 0;
-
-var scrollToDiv = function(target){
-	$('html, body').animate({
-	    scrollTop: $(target).offset().top
-	}, 1000);}
+$('#greets').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	$('#title-desc-1').addClass('bounceInDown').removeClass('hidden');
+	$('#title-desc-1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+		$('#title-desc-2').addClass('fadeIn').removeClass('hidden');
+		$('#title-desc-2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+			$('.left-button, .right-button').addClass('fadeIn').removeClass('hidden');
+			
+		});
+	});
+});
+$('.more-info').tooltip();

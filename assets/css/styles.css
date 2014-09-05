@@ -2,15 +2,35 @@
 	font-family: 'Lily Script One', cursive; > TITLE
 	font-family: 'Kite One', sans-serif; > HEADERS
 	font-family: 'Hind', sans-serif;  > SANS SERIF */
+/*Animations*/
+@keyframes moveLeft {
+  0%, 100% {padding-left: 1em}
+  50% {padding-left: .5em}
+}
+@-webkit-keyframes moveLeft {
+  0%, 100% {padding-left: 1em}
+  50% {padding-left: .5em}
+}
+@keyframes moveRight {
+  0%, 100% {padding-right: 1em}
+  50% {padding-right: .5em}
+}
+@-webkit-keyframes moveRight {
+  0%, 100% {padding-right: 1em}
+  50% {padding-right: .5em}
+}
+* {
+  cursor: url('../assets/img/cursor.cur');
+}
 header {
   text-align: center;
 }
 #greets {
   font-size: 7em;
-  font-family: 'Lily Script One';
+  font-family: 'Lily Script One', cursive;
 }
 #title-desc-1, #title-desc-2 {
-  font-family: 'Hind';
+  font-family: 'Hind', sans-serif;
 }
 #title-desc-1 {
   color: #5677fc;
@@ -30,3 +50,49 @@ header {
   -o-animation-duration: .5s;
   animation-duration: .5s;
 }
+.left-button, .right-button {
+  position: absolute;
+  top: 50%
+}
+.left-button {
+  left: 0px;
+  vertical-align: middle;
+  padding-left: 1em;
+}
+.left-button:hover {
+  -webkit-animation: moveLeft 1.3s ease-in-out infinite;
+  animation: moveLeft 1.3s ease-in-out infinite;
+}
+.right-button {
+  right: 0px;
+  vertical-align: middle;
+  padding-right: 1em;
+}
+.right-button:hover {
+  -webkit-animation: moveRight 1.3s ease-in-out infinite;
+  animation: moveRight 1.3s ease-in-out infinite;
+}
+footer {
+  bottom: 0;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+  vertical-align: bottom;
+}
+  .copyright {
+    position: relative;
+    background-color: rgba(255,255,255,0.4);
+    text-align: center;
+    width: 100%;
+    font-family: 'Kite One', sans-serif;
+  }
+    .copyright a {
+      color: #5677fc;
+    }
+  .more-info {
+    float: left;
+    margin-left: 1em;
+  }

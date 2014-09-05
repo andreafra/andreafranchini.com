@@ -29,21 +29,29 @@
 	    	</div>
 	    </div>
     </header>
-    <content>
-    	
-    </content>
+    <div class="left-button animated hidden">
+    	<object>
+    		<embed src="assets/img/back.svg">
+    	</object>
+    </div>
+    <div class="right-button animated hidden">
+    	<object>
+    		<embed src="assets/img/next.svg">
+    	</object>
+    </div>
+
     <footer>
-    	
+		<div class="copyright">
+			&copy; 2014 <a href="http://qub3x.github.io">Andrea Franchini</a>. All Rights Reserved.
+	    		<span class="more-info" data-toggle="tooltip" data-placement="right" title="More Info"><span class="glyphicon glyphicon-info-sign"></span></span>
+		</div>
+		<div class="others-copyright hidden">
+
+		</div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script async src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.0/angular.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-    $('#greets').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    	$('#title-desc-1').addClass('bounceInDown').removeClass('hidden');
-    	$('#title-desc-1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    		$('#title-desc-2').addClass('bounceInDown').removeClass('hidden');
-    	});
-    });
-    </script>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>
