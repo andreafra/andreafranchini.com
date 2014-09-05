@@ -19,6 +19,14 @@
   0%, 100% {padding-right: 1em}
   50% {padding-right: .5em}
 }
+/*media*/
+@media screen and (max-width: 767px) {
+  .left-button, .right-button {
+    top: 70%;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+  }
+}
 * {
   cursor: url('../assets/img/cursor.cur');
 }
@@ -50,9 +58,13 @@ header {
   -o-animation-duration: .5s;
   animation-duration: .5s;
 }
+.left-button img, .right-button img {
+  height: 100%
+}
 .left-button, .right-button {
+  height: 4em;
   position: absolute;
-  top: 50%
+  top: 40%
 }
 .left-button {
   left: 0px;
