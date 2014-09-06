@@ -1,3 +1,4 @@
+//animations
 $('#greets').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 	$('#title-desc-1').addClass('bounceInDown').removeClass('hidden');
 	$('#title-desc-1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
@@ -8,4 +9,5 @@ $('#greets').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationen
 		});
 	});
 });
+//tooltip
 $('.more-info').tooltip();

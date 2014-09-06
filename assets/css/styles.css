@@ -26,16 +26,32 @@
     transform: scale(0.5);
     -webkit-transform: scale(0.5);
   }
+  .mars {
+    display: none;
+  }
 }
-* {
-  cursor: url('../assets/img/cursor.cur');
+body {
+  background-image: url('../img/space.png');
+  background-repeat: repeat-y;
+  background-size: 100%;
+    image-rendering:optimizeSpeed;             /* Legal fallback */
+    image-rendering:-moz-crisp-edges;          /* Firefox        */
+    image-rendering:-o-crisp-edges;            /* Opera          */
+    image-rendering:-webkit-optimize-contrast; /* Safari         */
+    image-rendering:optimize-contrast;         /* CSS3 Proposed  */
+    image-rendering:crisp-edges;               /* CSS4 Proposed  */
+    image-rendering:pixelated;                 /* CSS4 Proposed  */
+    -ms-interpolation-mode:nearest-neighbor;  
+    z-index: 0;
 }
 header {
   text-align: center;
+  z-index: 10;
 }
 #greets {
   font-size: 7em;
   font-family: 'Lily Script One', cursive;
+  color: #fff;
 }
 #title-desc-1, #title-desc-2 {
   font-family: 'Hind', sans-serif;
@@ -59,12 +75,12 @@ header {
   animation-duration: .5s;
 }
 .left-button img, .right-button img {
-  height: 100%
+  height: 100
 }
 .left-button, .right-button {
   height: 4em;
   position: absolute;
-  top: 40%
+  top: 40%;
 }
 .left-button {
   left: 0px;
@@ -84,19 +100,46 @@ header {
   -webkit-animation: moveRight 1.3s ease-in-out infinite;
   animation: moveRight 1.3s ease-in-out infinite;
 }
+.planets {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+  .earth {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    z-index: 3
+  }
+  .moon {
+    position: absolute;
+    left: 175px;
+    bottom: 200px;
+    width: 100px;
+    z-index: 2
+  }
+  .mars {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 200px;
+    z-index: 1;
+  }
 footer {
   bottom: 0;
-  position: fixed;
-  z-index: 10;
+  position: absolute;
+  z-index: 30;
   width: 100%;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  line-height: 3em;
   text-align: center;
   vertical-align: bottom;
+  height: 3em;
 }
   .copyright {
     position: relative;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255,255,255,0.7);
     text-align: center;
     width: 100%;
     font-family: 'Kite One', sans-serif;
