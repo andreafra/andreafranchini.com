@@ -1,3 +1,26 @@
+// var pages = 3;
+// var page = 0;
+// $('.left-button').click(function(){
+// 	if(page === 0) {
+// 		page = pages;
+// 				console.log(page);
+// 	} else {
+// 		page = page - 1;
+// 				console.log(page);
+
+// 	}
+// });
+// $('.right-button-button').click(function(){
+// 	if(page === 0) {
+// 		page = pages;
+// 				console.log(page);
+
+// 	} else {
+// 		page = page + 1;
+// 				console.log(page);
+
+// 	}
+// });
 //animations
 $('#greets').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 	$('#title-desc-1').addClass('bounceInDown').removeClass('hidden');
