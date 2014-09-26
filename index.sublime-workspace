@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"f",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"page",
+				"page"
+			],
+			[
 				"ri",
 				"right-button"
 			],
@@ -94,10 +102,6 @@
 			[
 				"bac",
 				"background-color"
-			],
-			[
-				"f",
-				"Franchini"
 			]
 		]
 	},
@@ -107,9 +111,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 169.0,
+		"height": 101.0,
 		"selected_items":
 		[
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
 			[
 				"colo",
 				"Color Picker"
@@ -183,13 +191,22 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/Andrea/Sites/qub3x.github.io",
+		"/Users/Andrea/Sites/qub3x.github.io/assets",
+		"/Users/Andrea/Sites/qub3x.github.io/assets/img",
+		"/Users/Andrea/Sites/qub3x.github.io/assets/js"
+	],
 	"file_history":
 	[
+		"/Users/Andrea/Sites/qub3x.github.io/index.html",
+		"/Users/Andrea/Sites/qub3x.github.io/assets/css/styles.css",
+		"/Users/Andrea/Sites/qub3x.github.io/assets/js/app.js",
 		"/Users/Andrea/Sites/qub3x.github.io/assets/img/back.svg",
 		"/Users/Andrea/Sites/qub3x.github.io/assets/img/next.svg",
 		"/Users/Andrea/Downloads/trianglify-background.svg",
 		"/Users/Andrea/Sites/qub3x.github.io/assets/scss/styles.scss",
-		"/Users/Andrea/Sites/qub3x.github.io/index.html",
 		"/Users/Andrea/Sites/qub3x.github.io/assets/css/styles.scss",
 		"/Users/Andrea/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/Andrea/Sites/qub3x.github.io/README.md",
@@ -199,7 +216,7 @@
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -213,6 +230,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"hidden",
 			"to",
 			"from",
 			"margin",
