@@ -56,10 +56,10 @@ section {
   font-family: 'Lily Script One', cursive;
   color: #fff;
 }
-#title-desc-1, #title-desc-2 {
+#title-1, #title-2 {
   font-family: 'Hind', sans-serif;
 }
-#title-desc-1 {
+#title-1 {
   color: #9ad3fc;
   font-size: 3em;
   -webkit-animation-duration: .7s;
@@ -68,7 +68,7 @@ section {
   -o-animation-duration: .7s;
   animation-duration: .7s;
 }
-#title-desc-2 {
+#title-2 {
   color: #ababab;
   font-size: 2em;
   -webkit-animation-duration: .5s;
@@ -104,6 +104,7 @@ section {
   -webkit-animation: moveRight 1.3s ease-in-out infinite;
   animation: moveRight 1.3s ease-in-out infinite;
 }
+/*------- decorations ---*/
 .planets {
   position: absolute;
   z-index: -1;
@@ -131,6 +132,9 @@ section {
     width: 200px;
     z-index: 1;
   }
+/*---------------------*/
+/*      FOOTER         */
+/*---------------------*/
 footer {
   bottom: 0;
   position: fixed;

@@ -20,16 +20,29 @@
     <![endif]-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script async src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/app.js"></script>
   </head>
-  <body class="animated fadeIn" ng-controller="ViewController as view">
+  <body class="animated fadeIn" ng-controller="PanelController as panel">
     <div class="planets">
         <img src="assets/img/mars.png" class="mars">
         <img src="assets/img/earth.png" class="earth">
         <img src="assets/img/moon.png" class="moon">
     </div>
+    <header>
+        <ul class="nav nav-pills">
+            <li ng-class="{ active: panel.isSelected(1) }">
+                <a href="" ng-click="panel.selectTab(1)">Page 1</a>
+            </li>
+            <li ng-class="{ active: panel.isSelected(2) }">
+                <a href="" ng-click="panel.selectTab(2)">Page 2</a>
+            </li>
+            <li ng-class="{ active: panel.isSelected(3) }">
+                <a href="" ng-click="panel.selectTab(3)">Page 3</a>
+            </li>
+        </ul>
+    </header>
     <section ng-show="panel.isSelected(1)">
     	<div class="container">
 	    	<div class="animated bounceInDown" id="greets">Hello!</div>
@@ -44,17 +57,6 @@
             
     </section>
 
-    <div class="left-button animated hidden" ng-click="panel.selectTab(true)">
-    	<object>
-    		<embed src="assets/img/back.svg">
-    	</object>
-    </div>
-    <div class="right-button animated hidden" ng-click="panel.selectTab(false)">
-    	<object>
-    		<embed src="assets/img/next.svg">
-    	</object>
-    </div>
-
     <footer>
 		<div class="copyright">
 			&copy; 2014 <a href="http://qub3x.github.io">Andrea Franchini</a>. All Rights Reserved.
@@ -64,6 +66,18 @@
 
 		</div>
     </footer>
-    
+    <script type="text/javascript">
+        $('#greets').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $('#title-1').addClass('bounceInDown').removeClass('hidden');
+            $('#title-1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $('#title-2').addClass('fadeIn').removeClass('hidden');
+                $('#title-2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $('.left-button, .right-button').addClass('fadeIn').removeClass('hidden');
+                });
+            });
+        });
+//tooltip
+        $('.more-info').tooltip();
+    </script>
   </body>
 </html>
