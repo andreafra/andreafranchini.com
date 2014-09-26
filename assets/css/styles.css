@@ -47,7 +47,7 @@ body {
 .hidden {
   display: none;
 }
-header {
+section {
   text-align: center;
   z-index: 10;
 }
