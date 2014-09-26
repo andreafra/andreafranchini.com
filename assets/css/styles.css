@@ -19,6 +19,7 @@
   0%, 100% {margin-right: 20px}
   50% {margin-right: 10px}
 }
+
 /*media*/
 @media screen and (max-width: 767px) {
   .left-button, .right-button {
