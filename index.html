@@ -30,7 +30,7 @@
         <img src="assets/img/earth.png" class="earth">
         <img src="assets/img/moon.png" class="moon">
     </div>
-    <header>
+    <nav>
         <ul class="nav nav-pills">
             <li ng-class="{ active: panel.isSelected(1) }">
                 <a href="" ng-click="panel.selectTab(1)">Page 1</a>
@@ -42,8 +42,8 @@
                 <a href="" ng-click="panel.selectTab(3)">Page 3</a>
             </li>
         </ul>
-    </header>
-    <section ng-show="panel.isSelected(1)">
+    </nav>
+    <section class="sample-show-hide" ng-show="panel.isSelected(1)">
     	<div class="container">
 	    	<div class="animated bounceInDown" id="greets">Hello!</div>
 	    	<h1 class="animated hidden" id="title-1">I'm Andrea Franchini</h1>

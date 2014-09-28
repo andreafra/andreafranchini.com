@@ -3,38 +3,55 @@
 	font-family: 'Kite One', sans-serif; > HEADERS
 	font-family: 'Hind', sans-serif;  > SANS SERIF */
 /*Animations*/
-@keyframes moveLeft {
-  0%, 100% {margin-left: 20px}
-  50% {margin-left: 10px}
+@-webkit-keyframes hyperOut {
+  0% {
+    -webkit-transform: perspective(1200px) rotateX(0deg);
+    transform: perspective(1200px) rotateX(0deg);
+  }
+  30% {
+    -webkit-transform: perspective(1200px) rotateX(-80deg);
+    transform: perspective(1200px) rotateX(-80deg);
+  }
+  50% {
+    -webkit-transform: perspective(1200px) scale(0.8);
+    transform: perspective(1200px) scale(0.8);
+  }
+  100% {
+    -webkit-transform: perspective(1200px) rotateX(-90deg) scale(0.1);
+    transform: perspective(1200px) rotateX(-90deg) scale(0.1);
+  }
 }
-@-webkit-keyframes moveLeft {
-  0%, 100% {margin-left: 20px}
-  50% {margin-left: 10px}
-}
-@keyframes moveRight {
-  0%, 100% {margin-right: 20px}
-  50% {margin-right: 10px}
-}
-@-webkit-keyframes moveRight {
-  0%, 100% {margin-right: 20px}
-  50% {margin-right: 10px}
+.sample-show-hide {
+
 }
 
+.sample-show-hide.ng-hide {
+  -webkit-animation: hyperOut .5s;
+  animation: hyperOut .5s;
+}
+.sample-show-hide.ng-show {
+  -webkit-animation: hyperIn .5s;
+  animation: hyperIn .5s;
+}
 /*media*/
 @media screen and (max-width: 767px) {
-  .left-button, .right-button {
-    top: 70%;
-    transform: scale(0.5);
-    -webkit-transform: scale(0.5);
-  }
   .mars {
     display: none;
+  }
+  #greets {
+  font-size: 5em;
+  }
+  #title-1 {
+    font-size: 2em;
+  }
+  #title-2 {
+    font-size: 1em;
   }
 }
 body {
   background-image: url('../img/space.png');
   background-repeat: repeat;
-  background-size: auto;
+  background-size: 100%;
     image-rendering:optimizeSpeed;
     image-rendering:-moz-crisp-edges;
     image-rendering:-o-crisp-edges;
@@ -47,6 +64,13 @@ body {
 }
 .hidden {
   display: none;
+}
+nav {
+  position: fixed;
+  top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 section {
   text-align: center;
