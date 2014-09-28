@@ -5,12 +5,15 @@
 /*Animations*/
 @-webkit-keyframes hyperOut {
   0% {
-    -webkit-transform: perspective(1200px) rotateX(0deg);
-    transform: perspective(1200px) rotateX(0deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: perspective(1200px) rotateX(0deg) scale(1);
+    transform: perspective(1200px) rotateX(0deg) scale(1);
+    
   }
   30% {
-    -webkit-transform: perspective(1200px) rotateX(80deg);
-    transform: perspective(1200px) rotateX(80deg);
+    -webkit-transform: perspective(1200px) rotateX(80deg) scale(1);
+    transform: perspective(1200px) rotateX(80deg) scale(1);
   }
   50% {
     -webkit-transform: perspective(1200px) scale(0.8);
@@ -23,17 +26,36 @@
     opacity: 0;
   }
 }
-.sample-show-hide {
-
+@-webkit-keyframes hyperIn {
+  0% {
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: perspective(1200px) rotateX(90deg) scale(0.1);
+    transform: perspective(1200px) rotateX(90deg) scale(0.1);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: perspective(1200px) scale(0.8);
+    transform: perspective(1200px) scale(0.8);
+    opacity: .7;
+  }
+  70% {
+    -webkit-transform: perspective(1200px) rotateX(80deg) scale(1);
+    transform: perspective(1200px) rotateX(80deg) scale(1);
+  }
+  100% {
+    -webkit-transform: perspective(1200px) rotateX(0deg) scale(1);
+    transform: perspective(1200px) rotateX(0deg) scale(1);
+  }
+}
+.panel-animation {
+  -webkit-animation: hyperIn .7s ease-in-out;
+  animation: hyperIn .7s ease-in-out;
 }
 
-.sample-show-hide.ng-hide {
-  -webkit-animation: hyperOut .5s;
-  animation: hyperOut .5s;
-}
-.sample-show-hide.ng-show {
-  -webkit-animation: hyperIn .5s;
-  animation: hyperIn .5s;
+.panel-animation.ng-hide {
+  -webkit-animation: hyperOut .7s ease-in-out;
+  animation: hyperOut .7s ease-in-out;
 }
 /*media*/
 @media screen and (max-width: 767px) {
@@ -73,6 +95,35 @@ nav {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  margin-bottom: 2em;
+  display: inline-block;
+}
+.navigator {
+  position: relative;
+  text-align: center;
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navigator li {
+  display: inline-block;
+  height: 4em;
+  width: 6em;
+  line-height: 4.5em;
+  background-color: #607d8b;
+  margin-top: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 0;
+  border-radius: 5px;
+  opacity: .9;
+}
+.navigator li a {
+  color: white;
+  font-family: 'Hind', 'Helvetica Neue', sans-serif;
+  font-size: 1.5em;
+  text-decoration: none;
 }
 section {
   text-align: center;
@@ -84,7 +135,7 @@ section {
   color: #fff;
 }
 #title-1, #title-2 {
-  font-family: 'Hind', sans-serif;
+  font-family: 'Hind', 'Helvetica Neue', sans-serif;
 }
 #title-1 {
   color: #9ad3fc;

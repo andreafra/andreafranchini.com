@@ -11,7 +11,6 @@
 	
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/styles.css">
-	<link rel="stylesheet" href="assets/css/animate.css">
     <link href='http://fonts.googleapis.com/css?family=Lily+Script+One|Kite+One|Karma|Hind:300' rel='stylesheet' type='text/css'>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -31,7 +30,7 @@
         <img src="assets/img/moon.png" class="moon">
     </div>
     <nav>
-        <ul class="nav nav-pills">
+        <ul class="navigator">
             <li ng-class="{ active: panel.isSelected(1) }">
                 <a href="" ng-click="panel.selectTab(1)">Page 1</a>
             </li>
@@ -43,11 +42,11 @@
             </li>
         </ul>
     </nav>
-    <section class="sample-show-hide" ng-show="panel.isSelected(1)">
+    <section class="panel-animation" ng-show="panel.isSelected(1)">
     	<div class="container">
-	    	<div class="animated bounceInDown" id="greets">Hello!</div>
-	    	<h1 class="animated hidden" id="title-1">I'm Andrea Franchini</h1>
-	    	<span class="animated hidden" id="title-2">an Italian web developer</span>
+	    	<div class="" id="greets">Hello!</div>
+	    	<h1 class="" id="title-1">I'm Andrea Franchini</h1>
+	    	<span class="" id="title-2">an Italian web developer</span>
 	    </div>
     </section>
     <section ng-show="panel.isSelected(2)">
@@ -67,8 +66,8 @@
 		</div>
     </footer>
     <script type="text/javascript">
-        //timed animations
-        $('#greets').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        //timed animation
+        /*$('#greets').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
             $('#title-1').addClass('bounceInDown').removeClass('hidden');
             $('#title-1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                 $('#title-2').addClass('fadeIn').removeClass('hidden');
@@ -76,7 +75,7 @@
                     $('.left-button, .right-button').addClass('fadeIn').removeClass('hidden');
                 });
             });
-        });
+        });*/
         //tooltip
         $('.more-info').tooltip();
     </script>
