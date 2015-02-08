@@ -1,0 +1,101 @@
+/*
+	(c) 2015 - Andrea Franchini @Qubex_
+*/
+/* Fonts */
+
+@font-face {
+    font-family: DAI;
+    src: url(../fonts/Inquisition Thin.otf);
+}
+
+$orange: #F79256;
+/*Animation stuff*/
+@keyframes {}
+
+
+/*Fit the whole page*/
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#wrapper {
+	min-height: 100%;
+	position: fixed;
+	padding: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; 
+}
+/*Body*/
+
+header {
+	margin-top: -20px; //maybe only on
+  display: block;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  text-align: right;
+  background-color: $orange;
+  padding-top: 4rem;
+  
+	h1 {
+		font-size: 4rem;
+		font-family: DAI;
+		padding-right: 0.25em;
+	  background: -webkit-linear-gradient(left, #e5e5e5 0%, #ffffff 100%);
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	}
+	ul {
+	  list-style: none;
+	  overflow: hidden;
+	  padding: 0;
+	  float: right;
+
+		li {
+			font-size: 2rem;
+			width: auto;
+			transition: all 0.3s ease;
+			text-align: right;
+			padding-left: 0.5em;
+			padding-right: 0.5em;
+			padding-top: 0.2em;
+			padding-bottom: 0.2em;
+			transition: all 0.3s ease-in-out;	
+			
+			a {
+				color: #494949;
+				font-weight: bold;
+				font-family: DAI, Helvetica, sans-serif;
+				
+				&:hover {
+					color: black;
+					text-decoration: none;
+				}
+			}
+			
+			&:first-child:hover {
+				background-color: rgba(255, 112, 0, 0.7);
+			}
+			&:nth-child(2):hover {
+				background-color: rgba(17, 190, 0, 0.7);
+			}
+			&:nth-child(3):hover {
+				background-color: rgba(0, 91, 226, 0.7);
+			}
+		}
+	}
+}
+
+//MOBILE
+
+@media screen and (max-device-width : 480px) {
+
+	header {
+		width: 100% !important;
+		height: auto !important;
+	}
+	
+}
