@@ -21,19 +21,21 @@ html, body {
   top: 0;
   left: 0;
   bottom: 0;
-  right: 0; }
+  right: 0;
+  font-size: 0; }
 
 /*Body*/
 header {
   top: 0;
-  display: block;
+  display: inline-block;
   position: relative;
   width: 50%;
   height: 100%;
   text-align: right;
   background-color: #F79256;
   padding-top: 4rem;
-  overflow: hidden; }
+  overflow: hidden;
+  font-size: 1rem; }
   header h1 {
     font-size: 2.5rem;
     font-family: DAI;
@@ -66,8 +68,19 @@ header {
         text-decoration: none;
         color: white; }
 
+section {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  font-size: 1rem;
+  padding-top: 4rem;
+  background-color: green; }
+  section .page {
+    display: inline-block; }
+
 @media screen and (max-device-width: 480px) {
   header {
+    display: block;
     width: 100% !important;
     height: auto !important;
     padding: 0;
