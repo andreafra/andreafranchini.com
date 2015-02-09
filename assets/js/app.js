@@ -2,18 +2,17 @@
 
 var app = angular.module('PageLoader', [ ]);
 
-app.controller('PageController', function(){
+	app.controller('PageController', function(){
+		
+		this.tab = 1;
+		this.selectTab = function(setTab) {
+			this.tab = setTab;
+		};
 	
-	this.tab = 1;
-	this.selectTab = function(setTab) {
-		this.tab = setTab;
-	};
-
-	this.isSelected = function(checkTab){
-	  return this.tab === checkTab;
-	};
-	
-});
-
+		this.isSelected = function(checkTab){
+		  return this.tab === checkTab;
+		};
+		
+	});
 
 })();
