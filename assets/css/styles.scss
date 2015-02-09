@@ -8,7 +8,8 @@
     src: url(../fonts/Inquisition Thin.otf);
 }
 
-$orange: #F79256;
+$menu-background-color: #F79256;
+$content-background-color: #eee;
 /*Animation stuff*/
 @keyframes {}
 
@@ -38,15 +39,17 @@ header {
   width: 50%;
   height: 100%;
   text-align: right;
-  background-color: $orange;
+  background-color: $menu-background-color;
   padding-top: 4rem;
   overflow: hidden;
   font-size: 1rem;
+  z-index: 100;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
   
 	h1 {
 		font-size: 2.5rem;
 		font-family: DAI;
-		padding-right: 0.25em;
+		padding-right: 2.5rem;
 	  background: -webkit-linear-gradient(left, #e5e5e5 0%, #ffffff 100%);
 	  -webkit-background-clip: text;
 	  -webkit-text-fill-color: transparent;
@@ -55,6 +58,7 @@ header {
 	  list-style: none;
 	  overflow: hidden;
 	  padding: 0;
+	  padding-right: 2em;
 	  float: right;
 
 		li {
@@ -87,7 +91,8 @@ section {
 	height: 100%;
 	font-size: 1rem;
 	padding-top: 4rem;
-	background-color: green;
+	background-color: $content-background-color;
+	z-index: 99;
 	.page {
 		display: inline-block;
 	}
@@ -115,6 +120,18 @@ section {
 					display: inline-block;
 				}
 			}
+		}
+	}
+	section {
+		display: block;
+		width: 100%;
+		height: 100%;
+		font-size: 1rem;
+		padding-top: 4rem;
+		background-color: $content-background-color;
+		z-index: 99;
+		.page {
+			display: inline-block;
 		}
 	}
 	
