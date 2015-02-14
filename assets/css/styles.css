@@ -14,98 +14,118 @@ html, body {
   height: 100%;
   margin: 0; }
 
-#wrapper {
-  min-height: 100%;
+body {
   position: fixed;
-  padding: 0;
+  min-height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
-  font-size: 0; }
-
-/*Body*/
-header {
-  top: 0;
-  display: inline-block;
-  position: relative;
-  width: 50%;
-  height: 100%;
-  text-align: right;
-  background-color: #F79256;
-  padding-top: 4rem;
-  overflow: hidden;
-  font-size: 1rem;
-  z-index: 100;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); }
-  header h1 {
-    font-size: 2.5rem;
-    font-family: DAI;
-    padding-right: 2.5rem;
-    background: -webkit-linear-gradient(left, #e5e5e5 0%, #ffffff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
-  header nav > ul {
-    list-style: none;
-    overflow: hidden;
-    padding: 0;
-    padding-right: 2em;
-    float: right; }
-    header nav > ul li {
-      font-size: 1.5rem;
-      width: auto;
-      transition: all 0.3s ease;
+  bottom: 0;
+  font-family: sans-serif; }
+  body #wrapper {
+    font-size: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    font: DAI, Helvetica, sans-serif; }
+    body #wrapper header {
+      position: relative;
+      display: inline-block;
+      width: 50%;
+      height: 100%;
+      font-size: 1rem;
+      font-family: DAI;
+      background-color: #F79256;
+      color: white;
       text-align: right;
-      padding-left: 0.5em;
-      padding-right: 0.5em;
-      padding-top: 0.2em;
-      padding-bottom: 0.2em;
-      transition: all 0.3s ease-in-out; }
-      header nav > ul li a {
-        color: #494949;
-        font-weight: bold;
-        text-decoration: none;
-        font-family: DAI, Helvetica, sans-serif;
-        transition: all 0.3s ease-in-out; }
-      header nav > ul li:hover > a {
-        text-decoration: none;
-        color: white; }
-
-section {
-  display: inline-block;
-  width: 50%;
-  height: 100%;
-  font-size: 1rem;
-  padding-top: 4rem;
-  background-color: #eee;
-  z-index: 99; }
-  section .page {
-    display: inline-block; }
+      padding-top: 3em; }
+      body #wrapper header h1 {
+        font-size: 2em;
+        margin: 0;
+        margin-right: 5%; }
+        body #wrapper header h1 a, body #wrapper header h1 a:hover, body #wrapper header h1 a:focus {
+          color: inherit;
+          text-decoration: none; }
+      body #wrapper header nav #nav-toggle {
+        display: none; }
+        body #wrapper header nav #nav-toggle:checked label > img {
+          display: block;
+          height: 1em;
+          width: 2em; }
+      body #wrapper header nav ul {
+        padding: none;
+        margin-right: 5%; }
+        body #wrapper header nav ul li {
+          list-style: none; }
+          body #wrapper header nav ul li a {
+            display: block;
+            font-size: 1.4em;
+            padding: 0.25em;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            color: #fff; }
+            body #wrapper header nav ul li a:hover, body #wrapper header nav ul li a:focus {
+              color: #cccccc;
+              text-decoration: none;
+              margin-right: 0.5em; }
+    body #wrapper section {
+      position: absolute;
+      display: inline-block;
+      width: 50%;
+      height: 100%;
+      font-size: 1rem;
+      font-family: DAI;
+      padding-top: 3em;
+      background-color: #eee; }
+      body #wrapper section .page {
+        margin-left: 5%;
+        transition: all 0.3s cubic-bezier;
+        opacity: 1; }
+        body #wrapper section .page h2 {
+          font-size: 2em;
+          margin: 0; }
+        body #wrapper section .page.ng-hide {
+          opacity: 0; }
 
 @media screen and (max-device-width: 480px) {
   header {
-    display: block;
+    position: relative;
+    display: block !important;
     width: 100% !important;
     height: auto !important;
     padding: 0;
-    text-align: center; }
+    padding-top: 1.5rem !important;
+    text-align: center;
+    overflow: visible; }
     header h1 {
-      padding: 0; }
+      padding: 0;
+      margin: 0 !important;
+      margin-bottom: 1rem !important;
+      text-align: center; }
     header nav {
       text-align: center; }
       header nav ul {
-        float: none;
-        margin-right: auto;
-        margin-left: auto; }
+        padding: 0;
+        margin: 0 !important;
+        float: none; }
         header nav ul li {
           display: inline-block; }
+          header nav ul li a {
+            padding: 0.5em !important; }
 
   section {
-    display: block;
-    width: 100%;
-    height: 100%;
+    position: relative;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
     font-size: 1rem;
-    padding-top: 4rem;
+    padding: 0 !important;
     background-color: #eee;
     z-index: 99; }
+    section .page {
+      margin: 0 !important;
+      padding: 1em;
+      display: block;
+      width: auto; }
  }
