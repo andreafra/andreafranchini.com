@@ -37,9 +37,9 @@
           <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
             <legend>Layout:</legend>
               <input type="radio" name="watchface-layout" id="radio-layout-a" value="A" checked="checked">
-              <label for="radio-layout-a" data-transition="flip">A</label>
+              <label for="radio-layout-a">A</label>
               <input type="radio" name="watchface-layout" id="radio-layout-b" value="B">
-              <label for="radio-layout-b" data-transition="flip">B</label>
+              <label for="radio-layout-b">B</label>
           </fieldset>
         </div>
 
@@ -48,8 +48,9 @@
             <label for="top-left-corner" class="select">Top-left corner:</label>
             <select name="top-left-corner" id="top-left-corner">
               <option value="weather">Weather</option>
-              <option value="moon">Moon Phases</option>
+              <option value="moon" selected>Moon Phases</option>
               <option value="sunset">Sunset Time</option>
+              <option value="none">Nothing</option>
             </select>
           </div>
           <div data-role="fieldcontain">
@@ -57,7 +58,8 @@
             <select name="top-right-corner" id="top-right-corner">
               <option value="weather">Weather</option>
               <option value="moon">Moon Phases</option>
-              <option value="sunset">Sunset Time</option>
+              <option value="sunset" selected>Sunset Time</option>
+              <option value="none">Nothing</option>
             </select>
           </div>
           <div data-role="fieldcontain">
@@ -66,14 +68,16 @@
               <option value="weather">Weather</option>
               <option value="moon">Moon Phases</option>
               <option value="sunset">Sunset Time</option>
+              <option value="none" selected>Nothing</option>
             </select>
           </div>
           <div data-role="fieldcontain">
             <label for="bottom-right-corner" class="select">Bottom-right corner:</label>
             <select name="bottom-right-corner" id="bottom-right-corner">
-              <option value="weather">Weather</option>
+              <option value="weather" selected>Weather</option>
               <option value="moon">Moon Phases</option>
               <option value="sunset">Sunset Time</option>
+              <option value="none">Nothing</option>
             </select>
           </div>
         </div>
@@ -84,8 +88,9 @@
             <label for="bar-left" class="select">Bar left:</label>
             <select name="bar-left" id="bar-left">
               <option value="weather">Weather</option>
-              <option value="moon">Moon Phases</option>
+              <option value="moon" selected>Moon Phases</option>
               <option value="sunset">Sunset Time</option>
+              <option value="none">Nothing</option>
             </select>
           </div>
           <div data-role="fieldcontain">
@@ -93,15 +98,17 @@
             <select name="bottom-left-corner" id="bottom-left-corner">
               <option value="weather">Weather</option>
               <option value="moon">Moon Phases</option>
-              <option value="sunset">Sunset Time</option>
+              <option value="sunset" selected>Sunset Time</option>
+              <option value="none">Nothing</option>
             </select>
           </div>
           <div data-role="fieldcontain">
             <label for="bar-right" class="select">Bar right:</label>
             <select name="bar-right" id="bar-right">
-              <option value="weather">Weather</option>
+              <option value="weather" selected>Weather</option>
               <option value="moon">Moon Phases</option>
               <option value="sunset">Sunset Time</option>
+              <option value="none">Nothing</option>
             </select>
           </div>
         </div>
