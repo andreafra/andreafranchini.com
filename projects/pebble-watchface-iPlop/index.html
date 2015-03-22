@@ -42,17 +42,12 @@
 
         <div id="layout-a">
           <div data-role="fieldcontain">
-            <fieldset data-role="controlgroup">
-              <legend>Top-left corner:</legend>
-              <input type="radio" name="widget" id="radio-weather" class="custom" />
-              <label for="radio-weather">Weather</label>
-
-              <input type="radio" name="widget" id="radio-moon" class="custom" />
-              <label for="radio-moon">Moon Phases</label>
-
-              <input type="radio" name="widget" id="radio-sunset" class="custom" />
-              <label for="radio-sunset">Sunset Time</label>
-            </fieldset>
+            <label for="top-left-corner" class="select">Top-left corner:</label>
+            <select name="top-left-corner" id="top-left-corner">
+              <option value="weather">Weather</option>
+              <option value="moon">Moon Phases</option>
+              <option value="sunset">Sunset Time</option>
+            </select>
           </div>
           <div data-role="fieldcontain">
             <label for="top-right-corner" class="select">Top-right corner:</label>
@@ -62,46 +57,51 @@
               <option value="sunset">Sunset Time</option>
             </select>
           </div>
-        </div>
-        <div id="layout-b">
           <div data-role="fieldcontain">
-            <fieldset data-role="controlgroup">
-              <legend>Choose as many snacks as you'd like:</legend>
-              <input type="radio" name="widget" id="radio-weather" class="custom" />
-              <label for="radio-weather">Cheetos</label>
-
-              <input type="radio" name="widget" id="radio-moon" class="custom" />
-              <label for="radio-moon">Doritos</label>
-
-              <input type="radio" name="widget" id="radio-sunset" class="custom" />
-              <label for="radio-sunset">Fritos</label>
-            </fieldset>
+            <label for="bottom-left-corner" class="select">Bottom-left corner:</label>
+            <select name="bottom-left-corner" id="bottom-left-corner">
+              <option value="weather">Weather</option>
+              <option value="moon">Moon Phases</option>
+              <option value="sunset">Sunset Time</option>
+            </select>
+          </div>
+          <div data-role="fieldcontain">
+            <label for="bottom-right-corner" class="select">Bottom-right corner:</label>
+            <select name="bottom-right-corner" id="bottom-right-corner">
+              <option value="weather">Weather</option>
+              <option value="moon">Moon Phases</option>
+              <option value="sunset">Sunset Time</option>
+            </select>
           </div>
         </div>
 
 
-        <div data-role="fieldcontain">
-          <label for="special-feature">Activate special feature:</label>
-          <select name="special-feature" id="special-feature" data-role="slider">
-            <option value="off">Off</option>
-            <option value="on">On</option>
-          </select>
+        <div id="layout-b">
+          <div data-role="fieldcontain">
+            <label for="bar-left" class="select">Bar left:</label>
+            <select name="bar-left" id="bar-left">
+              <option value="weather">Weather</option>
+              <option value="moon">Moon Phases</option>
+              <option value="sunset">Sunset Time</option>
+            </select>
+          </div>
+          <div data-role="fieldcontain">
+            <label for="bar-center" class="select">Bar center:</label>
+            <select name="bottom-left-corner" id="bottom-left-corner">
+              <option value="weather">Weather</option>
+              <option value="moon">Moon Phases</option>
+              <option value="sunset">Sunset Time</option>
+            </select>
+          </div>
+          <div data-role="fieldcontain">
+            <label for="bar-right" class="select">Bar right:</label>
+            <select name="bar-right" id="bar-right">
+              <option value="weather">Weather</option>
+              <option value="moon">Moon Phases</option>
+              <option value="sunset">Sunset Time</option>
+            </select>
+          </div>
         </div>
-
-        <div data-role="fieldcontain">
-          <fieldset data-role="controlgroup">
-            <legend>Choose as many snacks as you'd like:</legend>
-            <input type="radio" name="widget" id="radio-weather" class="custom" />
-            <label for="radio-weather">Cheetos</label>
-
-            <input type="radio" name="widget" id="radio-moon" class="custom" />
-            <label for="radio-moon">Doritos</label>
-
-            <input type="radio" name="widget" id="radio-sunset" class="custom" />
-            <label for="radio-sunset">Fritos</label>
-          </fieldset>
-        </div>
-      </div>
 
         <div class="ui-body ui-body-b">
           <fieldset class="ui-grid-a">
@@ -113,6 +113,14 @@
       </div>
     </div>
     <script>
+      $('input[name=watchface-layout]').change(function(){
+        alert("changed value!");
+        if($('watchface-layout:checked').val() === "A") {
+
+        }
+      });
+
+
       function saveOptions() {
         var options = {}
         //Add all textual values
