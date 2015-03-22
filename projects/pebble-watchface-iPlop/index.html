@@ -30,8 +30,13 @@
       <div data-role="content">
 
         <div data-role="fieldcontain">
-          <label for="name">Name:</label>
-          <textarea cols="40" rows="8" name="name" id="name"></textarea>
+          <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <legend>Layout:</legend>
+              <input type="radio" name="watchface-layout" id="radio-layout-a" value="A" checked="checked">
+              <label for="radio-choice-c">A</label>
+              <input type="radio" name="watchface-layout" id="radio-layout-b" value="B">
+              <label for="radio-choice-d">B</label>
+          </fieldset>
         </div>
 
         <div data-role="fieldcontain">
