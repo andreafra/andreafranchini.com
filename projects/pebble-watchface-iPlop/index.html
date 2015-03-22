@@ -16,6 +16,7 @@
         border-bottom-right-radius: 0.3em;
         border-top-right-radius: 0.3em;
         background-color: #ff6300;
+        color: #fff;
       }
     </style>
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -30,11 +31,11 @@
       <div data-role="content">
 
         <div data-role="fieldcontain">
-          <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+          <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-grid-a">
             <legend>Layout:</legend>
-              <input type="radio" name="watchface-layout" id="radio-layout-a" value="A" checked="checked">
+              <input type="radio" name="watchface-layout" id="radio-layout-a" value="A" class="ui-block-a" checked="checked">
               <label for="radio-layout-a">A</label>
-              <input type="radio" name="watchface-layout" id="radio-layout-b" value="B">
+              <input type="radio" name="watchface-layout" id="radio-layout-b" value="B" class="ui-block-b">
               <label for="radio-layout-b">B</label>
           </fieldset>
         </div>
