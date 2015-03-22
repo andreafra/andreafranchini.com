@@ -116,10 +116,16 @@
       </div>
     </div>
     <script>
+      $('#layout-b').hide();
+
       $('input[name=watchface-layout]').change(function(){
         alert("changed value!");
         if($('watchface-layout:checked').val() === "A") {
-
+          $('#layout-a').show();
+          $('#layout-b').hide();
+        } else {
+          $('#layout-b').show();
+          $('#layout-a').hide();
         }
       });
 
