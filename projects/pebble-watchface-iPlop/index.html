@@ -120,7 +120,7 @@
 
       $('input[name=watchface-layout]').change(function(){
         alert("changed value!");
-        if($('watchface-layout:checked').val() === "A") {
+        if($(this).val() === "A") {
           $('#layout-a').show();
           $('#layout-b').hide();
         } else {
