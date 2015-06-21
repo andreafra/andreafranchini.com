@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Panton Black";
+    src: url("../fonts/Panton-BlackCaps.otf");
+}
+@font-face {
+    font-family: "Panton Light";
+    src: url("../fonts/Panton-LightCaps.otf");
+}
+@font-face {
+    font-family: "Neue Haas Unica";
+    src: url("../fonts/NeueHaasUnicaPro-Thin.otf");
+}
+* {
+  font-family: "Neue Haas Unica"
+}
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: #1e1c28;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;
+  width: 100%;
+  height: 3em;
+  line-height: 3em;
+  text-align: center;
+}
+
+h1 {
+  color: #666666;
+  font-size: 3em;
+  margin: 0;
+}
