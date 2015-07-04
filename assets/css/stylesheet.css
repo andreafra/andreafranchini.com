@@ -12,6 +12,22 @@
 }
 * {
   font-family: "Neue Haas Unica"
+  text-rendering: optimizeLegibility;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes loading {
+  0% { background-color: #FF403A }
+  16.6% { background-color: #2DD55E }
+  33.2% { background-color: #FFD857 }
+  49.8% { background-color: #18D15C }
+  66.4% { background-color: #1191F1 }
+  83% { background-color: #5959D3 }
+  100% { background-color: #FF403A }
 }
 
 .wrapper {
@@ -32,10 +48,31 @@
   height: 3em;
   line-height: 3em;
   text-align: center;
+
+  animation: 0.5s fadeIn ease-in
 }
 
 h1 {
   color: #666666;
   font-size: 3em;
   margin: 0;
+}
+
+#loading {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background-color: white;
+  animation: 10s loading infinite;
+}
+#loading:after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #1d1d1d;
+  margin-top: 7px;
+  margin-left: 7px;
+  border-radius: 3px;
 }
