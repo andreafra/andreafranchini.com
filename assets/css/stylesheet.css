@@ -11,7 +11,7 @@
     src: url("../fonts/NeueHaasUnicaPro-Thin.otf");
 }
 * {
-  font-family: "Neue Haas Unica"
+  font-family: "Neue Haas Unica", "Helvetica", "Arial", sans-serif;
   text-rendering: optimizeLegibility;
 }
 
