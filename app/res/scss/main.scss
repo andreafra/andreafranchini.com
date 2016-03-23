@@ -1,0 +1,50 @@
+/* Copyright (c) 2016 Andrea Franchini. All right reserved. */
+
+@import "config";
+@import "typography";
+@import "elements";
+
+body {
+  display: block;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+header {
+  position: relative;
+  height: 4em;
+  width: 100%;
+  text-align: center;
+  
+  nav {
+    ul {
+      padding: 0;
+      list-style: none;
+      font-size: 0;
+      li {
+        display: inline-block;
+        font-size: 1rem;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        a {
+          display: block;
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}
+
+section {
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}

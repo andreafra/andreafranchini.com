@@ -1,0 +1,32 @@
+.title {
+  padding: 1em 0 1em 0; 
+}
+
+.btn-nav {
+  $skew: 15deg;
+  background-color: $white;
+  font-weight: bold;
+  border: 0.2em solid transparent;
+  transform: skewX($skew);
+  transition: all ease-in 0.2s;
+  
+  &:hover, &:focus {
+    background-color: $main-color;
+    a {
+      color: white
+    }
+  }
+  &.active, &:active {
+    background-color: $main-color;
+    a {
+      color: white
+    }
+  }
+  a {
+    color: $main-color;
+    padding: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    transform: skewX(-$skew)
+  }
+}
