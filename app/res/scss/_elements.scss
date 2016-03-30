@@ -30,3 +30,231 @@
     transform: skewX(-$skew)
   }
 }
+.card-wrapper {
+  padding: 2em 0 2em 0;
+}
+.card-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 0;  
+  .card, .card-dummy {
+    font-size: 1rem;
+    vertical-align: top;
+    .intro {
+      display: inline-block;
+      width: $intro-width;
+      margin-left: 0;
+      height: 100%;
+      &.intro-reverse {
+        margin-left: -$intro-width;
+      }
+      &.intro-translate {
+        position: absolute;
+        right: 0;
+      }
+      @include transition;
+            
+      .container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        .button-box {
+          align-self: center;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          .symbol {
+            width: $portfolio-symbol;
+            height: $portfolio-symbol;
+            
+            white-space: normal;
+            .row {
+              height: $portfolio-symbol / 3;
+              display: flex;
+              .nospace {
+                font-size: 0;
+                align-self: center;
+                width: 100%;
+                span {
+                  display: inline-block;
+                  position: relative;
+                  width: $portfolio-full / 3;
+                  height: $portfolio-full / 3;
+                  text-align: center;
+                  font-size: 1rem;
+                  font-family: -apple-system;
+                  line-height: 1em;
+                  color: $white;
+                }
+              }
+            }
+          }
+          .arrow {
+            color: white;
+            border-top: 1px solid white;
+            margin-top: 1em;
+            padding-top: 1em;
+          }
+        }
+      }
+    }
+    .content {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      vertical-align: top;
+      color: $white;
+      
+      &#projects {
+        width: 75%;
+      }
+      
+      .text {
+        padding: 3em;
+      }
+      .boxes {
+        display: flex;
+        width: 100%;
+        padding: 0;
+        flex-wrap: wrap;
+        font-size: 0;
+        .box {
+          display: inline-block;
+          height: $card-height / 2;
+          width: $card-height / 2;
+          background-color: red;
+          flex-grow: 1;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+// PHONES
+@media (max-width: $small) {
+  body {
+    position: relative;
+  }
+  .card-dummy, #section_dummy {
+    display: none
+  }
+  .card-container {
+    white-space: normal;
+    .card {
+      display: block;
+      margin: 0 5% 1em 5%;
+      .intro {
+        display: block;
+        height: $card-height / 3;
+        width: 100%;
+        .container {
+          .button-box {
+            .symbol {
+              display: inline-block;
+              width: 5em;
+            }
+            .arrow {
+              display: none;
+              margin: 0;
+              padding: 0;
+            }
+          }  
+        }
+      }
+      .content {
+        display: block;
+        width: 90% !important;
+        margin-left: 5%;
+      }
+    }
+  }
+}
+// TABLETS
+// - portrait
+@media (min-width: $small) and (max-width: $medium) {
+  body {
+    position: relative;
+  }
+  .card-container {
+    white-space: normal;    
+    .card-dummy, #section_dummy {
+      display: none
+    }
+    .card {
+      display: block;
+      margin: 0 10% 1em 10%;
+      .intro {
+        display: block;
+        height: 5em;
+        width: 100%;
+        .container {
+          .button-box {
+            .symbol {
+              display: inline-block;
+              width: 5em;
+            }
+            .arrow {
+              display: none;
+              margin: 0;
+              padding: 0;
+            }
+          }  
+        }
+      }
+      .content {
+        display: block;
+        width: 80% !important;
+        margin-left: 10%;
+      }
+    }
+  }
+}
+
+// - landscape / laptops
+@media (min-width: $medium) and (max-width: $large) {
+  .card-container {
+    white-space: nowrap;
+    .card-dummy {
+      display: inline-block;
+      width: 15%;
+      height: $card-height;
+      vertical-align: top;
+    }
+    .card {
+      display: inline-block;
+      width: 60%;
+      height: $card-height;
+      margin-left: 5%;
+    }
+  }
+}
+// DESKTOP
+@media (min-width: $large) {
+  .card-wrapper {
+    max-width: $large;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+  .card-container {
+    white-space: nowrap;
+    overflow: hidden;
+    
+    .card-dummy {
+      display: inline-block;
+      width: 15%;
+      height: $card-height;
+      vertical-align: top;
+    }
+    .card {
+      display: inline-block;
+      width: 60%;
+      height: $card-height;
+      margin-left: 5%;
+    }
+  }
+}

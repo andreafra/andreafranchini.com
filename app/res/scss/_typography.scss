@@ -1,7 +1,8 @@
 body {
   font-size: 1rem;
-  font-family: sans-serif !important;
+  font-family: $font-stack-sans;
   font-weight: normal;
+  text-rendering: optimizeLegibility
 }
 
 h1 {
@@ -10,7 +11,20 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  white-space: normal;
+  font-size: 1.7em;
+  margin: 0 0 1em 0;
+}
 a {
   text-decoration: none;
   color: $link-color;
+}
+
+p {
+  margin: 0;
+}
+
+p.welcome {
+  font-size: 1.5em;
 }

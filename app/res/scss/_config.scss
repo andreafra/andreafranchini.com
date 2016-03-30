@@ -1,4 +1,32 @@
+// FONT
+//$font-stack: -apple-system, "Helvetica Neue", Arial, sans-serif;
+$font-stack-sans: "fira-sans-2", Roboto, Arial, sans-serif;
+$font-stack-serif: "yrsa", Georgia, serif;
+
+// MEDIA QUERIES
+$small:       		30em; // Portrait mobile to landscape mobile
+$medium:      		50em; // Portrait tablet to landscape tablet
+$large:       		68.750em; // Small desktop to large desktop
+
+// COLORS
 $white: #eee;
 
 $main-color: red;
 $link-color: blue;
+
+$card-height: 20em;
+$intro-width: 10.5em;
+$footer-height: 2em;
+$content-padding: 3em;
+
+$portfolio-symbol: 5em;
+$portfolio-full: 100%;
+
+$section-bio: linear-gradient(to left, #7474BF , #348AC7);
+$section-portfolio: linear-gradient(to left, #E43A15 , #E65245);
+$section-contacts: linear-gradient(to left, #2F7336 , #AA3A38);
+$section-dummy-color: linear-gradient(to left, #c0cdd3 , #91c0d2);
+
+@mixin transition {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}

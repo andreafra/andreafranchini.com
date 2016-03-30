@@ -1,8 +1,5 @@
 /* Copyright (c) 2016 Andrea Franchini. All right reserved. */
-
 @import "config";
-@import "typography";
-@import "elements";
 
 body {
   display: block;
@@ -12,11 +9,16 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+  
+  font-family: $font-stack-sans;
 }
+
+@import "typography";
+@import "elements";
+@import "shadows";
 
 header {
   position: relative;
-  height: 4em;
   width: 100%;
   text-align: center;
   
@@ -47,4 +49,25 @@ footer {
   position: absolute;
   width: 100%;
   bottom: 0;
+}
+
+.hidden {
+  display: none !important
+}
+
+.scrolled-left {
+  margin-left: 0 !important
+}
+
+#section_dummy {
+  background: $section-dummy-color;
+}
+#section_about {
+  background: $section-bio;
+}
+#section_portfolio {
+  background: $section-portfolio;
+}
+#section_contacts {
+  background: $section-contacts;
 }

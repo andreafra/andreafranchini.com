@@ -8,7 +8,11 @@
 
     <!-- CSS -->
     <link href="app/res/css/main.css" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<!--     <link href='https://fonts.googleapis.com/css?family=Open+Sans:800,400|Gentium+Book+Basic' rel='stylesheet' type='text/css'> -->
+    <script src="https://use.typekit.net/ghz5hpv.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,34 +22,158 @@
   </head>
   <body>
     <header>
-      <h1 class="title">Titolo</h1>
-      <nav id="menu">
+      <h1 class="title">Andrea Franchini</h1>
+      <nav id="menu" class="hidden">
         <ul>
           <li class="btn-nav active">
-            <a href="#" data-text="Link 1">Link 1</a>
+            <a href="#" data-text="Link 1">About</a>
           </li>
           <li class="btn-nav">
-            <a href="#" data-text="Link 2">Link 2</a>
+            <a href="#" data-text="Link 2">Works</a>
           </li>
           <li class="btn-nav">
-            <a href="#" data-text="Link 3">Link 3</a>
+            <a href="#" data-text="Link 3">Contacts</a>
           </li>
         </ul>
       </nav>
     </header>
-    <section id="section_bio">
-      
-    </section>
-    <section id="section_portfolio">
-      
-    </section>
-    <section id="section_contacts">
-      
-    </section>
+    <div class="card-wrapper">
+      <div class="card-container" id="section_container">
+        <div class="card-dummy" id="section_dummy"></div>
+        <!-- Bio -->
+        <section class="card" id="section_about">
+          <div class="content">
+            <div class="text">
+              <h2>Hello!</h2>
+              <p class="welcome">I make stuff.</p>
+            </div>
+          </div>
+          <div class="intro intro-reverse hidden" id="about_container">
+            <a class="container" href="#about" id="about_link">
+              <div class="button-box">
+                <div class="symbol">
+                  <div class="row">
+                    <div class="nospace">
+                      <span>A</span>
+                      <span>B</span>
+                      <span>O</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="nospace">
+                      <span>U</span>
+                      <span>T</span>
+                      <span>•</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="nospace">
+                      <span>•</span>
+                      <span>M</span>
+                      <span>E</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="arrow">
+                  <i class="material-icons" id="about_icon">chevron_left</i>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+        <!-- Portfolio -->
+        <section class="card" id="section_portfolio">
+          <div class="intro" id="portfolio_container">
+            <a class="container" href="#portfolio" id="portfolio_link">
+              <div class="button-box">
+                <div class="symbol">
+                  <div class="row">
+                    <div class="nospace">
+                      <span>P</span>
+                      <span>O</span>
+                      <span>R</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="nospace">
+                      <span>T</span>
+                      <span>F</span>
+                      <span>O</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="nospace">
+                      <span>L</span>
+                      <span>I</span>
+                      <span>O</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="arrow">
+                  <i class="material-icons" id="portfolio_icon">chevron_right</i>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="content" id="projects">
+            <div class="boxes">
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>
+          </div>
+        </section>
+        <!-- Contacts -->
+        <section class="card" id="section_contacts">
+          <div class="intro">
+            <a class="container" href="#contacts" id="contacts_link">
+              <div class="button-box">
+                <div class="symbol">
+                  <div class="row">
+                    <div class="nospace">
+                      <span>C</span>
+                      <span>O</span>
+                      <span>N</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="nospace">
+                      <span>T</span>
+                      <span>A</span>
+                      <span>C</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="nospace">
+                      <span>T</span>
+                      <span>S</span>
+                      <span>•</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="arrow">
+                  <i class="material-icons" id="contacts_icon">chevron_right</i>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="content">
+            <div class="text">
+              <h2>Drop me a line!</h2>
+              <p>andrea [dot] franchini [at] outlook [dot] com</p>
+            </div>
+          </div>
+        </section>
+      </div>
     <footer>
       © Copyright 2016 Andrea Franchini. All right reserved.
     </footer>
-    <!-- JS Code loaded at the end of the page for improved performances -->
-    <script src="main.js"></script>
+    <!-- JS Code loaded at the end of the page for improved performance -->
+    <script src="app/res/js/main.js"></script>
+    <script src="app/lib/js/hammer-time.min.js"></script>
+    <script src="app/lib/js/TweenMax.min.js"></script>
+    <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>-->
   </body>
 </html>
