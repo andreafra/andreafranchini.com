@@ -13,10 +13,6 @@ body {
   font-family: $font-stack-sans;
 }
 
-@import "typography";
-@import "elements";
-@import "shadows";
-
 header {
   position: relative;
   width: 100%;
@@ -50,6 +46,10 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
+@import "typography";
+@import "elements";
+@import "shadows";
 
 .hidden {
   display: none !important

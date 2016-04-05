@@ -31,7 +31,7 @@
   }
 }
 .card-wrapper {
-  padding: 2em 0 2em 0;
+  padding: 0;
 }
 .card-container {
   position: relative;
@@ -42,14 +42,13 @@
   .card, .card-dummy {
     font-size: 1rem;
     vertical-align: top;
+    border-radius: $card-radius;
     .intro {
       display: inline-block;
       width: $intro-width;
       margin-left: 0;
       height: 100%;
-      &.intro-reverse {
-        margin-left: -$intro-width;
-      }
+
       &.intro-translate {
         position: absolute;
         right: 0;
@@ -84,7 +83,8 @@
                   height: $portfolio-full / 3;
                   text-align: center;
                   font-size: 1rem;
-                  font-family: -apple-system;
+                  font-family: $font-stack-sans;
+                  font-weight: 600;
                   line-height: 1em;
                   color: $white;
                 }
@@ -107,13 +107,7 @@
       vertical-align: top;
       color: $white;
       
-      &#projects {
-        width: 75%;
-      }
-      
-      .text {
-        padding: 3em;
-      }
+     
       .boxes {
         display: flex;
         width: 100%;
@@ -124,7 +118,7 @@
           display: inline-block;
           height: $card-height / 2;
           width: $card-height / 2;
-          background-color: red;
+          background: linear-gradient(45deg, #d2e9e5 , #a5b496);
           flex-grow: 1;
           font-size: 1rem;
         }
@@ -165,10 +159,19 @@
       }
       .content {
         display: block;
-        width: 90% !important;
-        margin-left: 5%;
+        width: 100%;
+        .text {
+          padding: 2em
+        }
+        .boxes {
+          width: 90%;
+          margin-left: 5%
+        }
       }
     }
+  }
+  footer {
+    position: relative;
   }
 }
 // TABLETS
@@ -205,15 +208,27 @@
       }
       .content {
         display: block;
-        width: 80% !important;
-        margin-left: 10%;
+        width: 100%;
+        .text {
+          padding: 2em;
+        }
+        .boxes {
+          width: 80%;
+          margin-left: 10%
+        }
       }
     }
+  }
+  footer {
+    position: relative;
   }
 }
 
 // - landscape / laptops
 @media (min-width: $medium) and (max-width: $large) {
+  .card-wrapper {
+    padding: 2em 0 2em 0
+  }
   .card-container {
     white-space: nowrap;
     .card-dummy {
@@ -227,12 +242,22 @@
       width: 60%;
       height: $card-height;
       margin-left: 5%;
+      
+      .content {
+
+        width: $content-width;
+        
+        .text {
+          padding: 3em;
+        }
+      }
     }
   }
 }
 // DESKTOP
 @media (min-width: $large) {
   .card-wrapper {
+    padding: 2em 0 2em 0;
     max-width: $large;
     display: block;
     margin-left: auto;
@@ -255,6 +280,15 @@
       width: 60%;
       height: $card-height;
       margin-left: 5%;
+      
+      .content {
+
+        width: $content-width;
+        
+        .text {
+          padding: 3em;
+        }
+      }
     }
   }
 }
