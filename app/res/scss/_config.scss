@@ -25,10 +25,10 @@ $card-radius: 4px;
 $portfolio-symbol: 5em;
 $portfolio-full: 100%;
 
-$section-bio: linear-gradient(to left, #7474BF , #348AC7);
-$section-portfolio: linear-gradient(to left, #E43A15 , #E65245);
-$section-contacts: linear-gradient(to left, #EDDE5D , #F09819);
-$section-dummy-color: linear-gradient(to left, #c0cdd3 , #91c0d2);
+$section-bio: linear-gradient(to left top, #7474BF , #348AC7);
+$section-portfolio: linear-gradient(to left bottom, #E43A15 , #E65245);
+$section-contacts: linear-gradient(to left top, #ffbc1b , #e16809);
+$section-dummy-color: linear-gradient(to left bottom, #c0cdd3 , #91c0d2);
 
 @mixin transition {
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
