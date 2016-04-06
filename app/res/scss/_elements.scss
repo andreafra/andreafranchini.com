@@ -136,6 +136,7 @@
   }
   .card-container {
     white-space: normal;
+    
     .card {
       display: block;
       margin: 0 5% 1em 5%;
@@ -143,7 +144,7 @@
         display: block;
         height: $card-height / 3;
         width: 100%;
-        .container {
+        .container {          
           .button-box {
             .symbol {
               display: inline-block;
@@ -168,6 +169,11 @@
           margin-left: 5%
         }
       }
+      .intro + .content {
+        .text {
+          padding-top: 0;
+        }
+      }
     }
   }
   footer {
@@ -190,9 +196,10 @@
       margin: 0 10% 1em 10%;
       .intro {
         display: block;
-        height: 5em;
+        //height: 5em;
         width: 100%;
         .container {
+          padding: 1em 0 1em 0;
           .button-box {
             .symbol {
               display: inline-block;
