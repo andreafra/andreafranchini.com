@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
+  var loader = document.getElementById("loading_page");
+  loader.classList.add("hidden-loader");
+  
+  var transitionEvent = whichTransitionEvent();
+  transitionEvent && loader.addEventListener(transitionEvent, function() {
+    loader.classList.add("hidden");
+    console.log('Transition complete!  This is the callback, no library needed!');
+  })
   
   var sections = document.getElementById("section_container").children;
   var sectionsPosition = ["0%", "-100%", "-200%"];
@@ -95,3 +103,20 @@ document.addEventListener("DOMContentLoaded", function() {
   })
 })
 
+/* From Modernizr */
+function whichTransitionEvent(){
+    var t;
+    var el = document.createElement('fakeelement');
+    var transitions = {
+      'animation':'animationend',
+      'OAnimation':'oAnimationEnd',
+      'MozAnimation':'animationend',
+      'WebkitAnimation':'webkitAnimationEnd'
+    }
+
+    for(t in transitions){
+        if( el.style[t] !== undefined ){
+            return transitions[t];
+        }
+    }
+}

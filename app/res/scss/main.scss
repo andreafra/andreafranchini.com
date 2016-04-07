@@ -45,11 +45,17 @@ footer {
   position: absolute;
   width: 100%;
   bottom: 0;
+  text-align: center;
+  color: $gray;
+  font-size: 0.7rem;
+  height: 2em;
+  line-height: 2em;
 }
 
 @import "typography";
 @import "elements";
 @import "shadows";
+@import "loader";
 
 .hidden {
   display: none !important

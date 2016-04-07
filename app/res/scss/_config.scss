@@ -10,9 +10,10 @@ $large:       		68.750em; // Small desktop to large desktop
 
 // COLORS
 $white: #eee;
+$gray: #9E9E9E;
 
-$main-color: red;
-$link-color: blue;
+$main-color: #F44336;
+$link-color: #2979FF;
 
 $card-height: 20em;
 $intro-width: 25%;
@@ -27,7 +28,7 @@ $portfolio-full: 100%;
 
 $section-bio: linear-gradient(to left top, #7474BF , #348AC7);
 $section-portfolio: linear-gradient(to left bottom, #E43A15 , #E65245);
-$section-contacts: linear-gradient(to left top, #ffbc1b , #e16809);
+$section-contacts: linear-gradient(to left top, #7CB342 , #00C853);
 $section-dummy-color: linear-gradient(to left bottom, #c0cdd3 , #91c0d2);
 
 @mixin transition {
