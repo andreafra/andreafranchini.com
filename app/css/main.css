@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'DIN 1451';
+  src: url("../fonts/din1451alt G.woff2") format("woff2"), url("../fonts/din1451alt G.woff") format("woff"), url("../fonts/din1451alt G.ttf") format("truetype"); }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "DIN 1451", "Space Mono", monospace;
+  text-rendering: optimizeLegibility;
+  font-size: 1rem; }
+
+.wrapper {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white; }
+
+.card-container {
+  height: 25rem;
+  width: 25rem;
+  margin: auto;
+  align-self: center;
+  font-size: 1.4rem; }
+  .card-container .card-bg {
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+    transform-style: flat;
+    transform-origin: 50% 50%;
+    transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28); }
+  .card-container .card-content {
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+    padding: 3rem;
+    color: white; }
+    .card-container .card-content h1 {
+      margin: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 1.4em;
+      letter-spacing: 0.1em;
+      line-height: 1em; }
+    .card-container .card-content p {
+      margin: 1em 0 0 0;
+      text-align: center;
+      font-size: 1em;
+      line-height: 1.5em; }
+    .card-container .card-content .new-line {
+      display: block; }
+
+footer {
+  display: flex;
+  height: 4em; }
+  footer .footer-label {
+    margin: auto;
+    align-self: center;
+    color: #cccccc; }
+
+@media only screen and (max-device-width: 736px) and (orientation: portrait) {
+  .card-container {
+    height: 80vw;
+    width: 80vw; }
+    .card-container .card-bg {
+      height: 80vw;
+      width: 80vw; }
+    .card-container .card-content {
+      height: 80vw;
+      width: 80vw;
+      padding: 10vw; } }
+
+@media only screen and (max-device-width: 736px) and (orientation: landscape) {
+  .card-container {
+    height: 80vh;
+    width: 80vh; }
+    .card-container .card-bg {
+      height: 80vh;
+      width: 80vh; }
+    .card-container .card-content {
+      height: 80vh;
+      width: 80vh;
+      padding: 10vh; } }
