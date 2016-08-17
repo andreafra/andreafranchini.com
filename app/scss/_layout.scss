@@ -51,6 +51,7 @@ $padding-landscape: 10vh;
     height: $card-size;
     padding: $padding;
     color: white;
+    font-size: 2.5rem;
 
     h1 {
       margin: 0;
@@ -97,6 +98,7 @@ footer {
       height: $size-portrait;
       width: $size-portrait;
       padding: $padding-portrait;
+      font-size: 8vw;
     }
   }
 }
