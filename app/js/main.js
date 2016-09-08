@@ -1,4 +1,13 @@
 (function() {
+	
+	var wrapper = document.querySelector(".wrapper");
+	var card_top = document.querySelector("#bg-top");
+	var card_back = document.querySelector("#bg-back");
+	var card_content = document.querySelector(".card-content");
+  var centerX = wrapper.clientWidth / 2;
+	var centerY = wrapper.clientHeight / 2;
+	var maxAngle = 15;
+	
   /////////////////
   // SVG Drawing //
   /////////////////
@@ -79,6 +88,9 @@
                   points: pts_7,
                   fill: colorsLight[6]
                 });
+                // Additional actions
+                card_content.classList.remove("hidden");
+                card_content.classList.add("display");
                 rotateCard();
               });
             });
@@ -92,13 +104,6 @@
   // Tilt div animation //
   ////////////////////////
   function rotateCard() {
-    var wrapper = document.querySelector(".wrapper");
-    var card_top = document.querySelector("#bg-top");
-    var card_back = document.querySelector("#bg-back");
-    var card_content = document.querySelector(".card-content");
-    var centerX = wrapper.clientWidth / 2;
-    var centerY = wrapper.clientHeight / 2;
-    var maxAngle = 15;
 
     document.addEventListener("mousemove", function(e) {
       var x = detectPosX(e.clientX), y = detectPosY(e.clientY);

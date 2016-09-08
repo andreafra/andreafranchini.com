@@ -2,6 +2,21 @@
   font-family: 'DIN 1451';
   src: url("../fonts/din1451alt G.woff2") format("woff2"), url("../fonts/din1451alt G.woff") format("woff"), url("../fonts/din1451alt G.ttf") format("truetype"); }
 
+@keyframes displayContent {
+  from {
+    opacity: 0;
+    transform: scale(0); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+
+.hidden {
+  display: none;
+  opacity: 0; }
+
+.display {
+  animation: 1s displayContent; }
+
 * {
   box-sizing: border-box; }
 
