@@ -1,0 +1,30 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  color: $font-color;
+}
+.home {
+  color: $font-color;
+  a {
+    color: white;
+    text-decoration: none;
+    &:active, &:hover, &:focus {
+      color: white;
+    }
+  }
+  p {
+    margin: 1em 0;
+  }
+}
+.portfolio {
+  * {
+    color: $font-color-accent;
+  }
+  a {
+    color: $font-color-accent;
+    text-decoration: none;
+    &:active, &:hover, &:focus {
+      color: $font-color-accent;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@import 'variables';
+@import 'typography';
+
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background: $background;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.page {
+  font-size: $font-size;
+  padding: 2em;
+  width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+}
+.home {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    border-bottom: 1px solid $font-color;
+
+    .link {
+      font-size: $font-size;
+      display: inline-block;
+      
+      a {
+        display: block;
+        padding: 1em;
+      }
+    }
+    .links {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+  }
+
+  .content {
+    font-size: $font-size;
+    padding: 1em;
+  }
+}
+
+.portfolio {
+  &__title {
+    font-size: $font-size * 2;
+  }
+}
+@media screen and (max-width: 599px) {
+  .page {
+    font-size: $font-size;
+    width: 100%;
+    height: 100%;
+    padding: 0.5em;
+  }
+  .home {
+    .header {
+      display: block;
+      .link {
+        a {
+          padding: 0.5em;
+        }
+      }
+      .links {
+        display: block;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+    .content {
+      font-size: $font-size;
+      padding: 0.5em;
+    }
+  }
+}
