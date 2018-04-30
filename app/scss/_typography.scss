@@ -2,6 +2,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
   color: $font-color;
+  text-rendering: optimizeLegibility;
 }
 .home {
   color: $font-color;
@@ -14,6 +15,8 @@ h1, h2, h3, h4, h5, h6, p {
   }
   p {
     margin: 1em 0;
+    font-family: $font-serif;
+    font-size: $font-size * 1.5;
   }
 }
 .portfolio {

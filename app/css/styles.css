@@ -1,7 +1,8 @@
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
-  color: #ffffff; }
+  color: #ffffff;
+  text-rendering: optimizeLegibility; }
 
 .home {
   color: #ffffff; }
@@ -11,7 +12,9 @@ h1, h2, h3, h4, h5, h6, p {
     .home a:active, .home a:hover, .home a:focus {
       color: white; }
   .home p {
-    margin: 1em 0; }
+    margin: 1em 0;
+    font-family: "Crimson Text", serif;
+    font-size: 1.8rem; }
 
 .portfolio * {
   color: #20173C; }
