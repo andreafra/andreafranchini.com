@@ -1,5 +1,10 @@
-document.addEventListener("onload", () => initTwo())
+var elem = document.getElementById('canvas')
+var params = { width: elem.clientWidth, height: elem.clientHeight }
+var two = new Two(params).appendTo(elem)
 
-initTwo = () => {
+// create here elements
 
-}
+
+two.bind('update', (frameCount) => {
+  // called every frame
+}).play()

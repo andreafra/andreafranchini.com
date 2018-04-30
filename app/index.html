@@ -7,9 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
   </head>
   <body>
-    <div class="background"></div>
-    <div class="wrapper">
-      <div class="page home">
+    <section class="page home" id="home">
+      <div class="box">
       <!-- Home -->
         <header class="header">
           <h1 class="link">
@@ -26,20 +25,23 @@
             </ul>
           </nav>
         </header>
-        <section class="content">
+        <div class="content">
           <p>Hi there!</p>
           <p>I'm a CS Student @ Politecnico di Milano.</p>
           <p>I really like progromming and designing stuff,
             searching for the perfect compromise between the two.</p>
           <p>Game Design is another thing I love a lot, and I try
             experimenting with it whenever I find the occasion!</p>
-        </section>
+          </div>
       </div>
-      <div class="page portfolio" id="portfolio">
+    </section>
+    <section class="page portfolio" id="portfolio">
+      <div id="canvas"></div>
+      <div class="box" >
       <!-- Portfolio -->
         <h2 class="portfolio__title">Portfolio</h2>
       </div>
-    </div>
+    </section>
 
     <!-- build:js js/main.min.js -->
     <script src="js/lib/two.js"></script>

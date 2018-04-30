@@ -34,64 +34,68 @@ html, body {
   padding: 0;
   height: 100%; }
 
-.background {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  background: linear-gradient(-135deg, #5F5769 0%, #20173C 100%), #323033; }
-
-.wrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 2; }
-
 .page {
+  height: 100vh;
+  width: 100%;
+  position: relative; }
+
+.box {
   font-size: 1.2rem;
   padding: 2em;
   width: 40em;
   margin-left: auto;
   margin-right: auto;
-  height: 100vh; }
+  min-height: 15em; }
 
-.home .header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1em;
-  border-bottom: 1px solid #ffffff; }
-  .home .header .link {
+.home {
+  background: linear-gradient(-135deg, #5F5769 0%, #20173C 100%), #323033;
+  background-attachment: fixed; }
+  .home .box .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #ffffff; }
+    .home .box .header .link {
+      font-size: 1.2rem;
+      display: inline-block; }
+      .home .box .header .link a {
+        display: block;
+        padding: 1em; }
+    .home .box .header .links {
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+  .home .box .content {
     font-size: 1.2rem;
-    display: inline-block; }
-    .home .header .link a {
-      display: block;
-      padding: 1em; }
-  .home .header .links {
-    padding: 0;
-    margin: 0;
-    list-style: none; }
+    padding: 1em; }
 
-.home .content {
-  font-size: 1.2rem;
-  padding: 1em; }
+.portfolio #canvas {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; }
 
-.portfolio__title {
+.portfolio .box__title {
   font-size: 2.4rem; }
 
 @media screen and (max-width: 599px) {
-  .page {
+  .box {
     font-size: 1.2rem;
     width: 100%;
     height: 100%;
     padding: 0.5em; }
-  .home .header {
+    .box p {
+      font-size: 1.2rem; }
+  .home .box .header {
     display: block; }
-    .home .header .link a {
+    .home .box .header .link a {
       padding: 0.5em; }
-    .home .header .links {
+    .home .box .header .links {
       display: block;
-      overflow-x: scroll;
+      overflow-x: auto;
       -webkit-overflow-scrolling: touch; }
-  .home .content {
+  .home .box .content {
     font-size: 1.2rem;
     padding: 0.5em; } }
