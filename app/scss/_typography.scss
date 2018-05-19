@@ -1,14 +1,14 @@
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, span, a {
   margin: 0;
   padding: 0;
   color: $font-color;
   text-rendering: optimizeLegibility;
 }
-.home {
-  color: $font-color;
+.bio {
   a {
     color: white;
     text-decoration: none;
+    font-family: $font-serif;
     &:active, &:hover, &:focus {
       color: white;
     }
@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6, p {
   p {
     margin: 1em 0;
     font-family: $font-serif;
-    font-size: $font-size * 1.5;
+    font-size: $font-size;
   }
 }
 .portfolio {
