@@ -1,84 +1,91 @@
-var gulp = require('gulp');
+const { src, dest, series, parallel, watch } = require("gulp")
+const stylus = require("gulp-stylus")
+const uglyfy = require("gulp-uglyfly")
+const pug = require("gulp-pug")
+const clean = require("gulp-clean-dest")
+const bs = require("browser-sync").create()
 
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
-var useref = require('gulp-useref');
-var uglify = require('gulp-uglify');
-var gulpIf = require('gulp-if');
-var cssnano = require('gulp-cssnano');
-var imagemin = require('gulp-imagemin');
-var cache = require('gulp-cache');
-var del = require('del');
-var runSequence = require('run-sequence');
+runClean = (cb) => {
+  clean("build")
+  cb()
+}
 
-gulp.task('useref', function(){
-  return gulp.src('app/*.html')
-    .pipe(useref())
-    // Minifies only if it's a JavaScript file
-    .pipe(gulpIf('*.js', uglify()))
-    .pipe(gulp.dest('dist'))
-});
-
-gulp.task('sass', function() {
-  return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss
-    .pipe(sass())
-    .pipe(gulp.dest('app/css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
-});
-
-gulp.task('browserSync', function() {
-  browserSync.init({
+bsInit = (cb) => {
+  bs.init({
     server: {
-      baseDir: './app'
-    },
-  });
-});
+      baseDir: "./build"
+    }
+  })
+  cb()
+}
 
-gulp.task('useref', function(){
-  return gulp.src('app/*.html')
-    .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
-    // Minifies only if it's a CSS file
-    .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist'))
-});
+bsReload = (cb) => {
+  bs.reload()
+  cb()
+}
 
-gulp.task('images', function(){
-  return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
-  // Caching images that ran through imagemin
-  .pipe(cache(imagemin({
-      interlaced: true
-    })))
-  .pipe(gulp.dest('dist/images'))
-});
+runStylus = () => {
+  return src("src/stylus/**/*.styl")
+    .pipe(stylus())
+    .pipe(dest("build/css/"))
+}
 
-gulp.task('fonts', function() {
-  return gulp.src('app/fonts/**/*')
-  .pipe(gulp.dest('dist/fonts'))
-})
+runStylusAndCompress = () => {
+  return src("src/stylus/**/*.styl")
+    .pipe(stylus({compress: true}))
+    .pipe(dest("build/css/"))
+}
 
-gulp.task('clean:dist', function() {
-  return del.sync('dist');
-});
+runUglyfy = () => {
+  return src("src/js/**/*.js")
+    .pipe(uglyfy())
+    .pipe(dest("build/js/"))
+}
 
-gulp.task('build', function (callback) {
-  runSequence('clean:dist', 
-    ['sass', 'useref', 'images', 'fonts'],
-    callback
+runPug = () => {
+  return src("src/pug/**/*.pug")
+    .pipe(pug())
+    .pipe(dest("build/"))
+}
+
+runImages = () => {
+  return src("src/assets/**/*")
+    .pipe(dest("build/assets/"))
+}
+
+watch("src/**/*", series(
+    parallel(
+      runStylus,
+      runUglyfy,
+      runPug,
+      runImages
+    )
+  ),
+  bsReload
+)
+
+build = (cb) => {
+  parallel(
+    runStylus,
+    runUglyfy,
+    runPug,
+    runImages
   )
-});
+  cb()
+}
 
-gulp.task('watch', ['browserSync', 'sass'], function (){
-  gulp.watch('app/scss/**/*.scss', ['sass']); 
-  // Reloads the browser whenever HTML or JS files change
-  gulp.watch('app/*.html', browserSync.reload); 
-  gulp.watch('app/js/**/*.js', browserSync.reload); 
-});
-
-gulp.task('default', function (callback) {
-  runSequence(['sass','browserSync', 'watch'],
-    callback
+if (process.env.NODE_ENV === "production") {
+  exports.build = series(
+    runClean,
+    parallel(
+      runStylusAndCompress,
+      runUglyfy,
+      runPug,
+      runImages
+    )
   )
-})
+} else {
+  exports.build = build
+}
+
+exports.default = series(bsInit, build)

@@ -1,7 +1,6 @@
 qub3x.github.io
 ===============
 
-My personal website and portfolio, at the moment under construction. 
-Reach me on [twitter](http://twitter.com/Qubex_)
+My personal website and portfolio, ~~at the moment~~ always under construction.
 
-***© 2014 Andrea Franchini (AKA "Qubex_" or "QUB3X")***
+**(c) 2018 Andrea Franchini**
