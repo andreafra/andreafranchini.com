@@ -1,3 +1,176 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: "Charter";
+  font-weight: normal;
+  src: url("../assets/fonts/charter/regular.eot"), url("../assets/fonts/charter/regular.ttf") format("truetype"), url("../assets/fonts/charter/regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Charter";
+  font-weight: bold;
+  src: url("../assets/fonts/charter/bold.eot"), url("../assets/fonts/charter/bold.ttf") format("truetype"), url("../assets/fonts/charter/bold.woff");
+}
 * {
-  background: #f00;
+  box-sizing: border-box;
+}
+html,
+body {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #fffaf2;
+  font: 1.2rem Charter, serif;
+  color: #063d33;
+}
+.wrap {
+  display: block;
+  margin: auto;
+  max-width: 820px;
+  padding: 0 0.6rem;
+}
+header {
+  border-bottom: 1px solid #063d33;
+  margin-bottom: 0.3em;
+}
+header h1 {
+  display: block;
+  font-weight: bold;
+}
+header h1 a {
+  display: block;
+  padding: 0.3em 0;
+  text-decoration: none;
+  color: #063d33;
+}
+section {
+  padding-top: 2em;
+}
+section h2 {
+  font-weight: bold;
+}
+section p {
+  display: block;
+  margin: 0.5em 0;
+  font-size: 0.8em;
 }

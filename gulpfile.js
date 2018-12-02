@@ -6,7 +6,7 @@ const clean = require("gulp-clean-dest")
 const bs = require("browser-sync").create()
 
 runClean = (cb) => {
-  clean("build")
+  clean("build/")
   cb()
 }
 
@@ -43,36 +43,43 @@ runUglyfy = () => {
 }
 
 runPug = () => {
-  return src("src/pug/**/*.pug")
+  return src("src/pug/pages/*.pug")
     .pipe(pug())
     .pipe(dest("build/"))
 }
 
 runImages = () => {
-  return src("src/assets/**/*")
-    .pipe(dest("build/assets/"))
+  return src("src/assets/images/**/*")
+    .pipe(dest("build/assets/images"))
+}
+
+runFonts = () => {
+  return src("src/assets/fonts/**/*")
+    .pipe(dest("build/assets/fonts"))
 }
 
 watch("src/**/*", series(
-    parallel(
-      runStylus,
-      runUglyfy,
-      runPug,
-      runImages
-    )
-  ),
-  bsReload
+    runStylus,
+    runUglyfy,
+    runPug,
+    runImages,
+    runFonts,
+    bsReload
+  )
 )
 
-build = (cb) => {
+const build = series(
+  runClean,
   parallel(
     runStylus,
     runUglyfy,
     runPug,
-    runImages
-  )
-  cb()
-}
+    runImages,
+    runFonts
+  ),
+)
+
+exports.build = build
 
 if (process.env.NODE_ENV === "production") {
   exports.build = series(
@@ -81,11 +88,11 @@ if (process.env.NODE_ENV === "production") {
       runStylusAndCompress,
       runUglyfy,
       runPug,
-      runImages
+      runImages,
+      runFonts
     )
   )
-} else {
-  exports.build = build
 }
 
-exports.default = series(bsInit, build)
+exports.default = series(build, bsInit)
+exports.clean = runClean

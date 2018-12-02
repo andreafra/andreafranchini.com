@@ -1,3 +1,51 @@
-* {
-    background: red;
-}
+@require "reset"
+@require "fonts"
+
+font-stack = Charter, serif
+font-size = 1.2rem
+
+color-bg = #fffaf2
+color-text = #063d33
+
+orange = #f4ad42
+green = #6ad676
+red = #ce406a
+
+max-w = 820px
+
+header-padding = 0.3em
+
+*
+    box-sizing border-box
+html,
+body
+    display block
+    height 100%
+    width 100%
+    background color-bg
+    font font-size font-stack
+    color color-text
+.wrap
+    display block
+    margin auto
+    max-width max-w
+    padding 0 (font-size/2)
+header
+    border-bottom 1px solid color-text
+    margin-bottom header-padding
+    h1
+        display block
+        font-weight bold
+        a
+            display block
+            padding header-padding 0
+            text-decoration none
+            color color-text
+section
+    padding-top 2em
+    h2
+        font-weight bold
+    p
+        display block
+        margin 0.5em 0
+        font-size 0.8em
