@@ -2,12 +2,12 @@ const { src, dest, series, parallel, watch } = require("gulp")
 const stylus = require("gulp-stylus")
 const uglyfy = require("gulp-uglyfly")
 const pug = require("gulp-pug")
-const clean = require("gulp-clean-dest")
+const clean = require("gulp-clean")
 const bs = require("browser-sync").create()
 
 runClean = (cb) => {
-  clean("build/")
-  cb()
+  return src("build/", {read: false})
+    .pipe(clean())
 }
 
 bsInit = (cb) => {

@@ -2,12 +2,32 @@
 extends ../includes/layout.pug
 
 block content
-    section.bio
+    .s.bio
         h2 Bio
-        p I have a keen interest in Game Design and Game Development, but I also have a good set of Web Design skills.
-            br 
-            | I’m currently studying Computer Engineering at Politecnico di Milano, Italy.
-    section.portfolio
+        p 
+            | I have a keen interest in 
+            span.t-green Game Design
+            |  and Development, but for quite some time I fiddled and tinkered with 
+            span.t-yellow JavaScript
+            |  and plenty of  
+            span.t-blue Web Design
+            |  related stuff, too. I enjoy creating useful things, and I care to make them look good.
+        p
+            | I’m currently enrolled at 
+            a(href="https://www.polimi.it") Politecnico di Milano
+            | , Italy, as a 
+            span.t-red Computer Engineering
+            |  student.
+    .s.portfolio
         h2 Portfolio
-    section.contact
+        p I keep a list of the projects I worked on in the 
+            a(href="/portfolio") portfolio page
+            |, which I recommend you to check out!
+
+    .s.contact
         h2 Contact
+        p If you want to ask me anything, or just say hi, feel free to drop me a line at:
+        span.email andrea (at) andreafranchini (dot) me
+        p You can also visit my 
+            a(href="https://github.com/qub3x") GitHub profile
+            |!

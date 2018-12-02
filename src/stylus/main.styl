@@ -2,25 +2,48 @@
 @require "fonts"
 
 font-stack = Charter, serif
-font-size = 1.2rem
+font-size = 1.1rem
 
 color-bg = #fffaf2
 color-text = #063d33
 
-orange = #f4ad42
-green = #6ad676
-red = #ce406a
+colors = {
+    yellow: #f4ad42,
+    green: #6ad676,
+    red: #ce406a,
+    blue: #77bdff,
+    purple: #ba70d1
+}
 
-max-w = 820px
+for key, value in colors
+    .{key}
+        color: value
+    .t-{key}
+        background-color alpha(value, 0.33)
 
-header-padding = 0.3em
+// Width of the page
+max-w = 28em
 
+
+h-font-size = font-size * 1.1
+h-height = 2.5em
+h-padding = ((h-height - h-font-size)/2)
+
+s-padding = 3 * font-size
+
+p-padding = 1em
+
+// CONTENT
 *
     box-sizing border-box
+
+::selection
+    background-color darken(color-bg, 5%)
+
 html,
 body
     display block
-    height 100%
+    min-height 100%
     width 100%
     background color-bg
     font font-size font-stack
@@ -32,20 +55,102 @@ body
     padding 0 (font-size/2)
 header
     border-bottom 1px solid color-text
-    margin-bottom header-padding
+    margin-bottom h-padding
     h1
-        display block
-        font-weight bold
+        display inline-block
+        color-text
         a
             display block
-            padding header-padding 0
-            text-decoration none
+            padding h-padding 0
             color color-text
-section
-    padding-top 2em
+            text-decoration none
+    nav
+        display inline-block
+        float right
+        ul
+            padding 0
+            li
+                display inline-block
+                margin-right: 0.5em
+                &:last-child
+                    margin-right: 0
+                a
+                    display inline-block
+                    font-size h-font-size
+                    padding h-padding 0
+                    text-decoration none
+.s
+    position relative
     h2
-        font-weight bold
+        margin s-padding 0 (s-padding/2) 0
+    h2::before
+        content ""
+        position absolute
+        display block
+        height 3em
+        width 3em
+        background-size 3em 3em
+        background-repeat no-repeat
+        transform translate(-25%, -27%)
+        opacity 0.3
     p
         display block
         margin 0.5em 0
-        font-size 0.8em
+    .email
+        display block
+        text-align center
+        color alpha(color-text, 0.66)
+
+// Portfolio 
+.p-list
+    padding p-padding
+    li
+        margin-bottom s-padding
+        h3
+            display block
+        h3::before
+            s = 3em
+            content ""
+            position absolute
+            display block
+            height s
+            width s
+            background-size s s
+            background-repeat no-repeat
+            transform translate(-30%, -27%)
+            background-image url(../assets/images/poly_4.svg)
+            opacity 0.3
+
+// Background Heading .s
+.bio h2::before
+    background-image url(../assets/images/poly_1.svg)
+.portfolio h2::before
+    background-image url(../assets/images/poly_2.svg)
+.contact h2::before
+    background-image url(../assets/images/poly_3.svg)
+
+footer
+    footer-color = alpha(color-text, 0.33)
+    border-top 1px solid footer-color
+    margin-top 2em
+    padding 0.5em 0
+    text-align center
+    color footer-color
+
+// TYPOGRAPHY
+h1
+    font-size h-font-size
+    font-weight bold
+h2
+    font-size font-size * 1.2
+    font-weight bold
+h3
+    font-size font-size * 1.1
+    font-weight bold
+p
+    font-size font-size
+    font-weight normal
+    line-height 1.5em
+a
+    text-decoration underline
+    color color-text
