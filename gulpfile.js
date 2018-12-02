@@ -4,7 +4,6 @@ const uglyfy = require("gulp-uglyfly")
 const pug = require("gulp-pug")
 const clean = require("gulp-clean")
 const bs = require("browser-sync").create()
-const ghDeploy = require("gulp-gh-pages")
 
 runClean = (cb) => {
   return src("build/", {read: false})
@@ -60,8 +59,8 @@ runFonts = () => {
 }
 
 runDeploy = () => {
-  return gulp.src("./build/**/*")
-    .pipe(ghDeploy())
+  return src(["CNAME"])
+    .pipe(dest("build/"))
 }
 
 watch("src/**/*", series(
@@ -81,7 +80,8 @@ const build = series(
     runUglyfy,
     runPug,
     runImages,
-    runFonts
+    runFonts,
+    runDeploy
   ),
 )
 
@@ -94,7 +94,7 @@ exports.deploy = series(
   runPug,
   runImages,
   runFonts,
-  ghDeploy
+  runDeploy
 )
 
 exports.default = series(build, bsInit)
