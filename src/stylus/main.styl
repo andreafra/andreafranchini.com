@@ -2,10 +2,13 @@
 @require "fonts"
 
 font-stack = Charter, serif
+font-stack-accent = Jost, Futura, sans-serif
 font-size = 1.1rem
 
 color-bg = #fffaf2
 color-text = #063d33
+
+color_b = 0.17
 
 colors = {
     yellow: #f4ad42,
@@ -17,9 +20,12 @@ colors = {
 
 for key, value in colors
     .{key}
-        color: value
+        color value
     .t-{key}
         background-color alpha(value, 0.33)
+        background linear-gradient(45deg, alpha(darken(value, 20%), 0.50) 0%, alpha(value, 0.10) 100%)
+        border-radius 3px
+        padding 0 4px
 
 // Width of the page
 max-w = 28em
@@ -54,31 +60,34 @@ body
     max-width max-w
     padding 0 (font-size/2)
 header
-    border-bottom 1px solid color-text
-    margin-bottom h-padding
+    font-family "Jost"
     h1
-        display inline-block
-        color-text
+        display block
+        color color-text
+        border-bottom 1px solid color-text
         a
             display block
             padding h-padding 0
             color color-text
             text-decoration none
     nav
-        display inline-block
-        float right
+        display block
         ul
             padding 0
+            display block
             li
                 display inline-block
-                margin-right: 0.5em
-                &:last-child
-                    margin-right: 0
+                width 50%
                 a
-                    display inline-block
+                    display block
+                    width 100%
+                    text-align center
                     font-size h-font-size
                     padding h-padding 0
                     text-decoration none
+                    &:hover
+                        background linear-gradient(180deg, alpha(color-bg, 0.33) 50%, color-bg 100%), url(../assets/images/bg_1.svg)
+                        background-size 10%
 .s
     position relative
     h2
