@@ -131,10 +131,37 @@ table {
   font-weight: bold;
   src: url("../assets/fonts/charter/bold.eot"), url("../assets/fonts/charter/bold.ttf") format("truetype"), url("../assets/fonts/charter/bold.woff");
 }
-@font-face {
-  font-family: "Jost";
-  font-weight: normal;
-  src: url("../assets/fonts/jost/medium.otf");
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .yellow {
   color: #f4ad42;
@@ -201,19 +228,21 @@ body {
   margin: auto;
   max-width: 28em;
   padding: 0 0.55rem;
+  animation: fade-in 0.39s ease-in-out;
 }
 header {
-  font-family: "Jost";
+  margin-top: 1.5em;
 }
 header h1 {
   display: block;
   color: #063d33;
-  border-bottom: 1px solid #063d33;
 }
 header h1 a {
   display: block;
-  padding: 0.645em 0;
+  padding: 0.18em 0;
   color: #063d33;
+  font-weight: bold;
+  line-height: 1em;
   text-decoration: none;
 }
 header nav {
@@ -224,20 +253,21 @@ header nav ul {
   display: block;
 }
 header nav ul li {
-  display: inline-block;
-  width: 50%;
+  display: block;
 }
 header nav ul li a {
   display: block;
   width: 100%;
-  text-align: center;
-  font-size: 1.21rem;
-  padding: 0.645em 0;
+  text-align: left;
+  font-size: 1.122rem;
+  padding: 0.18em 0;
   text-decoration: none;
+  transition: color 0.13s ease-in-out;
 }
-header nav ul li a:hover {
-  background: linear-gradient(180deg, rgba(255,250,242,0.33) 50%, #fffaf2 100%), url("../assets/images/bg_1.svg");
-  background-size: 10%;
+header nav ul li a:hover,
+header nav ul li a:focus,
+header nav ul li a:active {
+  color: #f00;
 }
 .s {
   position: relative;
@@ -303,7 +333,7 @@ footer {
   color: rgba(6,61,51,0.33);
 }
 h1 {
-  font-size: 1.21rem;
+  font-size: 1.32rem;
   font-weight: bold;
 }
 h2 {
