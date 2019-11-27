@@ -3,11 +3,13 @@
 @require "animations"
 
 font-stack = Charter, serif
+font-code = Hack, monospace
 // font-stack-accent = Jost, Futura, sans-serif
 font-size = 1.1rem
 
 color-bg = #fffaf2
 color-text = #063d33
+color-code = #3d1506
 
 color_b = 0.17
 
@@ -27,6 +29,9 @@ for key, value in colors
         background linear-gradient(45deg, alpha(darken(value, 20%), 0.50) 0%, alpha(value, 0.10) 100%)
         border-radius 3px
         padding 0 4px
+
+color-code-bg = darken(color-bg, 20%)
+
 
 // Width of the page
 max-w = 28em
@@ -102,16 +107,16 @@ header
     position relative
     h2
         margin s-padding 0 (s-padding/2) 0
-    h2::before
-        content ""
-        position absolute
-        display block
-        height 3em
-        width 3em
-        background-size 3em 3em
-        background-repeat no-repeat
-        transform translate(-25%, -27%)
-        opacity 0.3
+        &::before
+            content ""
+            position absolute
+            display block
+            height 3em
+            width 3em
+            background-size 3em 3em
+            background-repeat no-repeat
+            transform translate(-25%, -27%)
+            opacity 0.3
     p
         display block
         margin 0.5em 0
@@ -166,6 +171,9 @@ h2
 h3
     font-size font-size * 1.1
     font-weight bold
+h4, h5, h6
+    font-size font-size * 1
+    font-weight bold
 p
     font-size font-size
     font-weight normal
@@ -173,3 +181,57 @@ p
 a
     text-decoration underline
     color color-text
+
+strong
+    font-weight bold
+
+em
+    font-style italic
+
+img
+    width 100%
+
+// TYPOGRAPHY OVERRIDE FOR appunti.html
+.s.appunti
+    padding-top h-padding
+
+    h1, h2, h3, h4, h5, h6
+        font-weight bold
+        font-style normal
+        padding 0.5em 0
+        margin 0
+
+    h1
+        font-size font-size * 2
+    h2
+        font-size font-size * 1.5
+        &::before
+            display: none
+    h3
+        font-size font-size * 1.25
+    h4
+        font-size font-size * 1.1
+    h5
+        font-size font-size
+    
+    ul
+        padding-left 1.5em
+        list-style-type disc
+
+    pre,
+    code
+        font-family font-code
+        font-size 1em * 0.85
+        background-color alpha(color-code, 0.05)
+        padding 0.3em
+        border-radius 7px
+    pre
+        overflow-x auto
+        overflow-scrolling touch
+        margin font-size 0
+    pre > code
+        background-color transparent
+        padding 0
+        border-radius 0
+        
+@require "print"

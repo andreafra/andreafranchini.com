@@ -344,6 +344,12 @@ h3 {
   font-size: 1.21rem;
   font-weight: bold;
 }
+h4,
+h5,
+h6 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
 p {
   font-size: 1.1rem;
   font-weight: normal;
@@ -352,4 +358,138 @@ p {
 a {
   text-decoration: underline;
   color: #063d33;
+}
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+img {
+  width: 100%;
+}
+.s.appunti {
+  padding-top: 0.18em;
+}
+.s.appunti h1,
+.s.appunti h2,
+.s.appunti h3,
+.s.appunti h4,
+.s.appunti h5,
+.s.appunti h6 {
+  font-weight: bold;
+  font-style: normal;
+  padding: 0.5em 0;
+  margin: 0;
+}
+.s.appunti h1 {
+  font-size: 2.2rem;
+}
+.s.appunti h2 {
+  font-size: 1.65rem;
+}
+.s.appunti h2::before {
+  display: none;
+}
+.s.appunti h3 {
+  font-size: 1.375rem;
+}
+.s.appunti h4 {
+  font-size: 1.21rem;
+}
+.s.appunti h5 {
+  font-size: 1.1rem;
+}
+.s.appunti ul {
+  padding-left: 1.5em;
+  list-style-type: disc;
+}
+.s.appunti pre,
+.s.appunti code {
+  font-family: Hack, monospace;
+  font-size: 0.85em;
+  background-color: rgba(61,21,6,0.05);
+  padding: 0.3em;
+  border-radius: 7px;
+}
+.s.appunti pre {
+  overflow-x: auto;
+  overflow-scrolling: touch;
+  margin: 1.1rem 0;
+}
+.s.appunti pre > code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    font-size: 11pt;
+  }
+  .wrap {
+    max-width: 100%;
+  }
+  header,
+  .info {
+    display: none !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 !important;
+    padding: 0.2em 0 !important;
+    font-weight: bold;
+  }
+  h1 {
+    font-size: 13pt !important;
+  }
+  h2 {
+    font-size: 11pt !important;
+  }
+  h3 {
+    font-size: 10pt !important;
+  }
+  h4,
+  h5,
+  h6 {
+    font-size: 9pt !important;
+  }
+  p,
+  ul,
+  li,
+  a,
+  em,
+  strong {
+    font-size: 9pt !important;
+    line-height: 1.1em;
+    text-decoration: none;
+  }
+  p code,
+  ul code,
+  li code,
+  a code,
+  em code,
+  strong code {
+    font-size: 0.85em !important;
+    padding: 0 !important;
+  }
+  ul {
+    padding-left: 1.5em !important;
+  }
+  p,
+  ul,
+  pre {
+    margin: 0.5em 0 !important;
+  }
+  pre {
+    font-size: 8pt !important;
+    padding: 0 0.5em !important;
+    border-left: 1px solid #000 !important;
+    border-radius: 0 !important;
+  }
 }

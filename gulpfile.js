@@ -36,9 +36,9 @@ runStylusAndCompress = () => {
     .pipe(dest("build/css/"))
 }
 
-runUglyfy = () => {
+runJS = () => {
   return src("src/js/**/*.js")
-    .pipe(uglyfy())
+    //.pipe(uglyfy())
     .pipe(dest("build/js/"))
 }
 
@@ -58,6 +58,11 @@ runFonts = () => {
     .pipe(dest("build/assets/fonts"))
 }
 
+runAssets = () => {
+  return src(["src/assets/**/*", "!src/assets/images/**/*", "!src/assets/fonts/**/*"])
+    .pipe(dest("build/assets"))
+}
+
 runDeploy = () => {
   return src(["CNAME"])
     .pipe(dest("build/"))
@@ -65,10 +70,11 @@ runDeploy = () => {
 
 watch("src/**/*", series(
     runStylus,
-    runUglyfy,
+    runJS,
     runPug,
     runImages,
     runFonts,
+    runAssets,
     bsReload
   )
 )
@@ -77,11 +83,12 @@ const build = series(
   runClean,
   parallel(
     runStylus,
-    runUglyfy,
+    runJS,
     runPug,
     runImages,
     runFonts,
-    runDeploy
+    runDeploy,
+    runAssets
   ),
 )
 
@@ -90,11 +97,12 @@ exports.build = build
 exports.deploy = series(
   runClean,
   runStylusAndCompress,
-  runUglyfy,
+  runJS,
   runPug,
   runImages,
   runFonts,
-  runDeploy
+  runDeploy,
+  runAssets
 )
 
 exports.default = series(build, bsInit)
