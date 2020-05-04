@@ -1,0 +1,12 @@
+{
+  "name": "qub3x.github.io",
+  "scripts": {
+    "dev": "parcel ./src/pages/index.pug --out-dir build --public-url ./build/ --open",
+    "build": "parcel build ./src/pages/index.pug -out-dir build"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "pug": "^2.0.4",
+    "stylus": "^0.54.7"
+  }
+}
