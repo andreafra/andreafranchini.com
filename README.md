@@ -1,13 +1,15 @@
 qub3x.github.io
 ===============
 
-My personal website and portfolio. Static HTML/CSS and no JS for maximum speed and compatibility.
+My personal website and portfolio.
 
-Decent gulp automated script to build and deploy the website through Github Pages.
+Static HTML+CSS, minimum JS for maximum speed and compatibility.
+
+I've moved to [Parcel](https://parceljs.org) to bundle all the code with minimum effort.
 
 # How to use
 ## Installing
-Run `npm install` in the base directory.
+Run `yarn install` in the base directory.
 
 ##  Deploying
 1.  Commit on development branch
