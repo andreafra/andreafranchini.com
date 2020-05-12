@@ -1,27 +1,26 @@
 {
-  "name": "andreafranchini.me",
-  "version": "1.0.0",
-  "description": "My personal website",
-  "main": "index.html",
-  "scripts": {
-    "start": "gulp",
-    "build": "gulp build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "git checkout development && git subtree push --prefix build origin master"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/QUB3X/qub3x.github.io.git"
-  },
-  "author": "Andrea Franchini",
-  "homepage": "https://github.com/QUB3X/qub3x.github.io#readme",
-  "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-clean": "^0.4.0",
-    "gulp-pug": "^4.0.1",
-    "gulp-stylus": "^2.7.0",
-    "gulp-uglyfly": "^1.4.2",
-    "lodash.template": ">=4.5.0"
-  }
+	"name": "my_website",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "git@github.com:QUB3X/qub3x.github.io.git",
+	"author": "Andrea Franchini <hello@andreafranchini.com>",
+	"license": "MIT",
+	"scripts": {
+		"dev": "parcel src/pages/index.pug",
+		"build": "parcel build src/pages/index.pug --out-dir build",
+		"publish": "git checkout development && git subtree push --prefix dist origin master"
+	},
+	"devDependencies": {
+		"parcel-bundler": "^1.12.4",
+		"pug": "^2.0.4",
+		"stylus": "^0.54.7"
+	},
+	"dependencies": {
+		"autoprefixer": "^9.7.6",
+		"jstransformer-markdown-it": "^2.1.0",
+		"postcss-modules": "^2.0.0",
+		"posthtml-extend-attrs": "^1.0.0",
+		"posthtml-img-autosize": "^0.1.4",
+		"posthtml-to-svg-tags": "^0.0.0"
+	}
 }

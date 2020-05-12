@@ -1,237 +1,77 @@
 @require "reset"
+@require "variables"
 @require "fonts"
+@require "typography"
 @require "animations"
-
-font-stack = Charter, serif
-font-code = Hack, monospace
-// font-stack-accent = Jost, Futura, sans-serif
-font-size = 1.1rem
-
-color-bg = #fffaf2
-color-text = #063d33
-color-code = #3d1506
-
-color_b = 0.17
-
-colors = {
-    yellow: #f4ad42,
-    green: #6ad676,
-    red: #ce406a,
-    blue: #77bdff,
-    purple: #ba70d1
-}
-
-for key, value in colors
-    .{key}
-        color value
-    .t-{key}
-        background-color alpha(value, 0.33)
-        background linear-gradient(45deg, alpha(darken(value, 20%), 0.50) 0%, alpha(value, 0.10) 100%)
-        border-radius 3px
-        padding 0 4px
-
-color-code-bg = darken(color-bg, 20%)
-
-
-// Width of the page
-max-w = 28em
-
-
-h-font-size = font-size * 1.2
-h-margin = 1.5em
-h-padding = h-margin - h-font-size
-
-s-padding = 3 * font-size
-
-p-padding = 1em
-
-timing = 0.13s
-
 // General
 *
-    box-sizing border-box
+	box-sizing: border-box
 
 ::selection
-    background-color darken(color-bg, 5%)
+	background-color: alpha(color-primary, 0.4)
 
 html,
 body
-    display block
-    min-height 100%
-    width 100%
-    background color-bg
-    font font-size font-stack
-    color color-text
+	display: block
+	min-height: 100%
+	width: 100%
+	background: color-bg
+	font: font-size font-stack
+	color: color-text
 
 .wrap
-    display block
-    margin auto
-    max-width max-w
-    padding 0 (font-size/2)
-    animation: fade-in timing * 3 ease-in-out
+	display: block
+	margin: auto
+	max-width: size-page-max-width
+	padding: size-page-padding
+	animation: fade-in anim-timing * 3 ease-in-out
+	transform: skewY(-2deg)
 
 // Header
 header
-    margin-top: h-margin
-    h1
-        display block
-        color color-text
-        a
-            display block
-            padding h-padding 0
-            color color-text
-            font-weight: bold
-            line-height: 1em
-            text-decoration none
-    nav
-        display block
-        ul
-            padding: 0
-            display block
-            li
-                display block
-                a
-                    display block
-                    width 100%
-                    text-align left
-                    font-size h-font-size * 0.85
-                    padding h-padding 0
-                    text-decoration none
-                    transition-mixin(timing)
-                    &:hover,
-                    &:focus,
-                    &:active
-                        color: red
-// Content             
-.s
-    position relative
-    h2
-        margin s-padding 0 (s-padding/2) 0
-        &::before
-            content ""
-            position absolute
-            display block
-            height 3em
-            width 3em
-            background-size 3em 3em
-            background-repeat no-repeat
-            transform translate(-25%, -27%)
-            opacity 0.3
-    p
-        display block
-        margin 0.5em 0
-    .email
-        display block
-        text-align center
-        color alpha(color-text, 0.66)
+	display: block
+	text-align: center
+	margin-top: size-header-margin
+	.aligned-content
+		display: inline-block
+	h1
+		display: inline-block
+		a
+			display: inline-block
+			// padding: size-header-title-padding
+			font-size: font-size * 2
+			text-decoration: none
+	nav
+		display: inline-block
+		display: flex
+		ul
+			flex-grow: 1
+			width: 0
+			display: flex
+			justify-content: space-between
+			margin-top: size-header-link-margin
+			li
+				display: inline-block
+				a
+					padding: size-header-link-padding
+					background: color-bg-dark
+					text-decoration: none
+					border-radius: size-border-radius
+//
+.email
+	display: block
+	text-align: center
+	font-size: font-size * 0.9
+	font-family: font-code
+	padding: size-email-padding
+	margin-top: size-email-padding
+	background-color: color-bg-light
+	border-radius: size-border-radius
 
-// Portfolio 
-.p-list
-    padding p-padding
-    li
-        margin-bottom s-padding
-        h3
-            display block
-        h3::before
-            s = 3em
-            content ""
-            position absolute
-            display block
-            height s
-            width s
-            background-size s s
-            background-repeat no-repeat
-            transform translate(-30%, -27%)
-            background-image url(../assets/images/poly_4.svg)
-            opacity 0.3
-
-// Background Heading .s
-.bio h2::before
-    background-image url(../assets/images/poly_1.svg)
-.portfolio h2::before
-    background-image url(../assets/images/poly_2.svg)
-.contact h2::before
-    background-image url(../assets/images/poly_3.svg)
-
+// Footer
 footer
-    footer-color = alpha(color-text, 0.33)
-    border-top 1px solid footer-color
-    margin-top 2em
-    padding 0.5em 0
-    text-align center
-    color footer-color
-
-// TYPOGRAPHY
-h1
-    font-size h-font-size
-    font-weight bold
-h2
-    font-size font-size * 1.2
-    font-weight bold
-h3
-    font-size font-size * 1.1
-    font-weight bold
-h4, h5, h6
-    font-size font-size * 1
-    font-weight bold
-p
-    font-size font-size
-    font-weight normal
-    line-height 1.5em
-a
-    text-decoration underline
-    color color-text
-
-strong
-    font-weight bold
-
-em
-    font-style italic
-
-img
-    width 100%
-
-// TYPOGRAPHY OVERRIDE FOR appunti.html
-.s.appunti
-    padding-top h-padding
-
-    h1, h2, h3, h4, h5, h6
-        font-weight bold
-        font-style normal
-        padding 0.5em 0
-        margin 0
-
-    h1
-        font-size font-size * 2
-    h2
-        font-size font-size * 1.5
-        &::before
-            display: none
-    h3
-        font-size font-size * 1.25
-    h4
-        font-size font-size * 1.1
-    h5
-        font-size font-size
-    
-    ul
-        padding-left 1.5em
-        list-style-type disc
-
-    pre,
-    code
-        font-family font-code
-        font-size 1em * 0.85
-        background-color alpha(color-code, 0.05)
-        padding 0.3em
-        border-radius 7px
-    pre
-        overflow-x auto
-        overflow-scrolling touch
-        margin font-size 0
-    pre > code
-        background-color transparent
-        padding 0
-        border-radius 0
-        
-@require "print"
+	display: block
+	color: color-bg-text
+	font-size: font-size * 0.8
+	text-align: center
+	margin-top: size-footer-margin

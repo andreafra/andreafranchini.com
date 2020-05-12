@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300px" height="300px" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>poly_4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="poly_4" stroke="#000000" stroke-width="5">
+            <g id="Group-2" transform="translate(-71.000000, -71.000000)">
+                <g id="Group" transform="translate(220.155860, 220.155860) rotate(22.500000) translate(-220.155860, -220.155860) translate(51.655860, 51.655860)">
+                    <polygon id="Polygon-6" points="168.071254 49.8224075 286.571254 168.322407 168.071254 286.822407 49.5712537 168.322407"></polygon>
+                    <polygon id="Polygon-6" transform="translate(168.267796, 168.403818) rotate(45.000000) translate(-168.267796, -168.403818) " points="168.152664 49.7886862 286.652664 168.288686 168.152664 286.788686 49.652664 168.288686"></polygon>
+                </g>
+                <path d="M195,109 L220,91 L245,109 M282,124.704269 L312.374255,129.669985 L317.339971,160.04424 M333,197 L350.96655,221.989133 L333,246.978266 M317.339971,284 L312.374255,314.374255 L282,319.339971 M244.978266,335 L219.989133,352.96655 L195,335 M158.04424,319.339971 L127.669985,314.374255 L122.704269,284 M106.96655,246.978266 L89,221.989133 L106.96655,197 M122.704269,160.04424 L127.669985,129.669985 L158.04424,124.704269" id="Triangle-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>
