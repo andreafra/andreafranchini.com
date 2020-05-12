@@ -1,42 +1,15 @@
-
 extends ./includes/layout.pug
 
-block content
-    .s.bio
-        h2 Bio
-        p 
-            | I have a keen interest in 
-            span.t-green Game Design
-            |  and Development, but I often tinker with 
-            span.t-yellow JavaScript
-            |  and plenty of  
-            span.t-blue Web Design
-            |  related stuff, too. I enjoy creating useful things, and I care to make them look good.
-        p
-            | I’m a full-time 
-            span.t-red Computer Science and Engineering
-            |  student at 
-            a(href="https://www.polimi.it") Politecnico di Milano
-            | , Italy.
-    .s.portfolio
-        h2 Portfolio
-        p I keep a list of the projects I worked on in the 
-            a(href="/portfolio") portfolio page
-            |, which I recommend you to check out!
-    .s.notes
-        h2 Notes
-        p There's also a  
-            span.t-purple collection of notes
-            |  (in Italian) from University that I redacted with LaTeX and Markdown. They are 
-            a(href="https://github.com/qub3x/appunti") publicly available on GitHub
-            |.
-        p If you're looking for my notes on Java, I've just made a 
-            a(href="/appunti") nice page for that
-            |! You may print them if you want, too!
-    .s.contact
-        h2 Contact
-        p If you want to get in touch, drop me a line at:
-            span.email hi (at) andreafranchini (dot) me
-        p You can also visit my 
-            a(href="https://github.com/qub3x") GitHub profile
-            |!
+block content    
+    section.bio
+        include:markdown-it ./content/bio.md
+    section.contact
+    h2 Contacts
+    p If you want to get in touch, I'll be happy to read your email! Just write at:
+        span.email hello (at) andreafranchini (dot) com
+
+    section.portfolio
+        include:markdown-it ./content/portfolio.md
+    section.notes
+        include:markdown-it ./content/notes.md
+    

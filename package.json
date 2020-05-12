@@ -1,12 +1,25 @@
 {
-  "name": "qub3x.github.io",
+  "name": "my_website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:QUB3X/qub3x.github.io.git",
+  "author": "Andrea Franchini <hello@andreafranchini.com>",
+  "license": "MIT",
   "scripts": {
-    "dev": "parcel ./src/pages/index.pug --out-dir build --public-url ./build/ --open",
-    "build": "parcel build ./src/pages/index.pug -out-dir build"
+    "dev": "parcel src/pages/index.pug",
+    "build": "parcel build src/pages/index.pug --out-dir build"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "pug": "^2.0.4",
     "stylus": "^0.54.7"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.7.6",
+    "jstransformer-markdown-it": "^2.1.0",
+    "postcss-modules": "^2.0.0",
+    "posthtml-extend-attrs": "^1.0.0",
+    "posthtml-img-autosize": "^0.1.4",
+    "posthtml-to-svg-tags": "^0.0.0"
   }
 }
