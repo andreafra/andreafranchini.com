@@ -10,21 +10,21 @@ color-code = #3d1506
 color_b = 0.17
 
 colors = {
-    yellow: #f4ad42,
-    green: #6ad676,
-    red: #ce406a,
-    blue: #77bdff,
-    purple: #ba70d1
+	yellow: #f4ad42,
+	green: #6ad676,
+	red: #ce406a,
+	blue: #77bdff,
+	purple: #ba70d1
 }
 
 for key, value in colors
-    .{key}
-        color value
-    .t-{key}
-        background-color alpha(value, 0.33)
-        background linear-gradient(45deg, alpha(darken(value, 20%), 0.50) 0%, alpha(value, 0.10) 100%)
-        border-radius 3px
-        padding 0 4px
+	.{key}
+		color value
+	.t-{key}
+		background-color alpha(value, 0.33)
+		background linear-gradient(45deg, alpha(darken(value, 20%), 0.50) 0%, alpha(value, 0.10) 100%)
+		border-radius 3px
+		padding 0 4px
 
 color-code-bg = darken(color-bg, 20%)
 

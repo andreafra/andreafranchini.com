@@ -3,5 +3,11 @@
 node_modules
 .vscode
 .DS_STORE
-.yarn
 dist
+
+# Yarn
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*
+.cache
