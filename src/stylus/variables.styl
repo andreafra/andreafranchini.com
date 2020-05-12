@@ -1,44 +1,42 @@
-font-stack = Charter, serif
-font-code = Hack, monospace
-// font-stack-accent = Jost, Futura, sans-serif
+// Fonts
+font-stack = Charter, Georgia, serif
+font-code = Hack, Menlo, Monaco, Consolas, Courier, monospace
 font-size = 1.1rem
 
-color-bg = #fffaf2
-color-text = #063d33
-color-code = #3d1506
+// Colors
+color-bg = #f6d1ac
+color-text = #2c3245ff
+color-alert = #f08080ff
+color-primary = #74d3aeff
 
-color_b = 0.17
+color-bg-light = lighten(color-bg, 15%)
+color-text-light = lighten(color-text, 15%)
+color-alert-light = lighten(color-alert, 15%)
+color-primary-light = lighten(color-primary, 15%)
 
-colors = {
-	yellow: #f4ad42,
-	green: #6ad676,
-	red: #ce406a,
-	blue: #77bdff,
-	purple: #ba70d1
-}
+color-bg-dark = darken(color-bg, 10%)
+color-text-dark = darken(color-text, 10%)
+color-alert-dark = darken(color-alert, 10%)
+color-primary-dark = darken(color-primary, 10%)
 
-for key, value in colors
-	.{key}
-		color value
-	.t-{key}
-		background-color alpha(value, 0.33)
-		background linear-gradient(45deg, alpha(darken(value, 20%), 0.50) 0%, alpha(value, 0.10) 100%)
-		border-radius 3px
-		padding 0 4px
+color-bg-text = alpha(darken(color-bg, 30%), 0.7)
 
-color-code-bg = darken(color-bg, 20%)
+// Animations
+anim-timing = 0.23s
 
+// Size
+size-page-max-width = 25em
 
-// Width of the page
-max-w = 28em
+size-page-padding = 1em
+size-heading-margin = 1rem
 
+size-border-radius = 0.5em
 
-h-font-size = font-size * 1.2
-h-margin = 1.5em
-h-padding = h-margin - h-font-size
+size-email-padding = 0.5rem
 
-s-padding = 3 * font-size
+size-header-margin = 4rem
+size-header-title-padding = 1em
+size-header-link-padding = 0.4em 0.5em
+size-header-link-margin = 0.5em
 
-p-padding = 1em
-
-timing = 0.13s
+size-footer-margin = 4rem

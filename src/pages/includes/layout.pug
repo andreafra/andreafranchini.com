@@ -24,8 +24,9 @@ html(lang="en")
 	body
 		.wrap
 			include header.pug
-			article
+			main
 				block content
 
 			include footer.pug
 		block scripts
+		script(src="../js/main.js")

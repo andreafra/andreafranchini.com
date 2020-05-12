@@ -5,25 +5,73 @@
 @require "animations"
 // General
 *
-	box-sizing border-box
+	box-sizing: border-box
 
 ::selection
-	background-color darken(color-bg, 5%)
+	background-color: alpha(color-primary, 0.4)
 
 html,
 body
-	display block
-	min-height 100%
-	width 100%
-	background color-bg
-	font font-size font-stack
-	color color-text
+	display: block
+	min-height: 100%
+	width: 100%
+	background: color-bg
+	font: font-size font-stack
+	color: color-text
 
 .wrap
-	display block
-	margin auto
-	max-width max-w
-	padding 0 (font-size/2)
-	animation: fade-in timing * 3 ease-in-out
+	display: block
+	margin: auto
+	max-width: size-page-max-width
+	padding: size-page-padding
+	animation: fade-in anim-timing * 3 ease-in-out
+	transform: skewY(-2deg)
 
 // Header
+header
+	display: block
+	text-align: center
+	margin-top: size-header-margin
+	.aligned-content
+		display: inline-block
+	h1
+		display: inline-block
+		a
+			display: inline-block
+			// padding: size-header-title-padding
+			font-size: font-size * 2
+			text-decoration: none
+	nav
+		display: inline-block
+		display: flex
+		ul
+			flex-grow: 1
+			width: 0
+			display: flex
+			justify-content: space-between
+			margin-top: size-header-link-margin
+			li
+				display: inline-block
+				a
+					padding: size-header-link-padding
+					background: color-bg-dark
+					text-decoration: none
+					border-radius: size-border-radius
+//
+.email
+	display: block
+	text-align: center
+	font-size: font-size * 0.9
+	font-family: font-code
+	padding: size-email-padding
+	margin-top: size-email-padding
+	background-color: color-bg-light
+	border-radius: size-border-radius
+
+// Footer
+footer
+	display: block
+	color: color-bg-text
+	font-size: font-size * 0.8
+	text-align: center
+	margin-top: size-footer-margin
