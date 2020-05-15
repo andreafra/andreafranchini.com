@@ -1,5 +1,3 @@
-## Projects
-
 ### SuperCoolOrg/server
 
 [This project](https://github.com/supercoolorg/server)

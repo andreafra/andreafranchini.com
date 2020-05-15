@@ -16,9 +16,9 @@ body
 	min-height: 100%
 	width: 100%
 	background: color-bg
+	background: color-bg
 	font: font-size font-stack
 	color: color-text
-
 .wrap
 	display: block
 	margin: auto
@@ -53,11 +53,28 @@ header
 			li
 				display: inline-block
 				a
+					background: color-bg-dark-1
 					padding: size-header-link-padding
-					background: color-bg-dark
 					text-decoration: none
 					border-radius: size-border-radius
-//
+section
+	h2, h3
+		position: relative
+		display: inline-block
+		&:before
+			content: ""
+			position: absolute
+			display: inline-block
+			height: 0.4em
+			width: 100%
+			opacity: 0.6
+			bottom: 0
+			border-radius: 2em
+			z-index: -1
+	h2:before
+		background-color: color-primary-light
+	h3:before
+		background-color: color-alert-light
 .email
 	display: block
 	text-align: center
@@ -71,7 +88,7 @@ header
 // Footer
 footer
 	display: block
-	color: color-bg-text
+	color: color-text-light
 	font-size: font-size * 0.8
 	text-align: center
 	margin-top: size-footer-margin
