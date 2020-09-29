@@ -18,6 +18,7 @@ body
 	background: color-bg
 	font: font-size font-stack
 	color: color-text
+	border: 0.33rem solid color-primary-light
 
 .wrap
 	display: block
@@ -25,13 +26,14 @@ body
 	max-width: size-page-max-width
 	padding: size-page-padding
 	animation: fade-in anim-timing * 3 ease-in-out
-	transform: skewY(-2deg)
 
 // Header
 header
 	display: block
 	text-align: center
 	margin-top: size-header-margin
+	animation: curtain-reveal anim-timing * 3 ease-in-out anim-timing
+	animation-fill-mode: both
 	.aligned-content
 		display: inline-block
 	h1
@@ -42,6 +44,7 @@ header
 			font-size: font-size * 2
 			text-decoration: none
 	nav
+		margin: size-header-margin 0 (size-header-margin / 2) 0
 		display: inline-block
 		display: flex
 		ul
@@ -57,7 +60,13 @@ header
 					background: color-bg-dark
 					text-decoration: none
 					border-radius: size-border-radius
-//
+h2, h3, h4
+	animation: curtain-reveal anim-timing * 3 ease-in-out anim-timing * 2
+	animation-fill-mode: both
+p
+	animation: curtain-reveal anim-timing * 3 ease-in-out anim-timing * 3
+	animation-fill-mode: both
+// Email block
 .email
 	display: block
 	text-align: center
