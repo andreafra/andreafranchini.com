@@ -19,29 +19,43 @@ body
 	background: color-bg
 	font: font-size font-stack
 	color: color-text
+	border: 0.33rem solid color-primary-light
 .wrap
 	display: block
 	margin: auto
 	max-width: size-page-max-width
 	padding: size-page-padding
 	animation: fade-in anim-timing * 3 ease-in-out
-	transform: skewY(-2deg)
 
 // Header
 header
 	display: block
-	text-align: center
+	text-align: left
 	margin-top: size-header-margin
+	animation: curtain-reveal anim-timing * 3 ease-in-out anim-timing
+	animation-fill-mode: both
 	.aligned-content
 		display: inline-block
 	h1
 		display: inline-block
 		a
 			display: inline-block
+			position: relative
+			width: auto
 			// padding: size-header-title-padding
 			font-size: font-size * 2
 			text-decoration: none
+			&::before
+				content: ""
+				display: inline-block
+				position: absolute
+				z-index: -1
+				margin-top: 0.5em
+				height: 0.5em
+				width: 100%
+				background: color-primary-light
 	nav
+		margin: size-header-margin 0 (size-header-margin / 2) 0
 		display: inline-block
 		display: flex
 		ul
@@ -57,24 +71,26 @@ header
 					padding: size-header-link-padding
 					text-decoration: none
 					border-radius: size-border-radius
-section
-	h2, h3
-		position: relative
-		display: inline-block
-		&:before
-			content: ""
-			position: absolute
-			display: inline-block
-			height: 0.4em
-			width: 100%
-			opacity: 0.6
-			bottom: 0
-			border-radius: 2em
-			z-index: -1
-	h2:before
-		background-color: color-primary-light
-	h3:before
-		background-color: color-alert-light
+h2, h3, h4
+	display: inline-block
+	position: relative
+	animation: curtain-reveal anim-timing * 3 ease-in-out anim-timing * 2
+	animation-fill-mode: both
+h2::before
+	content: ""
+	display: inline-block
+	position: absolute
+	z-index: -1
+	margin-top: 0.7em
+	height: 0.3em
+	width: 100%
+	background: color-alert-light
+h3, h4
+	display: block
+p
+	animation: curtain-reveal anim-timing * 3 ease-in-out anim-timing * 3
+	animation-fill-mode: both
+// Email block
 .email
 	display: block
 	text-align: center
