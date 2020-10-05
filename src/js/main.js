@@ -7,3 +7,8 @@ projectsBtn.addEventListener("click", (ev) => {
 	})
 	ev.preventDefault()
 })
+
+/* See https://parceljs.org/hmr.html */
+if (module.hot) {
+	module.hot.accept()
+}

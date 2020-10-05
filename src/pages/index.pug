@@ -4,11 +4,13 @@ block content
 	section#bio
 		include:markdown-it ./content/bio.md
 	section#contact
-	h2 Contacts
-	p If you want to get in touch, I'll be happy to read your email! Just write at:
-		span.email hello (at) andreafranchini (dot) com
+		h2 Contacts
+		p If you want to get in touch, I'll be happy to read your email! Just write at:
+			span.email hello (at) andreafranchini (dot) com
 
 	section#projects
-		include:markdown-it ./content/projects.md
+		h2 Projects
+		.list
+			include:markdown-it ./content/projects.md
 	section#notes
 		include:markdown-it ./content/notes.md

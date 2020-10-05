@@ -3,7 +3,7 @@
 node_modules
 .vscode
 .DS_STORE
-dist
+# dist # needed for publishing
 
 # Yarn
 .yarn/*
