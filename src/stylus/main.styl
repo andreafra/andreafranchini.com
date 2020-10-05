@@ -30,7 +30,7 @@ body
 // Header
 header
 	display: block
-	text-align: center
+	text-align: left
 	margin-top: size-header-margin
 	animation: curtain-reveal anim-timing * 3 ease-in-out anim-timing
 	animation-fill-mode: both
@@ -40,9 +40,20 @@ header
 		display: inline-block
 		a
 			display: inline-block
+			position: relative
+			width: auto
 			// padding: size-header-title-padding
 			font-size: font-size * 2
 			text-decoration: none
+			&::before
+				content: ""
+				display: inline-block
+				position: absolute
+				z-index: -1
+				margin-top: 0.5em
+				height: 0.5em
+				width: 100%
+				background: color-primary-light
 	nav
 		margin: size-header-margin 0 (size-header-margin / 2) 0
 		display: inline-block
@@ -61,8 +72,21 @@ header
 					text-decoration: none
 					border-radius: size-border-radius
 h2, h3, h4
+	display: inline-block
+	position: relative
 	animation: curtain-reveal anim-timing * 3 ease-in-out anim-timing * 2
 	animation-fill-mode: both
+h2::before
+	content: ""
+	display: inline-block
+	position: absolute
+	z-index: -1
+	margin-top: 0.7em
+	height: 0.3em
+	width: 100%
+	background: color-alert-light
+h3, h4
+	display: block
 p
 	animation: curtain-reveal anim-timing * 3 ease-in-out anim-timing * 3
 	animation-fill-mode: both
