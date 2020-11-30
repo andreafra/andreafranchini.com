@@ -1,0 +1,225 @@
+/* Import Fonts */
+@import "../css/typography.css";
+
+/* CSS Custom Properties Definitions */
+
+:root {
+	--fontFamily-sans: system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--fontFamily-serif: "Charis", "Charter", "Georgia", Cambria, "Times New Roman",
+		Times, serif;
+		
+	--font-body: var(--fontFamily-serif);
+	--font-heading: var(--fontFamily-serif);
+	
+	--lineHeight-none: 1;
+	--lineHeight-tight: 1.1;
+	--lineHeight-normal: 1.5;
+	
+	--border-radius: 1em;
+
+	--fontSize-root: 16px;
+	--fontSize-small: 0.833rem;
+	--fontSize-normal: 1.2rem;
+	--fontSize-big: 1.4rem;
+	--fontSize-giant: 1.8rem;
+
+	--letterSpacing-title: -0.025em;
+
+	--maxWidth-wrapper: 640px;
+
+	--spacing-vertical: 1rem;
+	--spacing-horizontal: 1rem;
+
+	--color-background: #f6d1acff;
+	--color-text: #2c3245ff;
+	--color-error: #ec5b5bff;
+	--color-primary: #54c99cff;
+	--color-info: #8d86c9ff;
+	--color-link: #92c2e8ff;
+
+	--animation-duration: 0.33s
+}
+
+/* Animations */
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes curtain-reveal {
+	0% {
+		opacity: 0;
+		clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
+	}
+	100% {
+		opacity: 1;
+		clip-path: polygon(0% 0%, 200% 0%, 0% 200%);
+	}
+}
+/* HTML elements */
+
+::selection {
+	color: var(--color-text);
+	background-color: var(--color-primary);
+}
+
+*,
+:after,
+:before {
+	box-sizing: border-box;
+}
+
+html {
+	line-height: var(--lineHeight-normal);
+	font-size: var(--fontSize-root);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: var(--font-body);
+	font-size: var(--fontSize-normal);
+	color: var(--color-text);
+	background-color: var(--color-background);
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+/* Layout */
+.layout-wrapper {
+	max-width: 28em;
+	margin: 0 auto;
+	padding: calc(var(--spacing-vertical) * 2) var(--spacing-horizontal) 0;
+
+}
+
+.layout-header {
+	margin: 0;
+	display: block;
+	animation: curtain-reveal var(--animation-duration) ease-in 0s;
+}
+
+.layout-header a {
+	color: var(--color-text);
+	border: none;
+}
+
+.layout-header--title {
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+.layout-header--title a {
+	font-family: var(--fontFamily-serif);
+	font-size: var(--fontSize-giant);
+	font-weight: bold;
+	color: var(--color-text);
+	text-shadow: var(--color-primary);
+}
+
+.layout-header--nav {
+	display: block;
+}
+
+.layout-header--nav ul {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}
+
+.layout-header--nav ul li {
+	display: inline-block;
+}
+
+.layout-header--nav ul li a {
+	display: inline-block;
+	padding: calc(var(--spacing-vertical) / 2) 0;
+	margin-right: var(--spacing-horizontal);
+	font-size: var(--fontSize-normal);
+	font-style: italic;
+}
+
+.layout-content {
+	display: block;
+	font-size: var(--fontSize-normal);
+	animation: curtain-reveal var(--animation-duration) ease-out var(--animation-duration);
+	animation-fill-mode: both;
+}
+
+.layout-footer {
+	padding: calc(var(--spacing-vertical) * 3) 0 var(--spacing-vertical);
+	font-size: var(--fontSize-small);
+}
+
+.layout-footer--copyright {
+	text-align: right;
+}
+
+.layout-footer--tools {
+	text-align: right;
+}
+
+/* Blog, Portfolio */
+.layout-post-preface {
+	font-size: var(--fontSize-normal);
+	font-style: italic;
+	border: 2px solid var(--color-info);
+	padding: var(--spacing-vertical) var(--spacing-horizontal);
+	border-radius: var(--border-radius);
+}
+
+.layout-posts {
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin-top: var(--spacing-vertical);
+}
+
+.layout-post--title {
+	font-size: var(--fontSize-big);
+	margin: 0;
+}
+.layout-post--title a {
+	border: none;
+}
+.layout-post--date {
+	font-size: var(--fontSize-small);
+	margin: 0 0 var(--spacing-vertical) 0;
+}
+.layout-post--body {
+	font-size: var(--fontSize-normal);
+	margin: var(--spacing-vertical) 0 var(--spacing-vertical) 0;
+}
+
+.typography-email {
+	text-align: center;
+	display: block;
+	font-style: italic;
+	padding: var(--spacing-vertical) 0
+}
+
+a {
+	border-bottom: 2px solid var(--color-link);
+}
+
+/* Media queries */
+
+@media (max-width: 42rem) {
+	blockquote {
+		padding: 0;
+		margin-left: 0;
+	}
+	ul,
+	ol {
+		list-style-position: inside;
+	}
+}

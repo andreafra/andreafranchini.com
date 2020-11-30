@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Charis";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/charis/CharisSIL-R.woff");
+}
+@font-face {
+    font-family: "Charis";
+    font-weight: bold;
+    font-style: normal;
+    src: url("../fonts/charis/CharisSIL-B.woff");
+}
+@font-face {
+    font-family: "Charis";
+    font-weight: normal;
+    font-style: italic;
+    src: url("../fonts/charis/CharisSIL-I.woff");
+}
+@font-face {
+    font-family: "Charis";
+    font-weight: bold;
+    font-style: italic;
+    src: url("../fonts/charis/CharisSIL-BI.woff");
+}
