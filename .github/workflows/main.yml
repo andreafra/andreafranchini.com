@@ -27,4 +27,4 @@ jobs:
         run: yarn
 
       - name: Publish
-        run: yarn publish
+        run: yarn deploy
