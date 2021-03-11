@@ -51,6 +51,9 @@ const Blog = ({ data, location }) => {
                     itemProp="description"
                   />
                 </section>
+                <Link to={post.fields.slug} itemProp="url">
+                  <span className="layout-post--button" itemProp="button">Read more...</span>
+                </Link>
               </article>
             </li>
           )

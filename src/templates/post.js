@@ -15,15 +15,16 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article
-        className="post"
+        className="layout-post"
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+        <header className="layout--post-header">
+          <h1 className="layout-post--title" itemProp="headline">{post.frontmatter.title}</h1>
+          <p className="layout-post--date">Published in {post.frontmatter.date}</p>
         </header>
         <section
+          className="layout-post--body"
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />

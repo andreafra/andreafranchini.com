@@ -11,12 +11,32 @@ const Layout = ({ location, title, children }) => {
         <h1 className="layout-header--title">
           <Link to="/">{title}</Link>
         </h1>
-        <nav className="layout-header--nav">
+        <nav className="layout-header--nav bg-fill">
           <ul>
-            <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="//github.com/qub3x">GitHub</Link></li>
-            <li><Link to="//www.linkedin.com/in/andreafranchini/">LinkedIn</Link></li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link to="/projects">Projects</Link>
+            </li>
+            <li>
+              <a
+                href="//github.com/qub3x"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                href="//www.linkedin.com/in/andreafranchini/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -25,11 +45,13 @@ const Layout = ({ location, title, children }) => {
         <div className="layout-footer--copyright">
           © {new Date().getFullYear()}, Andrea Franchini
         </div>
+        <div className="layout-footer-gpg-key-id">
+          GPG Key Id <code>355F C9BA 5A61 A4EF</code>
+        </div>
         <div className="layout-footer--tools">
           Built with
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>,
-          hosted on
+          <a href="https://www.gatsbyjs.com">Gatsby</a>, hosted on
           {` `}
           <a href="https://pages.github.com/">GitHub pages</a>
         </div>

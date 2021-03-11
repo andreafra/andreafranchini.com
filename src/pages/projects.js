@@ -24,7 +24,7 @@ const Blog = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Projects" />
       <p className="layout-post-preface">
-        Here there's a small collection of the most significant project I made. If you want for some twisted reasons see all the crap I coded in these years, take a look at my <Link to="//github.com/qub3x">GitHub page.</Link>
+        Here there's a small collection of the most significant projects I made. If you want for some twisted reasons see all the crap I coded in these years, take a look at my <Link to="//github.com/qub3x">GitHub page.</Link>
       </p>
       <ul className="layout-posts">
         {posts.map(post => {
@@ -41,6 +41,7 @@ const Blog = ({ data, location }) => {
                   <h2 className="layout-post--title">
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
+                      <small>{" "} - {post.frontmatter.date}</small>
                     </Link>
                   </h2>
                 </header>
@@ -81,7 +82,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "DD MMMM YYYY")
+          date(formatString: "YYYY")
           title
           description
         }

@@ -25,10 +25,9 @@ const Bio = () => {
     <div className="bio">
       <h2>Bio</h2>
       <p>
-        I have a keen interest in Game Design and Development, but I often
-        tinker with Web-related technologies (mostly JavaScript).
+        I have a keen interest in Game Design and Development, Software Engineering and Web-related technologies.
       </p>
-      <p>I try to create well-polished stuff.</p>
+      <p>I try to create well-polished stuff and really enjoy working in a team.</p>
       <p>
         I have a bachelor’s in Computer Engineering, and I’m currently a
         full-time Computer Science and Engineering master’s degree student at
