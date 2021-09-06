@@ -1,0 +1,247 @@
+::selection {
+	color: var(--color-text);
+	background-color: var(--color-primary);
+}
+
+*,
+:after,
+:before {
+	box-sizing: border-box;
+}
+
+html {
+	line-height: var(--lineHeight-normal);
+	font-size: var(--fontSize-root);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: var(--font-body);
+	font-size: var(--fontSize-normal);
+	background-color: var(--color-background);
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+/* Layout */
+.container {
+	display: block;
+	max-width: var(--maxWidth-wrapper);
+	margin: auto;
+	padding: 0;
+	background-color: var(--color-background);
+	padding: var(--space-2);
+}
+
+/* [HEADER] */
+
+.info {
+	margin: 0;
+	display: block;
+	background-color: var(--color-blue);
+	color: var(--color-pink);
+	width: 24rem;
+	height: 24rem;
+	padding: var(--space-2);
+	margin-bottom: var(--space-2);
+}
+
+.info * {
+	display: block;
+	color: var(--color-pink);
+	font-size: var(--fontSize-normal);
+}
+.info .prefix {
+	margin-bottom: 0;
+}
+
+.info h1 {
+	font-size: var(--fontSize-giant);
+	margin: 0 0 var(--space-1);
+}
+
+.info ul {
+	padding: 0;
+	margin: 0;
+}
+
+.info li {
+	margin-bottom: var(--padding-0);
+}
+
+.info .label {
+	font-size: var(--fontSize-small);
+}
+
+/* [NAVBAR] */
+.nav {
+	display: block;
+	margin-bottom: var(--space-2);
+}
+
+.nav ul {
+	padding: 0;
+	list-style: none;
+}
+
+.nav ul li {
+	display: inline-block;
+}
+
+.nav ul li a {
+	display: block;
+	padding: 0;
+	margin-right: var(--space-1);
+	font-weight: 800;
+}
+
+/* [CONTENT] */
+
+.content {
+	display: block;
+	font-size: var(--fontSize-normal);
+	padding: var(--space-2);
+	border: var(--border-width) solid var(--color-blue);
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.content p {
+	margin: 0;
+	padding: 0 var(--space-1);
+}
+
+.content p {
+	padding-top: var(--space-1);
+	padding-bottom: var(--space-1);
+}
+
+.content p a {
+	display: inline-block;
+	position: relative;
+	font-style: italic;
+}
+
+.content p a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 100%;
+	background: var(--color-link);
+	z-index: -1;
+	border-radius: 1em;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.footer {
+	padding: var(--space-1) 0 0;
+	font-size: var(--fontSize-small);
+}
+
+.footer .copyright,
+.footer .gpg-key-id,
+.footer .tools {
+	text-align: right;
+	font-size: var(--fontSize-small);
+}
+
+/* Blog, Portfolio */
+.layout-post-preface {
+	font-size: var(--fontSize-normal);
+	font-style: italic;
+	padding: var(--spacing-vertical) var(--spacing-horizontal);
+	background-color: var(--color-info);
+	border-bottom: var(--border-width) solid var(--color-text);
+}
+
+.layout-post,
+.layout-posts {
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin-top: var(--spacing-vertical);
+}
+
+.layout-post--title {
+	font-size: var(--fontSize-big);
+	margin-bottom: 0 !important;
+	border-bottom: none !important;
+}
+.layout-post--title a {
+	font-style: italic;
+}
+.layout-post--date {
+	display: inline-block;
+	text-align: left;
+	font-size: var(--fontSize-small);
+	padding-left: var(--spacing-horizontal);
+	margin: calc(var(--spacing-vertical) / 2) 0 0 0;
+	border-bottom: var(--border-width) solid var(--color-text);
+	font-style: italic;
+}
+
+.layout-post--button {
+	display: inline-block;
+	padding: calc(var(--spacing-vertical) / 2) 0;
+	padding-left: var(--spacing-horizontal);
+	padding-right: var(--spacing-horizontal);
+	margin-left: var(--spacing-horizontal);
+	font-size: var(--fontSize-normal);
+	font-style: italic;
+	border: var(--border-width) solid var(--color-text);
+	background-color: var(--color-background);
+}
+
+.layout-post--body {
+	font-size: var(--fontSize-normal);
+	margin: var(--spacing-vertical) 0 var(--spacing-vertical) 0;
+}
+
+.content .email {
+	display: block;
+	text-align: center;
+	font-style: italic;
+	padding: var(--spacing-vertical) 0;
+}
+
+/* Media queries */
+
+@media (max-width: 42rem) {
+	:root {
+		--spacing-vertical: 0.5rem;
+		--spacing-horizontal: 0.5rem;
+	}
+
+	.layout-wrapper {
+		margin: 3px;
+	}
+	.layout-header--nav {
+		padding-bottom: var(--spacing-vertical);
+	}
+	.layout-header--nav ul li {
+		display: inline-block;
+		margin-top: var(--spacing-vertical);
+		margin-left: var(--spacing-horizontal);
+		border: var(--border-width) solid var(--color-text);
+	}
+	blockquote {
+		padding: 0;
+		margin-left: 0;
+	}
+	ul,
+	ol {
+		list-style-position: inside;
+	}
+}

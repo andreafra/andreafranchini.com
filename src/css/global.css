@@ -1,0 +1,92 @@
+/*
+  blue: {
+    light: "#7175ED",
+    DEFAULT: "#4245A3",
+    dark: "#1A1C56",
+  },
+  pink: {
+    light: "#FFE7F1",
+    DEFAULT: "#F9C9DE",
+    dark: "#E595B7",
+  },
+*/
+
+@import "../css/typography.css";
+@import "../css/icons.css";
+
+:root {
+	--fontFamily-sans: "Agane", system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+	--fontFamily-serif: "Charis", "Charter", "Georgia", Cambria,
+		"Times New Roman", Times, serif;
+
+	--font-body: var(--fontFamily-sans);
+	--font-heading: var(--fontFamily-sans);
+
+	--lineHeight-none: 1;
+	--lineHeight-tight: 1.1;
+	--lineHeight-normal: 1.5;
+
+	--fontSize-root: 1rem;
+	--fontSize-small: 0.8rem;
+	--fontSize-normal: 1.4rem;
+	--fontSize-big: 1.8rem;
+	--fontSize-giant: 2.2rem;
+
+	--letterSpacing-title: -0.025em;
+
+	--space-0: 0.5rem;
+	--space-1: 1rem;
+	--space-2: 2rem;
+	--space-3: 4rem;
+
+	--border-width: 0.25rem;
+
+	--maxWidth-wrapper: 50rem;
+
+	--color-blue-light: #7175ed;
+	--color-blue: #4245a3;
+	--color-blue-dark: #1a1c56;
+
+	--color-pink-light: #ffe7f1;
+	--color-pink: #f9c9de;
+	--color-pink-dark: #e595b7;
+
+	--color-background: var(--color-pink-light);
+	--color-text: var(--color-blue-dark);
+	--color-error: #ec5b5bff;
+	--color-primary: #54c99cff;
+	--color-info: rgba(141, 134, 201, 0.5);
+	--color-link: #92c2e8ff;
+
+	--animation-duration: 0.33s;
+}
+
+/* Animations */
+@keyframes dark-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes curtain-reveal {
+	0% {
+		opacity: 0;
+		clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
+	}
+	100% {
+		opacity: 1;
+		clip-path: polygon(0% 0%, 200% 0%, 0% 200%);
+	}
+}
+
+.anim-reveal {
+	animation: curtain-reveal var(--animation-duration) ease-out 0s;
+	animation-fill-mode: both;
+}
+
+@import "../css/layout.css";

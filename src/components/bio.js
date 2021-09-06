@@ -5,48 +5,40 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 import React from "react"
 
 const Bio = () => {
-  const data = useStaticQuery(graphql`
-    query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-        childImageSharp {
-          fixed(width: 50, height: 50, quality: 95) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
-
-  return (
-    <div className="bio">
-      <h2>Bio</h2>
-      <p>
-        I have a keen interest in Game Design and Development, Software Engineering and Web-related technologies.
-      </p>
-      <p>I try to create well-polished stuff and really enjoy working in a team.</p>
-      <p>
-        I have a bachelor’s in Computer Engineering, and I’m currently a
-        full-time Computer Science and Engineering master’s degree student at
-        {` `}
-        <Link to="//polimi.it">Politecnico di Milano</Link>, Italy.
-      </p>
-      <p>
-        Some of my university notes are collected <Link to="https://github.com/qub3x/appunti">here</Link> on GitHub.
-      </p>
-      <h2>Contacts</h2>
-      <p>
-        If you want to get in touch, I’ll be happy to read your email! Just
-        write at:
-      </p>
-      <span className="typography-email">
-        hello (at) andreafranchini (dot) com
-      </span>
-    </div>
-  )
+	return (
+		<div className="bio">
+			<p>
+				I’m currently a master’s degree student in Computer Science and
+				Engineering.
+			</p>
+			<p>I got my bachelor's degree in Computer Engineering in 2020.</p>
+			<p>
+				I’ve made a bunch of stuff over the years that is available on {` `}
+				<Link to="https://github.com/qub3x">GitHub</Link>. The projects that
+				are good enough to be showcased are briefly described in the project
+				section.
+			</p>
+			<p>
+				Other topics I’m interested about:
+				<ul>
+					<li>Design</li>
+					<li>Videogames</li>
+					<li>Open Source</li>
+					<li>Privacy & Computer Ethics</li>
+					<li>Dungeons & Dragons</li>
+				</ul>
+			</p>
+			<p>
+				If you want to get in touch, I’ll be happy to read your email! Just
+				write at:
+			</p>
+			<span className="email">hello (at) andreafranchini (dot) com</span>
+		</div>
+	)
 }
 
 export default Bio
