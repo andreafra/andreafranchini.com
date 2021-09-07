@@ -13,25 +13,25 @@ const Bio = () => {
 		<div className="bio">
 			<p>
 				I’m currently a master’s degree student in Computer Science and
-				Engineering.
+				Engineering at the{" "}
+				<a href="//www.polimi.it">Polytechnic University of Milan</a>.
+				<br />I got my bachelor's degree in Computer Engineering in 2020.
 			</p>
-			<p>I got my bachelor's degree in Computer Engineering in 2020.</p>
 			<p>
 				I’ve made a bunch of stuff over the years that is available on {` `}
 				<Link to="https://github.com/qub3x">GitHub</Link>. The projects that
 				are good enough to be showcased are briefly described in the project
 				section.
 			</p>
-			<p>
-				Other topics I’m interested about:
-				<ul>
-					<li>Design</li>
-					<li>Videogames</li>
-					<li>Open Source</li>
-					<li>Privacy & Computer Ethics</li>
-					<li>Dungeons & Dragons</li>
-				</ul>
-			</p>
+			<p>Other topics I’m interested about:</p>
+			<ul>
+				<li>Design</li>
+				<li>Videogames</li>
+				<li>Open Source</li>
+				<li>Privacy & Computer Ethics</li>
+				<li>Dungeons & Dragons</li>
+			</ul>
+
 			<p>
 				If you want to get in touch, I’ll be happy to read your email! Just
 				write at:

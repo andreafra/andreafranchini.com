@@ -21,34 +21,36 @@ const Blog = ({ data, location }) => {
 	return (
 		<Layout location={location} title={siteTitle}>
 			<Seo title="Projects" />
-			<p className="layout-post-preface">
+			<p className="preface">
 				Here there's a small collection of the most significant projects I
 				made. If you want for some twisted reasons see all the crap I coded
 				in these years, take a look at my{" "}
 				<Link to="//github.com/qub3x">GitHub page.</Link>
 			</p>
-			<ul className="layout-posts">
+			<ul className="posts">
 				{posts.map((post) => {
 					const title = post.frontmatter.title || post.fields.slug
 
 					return (
 						<li key={post.fields.slug}>
 							<article
-								className="layout-post"
+								className="post-item"
 								itemScope
 								itemType="http://schema.org/Article"
 							>
-								<header className="layout-post--header">
-									<h2 className="layout-post--title">
+								<header>
+									<h2 className="title">
 										<Link to={post.fields.slug} itemProp="url">
 											<span itemProp="headline">{title}</span>
-											<small> - {post.frontmatter.date}</small>
+											<sup className="small-date">
+												{post.frontmatter.date}
+											</sup>
 										</Link>
 									</h2>
 								</header>
 								<section>
 									<p
-										className="layout-post--body"
+										className="text"
 										dangerouslySetInnerHTML={{
 											__html:
 												post.frontmatter.description ||

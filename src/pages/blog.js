@@ -21,30 +21,28 @@ const Blog = ({ data, location }) => {
 	return (
 		<Layout location={location} title={siteTitle}>
 			<Seo title="Blog" />
-			<ul className="layout-posts">
+			<ul className="posts">
 				{posts.map((post) => {
 					const title = post.frontmatter.title || post.fields.slug
 
 					return (
 						<li key={post.fields.slug}>
 							<article
-								className="layout-post"
+								className="post-item"
 								itemScope
 								itemType="http://schema.org/Article"
 							>
-								<header className="layout-post--header">
-									<h2 className="layout-post--title">
+								<header>
+									<p className="date">{post.frontmatter.date}</p>
+									<h2 className="title">
 										<Link to={post.fields.slug} itemProp="url">
 											<span itemProp="headline">{title}</span>
 										</Link>
 									</h2>
-									<small className="layout-post--date">
-										{post.frontmatter.date}
-									</small>
 								</header>
 								<section>
 									<p
-										className="layout-post--body"
+										className="body"
 										dangerouslySetInnerHTML={{
 											__html:
 												post.frontmatter.description ||
@@ -54,11 +52,8 @@ const Blog = ({ data, location }) => {
 									/>
 								</section>
 								<Link to={post.fields.slug} itemProp="url">
-									<span
-										className="layout-post--button"
-										itemProp="button"
-									>
-										Read more...
+									<span className="button" itemProp="button">
+										Read more
 									</span>
 								</Link>
 							</article>
