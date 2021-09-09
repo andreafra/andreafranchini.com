@@ -9,7 +9,7 @@ const SiteIndex = ({ data, location }) => {
 
 	return (
 		<Layout location={location} title={siteTitle}>
-			<Seo title="Bio" />
+			<Seo title="Home" />
 			<Bio />
 		</Layout>
 	)

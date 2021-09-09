@@ -46,15 +46,16 @@
 
 	--maxWidth-wrapper: 50rem;
 
-	--color-blue-light: #7175ed;
-	--color-blue: #4245a3;
-	--color-blue-dark: #1a1c56;
+	--color-black: #0e0800;
 
-	--color-pink-light: #ffe7f1;
-	--color-pink: #f9c9de;
+	--color-blue-light: #6063be;
+	--color-blue: #4245a3;
+	--color-blue-dark: #2f3274;
+
+	--color-pink-light: #feeeec;
+	--color-pink: #fcccc5;
 	--color-pink-dark: #e595b7;
 
-	--color-background: var(--color-pink-light);
 	--color-text: var(--color-blue-dark);
 	--color-error: #ec5b5bff;
 	--color-primary: #54c99cff;

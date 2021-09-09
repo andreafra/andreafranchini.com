@@ -1,7 +1,7 @@
-::selection {
+/* ::selection {
 	color: var(--color-pink);
 	background-color: var(--color-blue-light);
-}
+} */
 
 *,
 :after,
@@ -19,7 +19,15 @@ html {
 body {
 	font-family: var(--font-body);
 	font-size: var(--fontSize-normal);
-	background-color: var(--color-background);
+
+	color: var(--color-blue-dark);
+	background: linear-gradient(
+		33deg,
+		var(--color-pink-light) 0%,
+		var(--color-pink) 100%
+	);
+	background-color: var(--color-pink);
+	background-attachment: fixed;
 }
 
 a {
@@ -34,7 +42,6 @@ a {
 	max-width: var(--maxWidth-wrapper);
 	margin: auto;
 	padding: 0;
-	background-color: var(--color-background);
 	padding: var(--space-2);
 }
 
@@ -43,17 +50,23 @@ a {
 .info {
 	margin: 0;
 	display: block;
-	background-color: var(--color-blue);
-	color: var(--color-pink);
 	width: 24rem;
 	height: 24rem;
 	padding: var(--space-2);
 	margin-bottom: var(--space-2);
+
+	color: var(--color-pink);
+	background: linear-gradient(
+		33deg,
+		var(--color-blue-light) 0%,
+		var(--color-blue) 100%
+	);
+	background-color: var(--color-blue);
+	background-attachment: fixed;
 }
 
 .info * {
 	display: block;
-	color: var(--color-pink);
 	font-size: var(--fontSize-normal);
 }
 .info .prefix {
@@ -106,8 +119,8 @@ a {
 	display: block;
 	font-size: var(--fontSize-normal);
 	padding: var(--space-2);
+
 	border: var(--border-width) solid var(--color-blue);
-	color: var(--color-text);
 }
 
 .content h1,
@@ -197,7 +210,6 @@ a {
 	display: inline-block;
 	font-size: var(--fontSize-normal);
 	font-style: italic;
-	background-color: var(--color-background);
 }
 .content .button::after {
 	content: "→";

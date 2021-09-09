@@ -5,7 +5,6 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import { Link } from "gatsby"
 import React from "react"
 
 const Bio = () => {
@@ -19,8 +18,8 @@ const Bio = () => {
 			</p>
 			<p>
 				I’ve made a bunch of stuff over the years that is available on {` `}
-				<Link to="https://github.com/qub3x">GitHub</Link>. The projects that
-				are good enough to be showcased are briefly described in the project
+				<a href="https://github.com/qub3x">GitHub</a>. The projects that are
+				good enough to be showcased are briefly described in the project
 				section.
 			</p>
 			<p>Other topics I’m interested about:</p>
