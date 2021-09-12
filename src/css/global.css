@@ -29,9 +29,9 @@
 	--lineHeight-tight: 1.1;
 	--lineHeight-normal: 1.5;
 
-	--fontSize-root: 1rem;
 	--fontSize-small: 1rem;
 	--fontSize-normal: 1.2rem;
+	--fontSize-nav: 1.6rem;
 	--fontSize-big: 1.8rem;
 	--fontSize-giant: 2.2rem;
 
@@ -48,19 +48,21 @@
 
 	--color-black: #0e0800;
 
-	--color-blue-light: #6063be;
-	--color-blue: #4245a3;
-	--color-blue-dark: #2f3274;
+	--color-primary-light: #6063be;
+	--color-primary: #4245a3;
+	--color-primary-dark: #2f3274;
 
-	--color-pink-light: #feeeec;
-	--color-pink: #fcccc5;
-	--color-pink-dark: #e595b7;
+	--color-secondary-light: #feeeec;
+	--color-secondary: #ffb1cf;
+	--color-secondary-dark: #e595b7;
 
-	--color-text: var(--color-blue-dark);
-	--color-error: #ec5b5bff;
-	--color-primary: #54c99cff;
-	--color-info: rgba(141, 134, 201, 0.5);
-	--color-link: #92c2e8ff;
+	--color-text: var(--color-primary-dark);
+
+	--bg-primary: linear-gradient(
+		33deg,
+		var(--color-primary) 0%,
+		var(--color-primary-light) 100%
+	);
 
 	--animation-duration: 0.33s;
 }

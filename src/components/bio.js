@@ -9,7 +9,7 @@ import React from "react"
 
 const Bio = () => {
 	return (
-		<div className="bio">
+		<div className="text">
 			<p>
 				I’m currently a master’s degree student in Computer Science and
 				Engineering at the{" "}
