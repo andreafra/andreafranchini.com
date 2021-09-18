@@ -21,7 +21,7 @@ body {
 	font-family: var(--font-body);
 	font-size: var(--fontSize-normal);
 
-	color: var(--color-primary-dark);
+	color: var(--color-primary);
 	background: linear-gradient(
 		33deg,
 		var(--color-secondary-light) 0%,
@@ -32,9 +32,9 @@ body {
 }
 
 a {
-	display: inline-block;
+	display: inline;
 	text-decoration: none;
-	color: var(--color-text);
+	color: var(--color-secondary);
 }
 
 /* Layout */
@@ -42,13 +42,13 @@ a {
 	display: grid;
 	max-width: var(--maxWidth-wrapper);
 	margin: auto;
-	padding: 0;
 	padding: var(--space-2);
 
 	grid-template-columns: 3em auto;
-	grid-template-areas: "header header"
-	"nav content"
-	"footer footer";
+	grid-template-areas:
+		"nav header"
+		"nav content"
+		"footer footer";
 }
 
 /* [HEADER] */
@@ -97,6 +97,7 @@ a {
 	grid-area: nav;
 	writing-mode: vertical-lr;
 	padding-top: var(--space-2);
+	border: var(--border-width) solid var(--color-primary);
 }
 
 .nav ul {
@@ -117,9 +118,9 @@ a {
 .nav ul li a {
 	display: block;
 	width: 100%;
-	font-weight: 800;
+	font-weight: 500;
 	font-size: var(--fontSize-nav);
-	padding: 0 0.4em;
+	padding: 0 0 0 0.2em;
 	color: var(--color-primary);
 }
 
@@ -132,7 +133,7 @@ a {
 
 	font-size: var(--fontSize-normal);
 	padding: var(--space-2);
-	
+
 	color: var(--color-secondary);
 	/* background: var(--bg-primary); */
 	background-color: var(--color-primary);
@@ -164,7 +165,8 @@ a {
 }
 
 .text p a {
-	display: inline-block;
+	display: inline;
+	text-decoration: underline;
 	position: relative;
 	font-style: italic;
 }
@@ -177,6 +179,15 @@ a {
 .text h5,
 .text h6 {
 	padding: 0;
+}
+
+.text ul {
+	padding: 0;
+}
+.text ul li::before {
+	content: "—";
+	position: relative;
+	margin-right: var(--space-1);
 }
 
 /* Blog, Portfolio */
@@ -276,6 +287,11 @@ a {
 	font-size: var(--fontSize-small);
 }
 
+.footer a {
+	color: var(--color-primary);
+	text-decoration: underline;
+}
+
 /* Media queries */
 
 @media screen and (max-width: 42rem) {
@@ -292,7 +308,7 @@ a {
 		margin: 0;
 		padding: 0;
 	}
-	
+
 	blockquote {
 		padding: 0;
 		margin-left: 0;
