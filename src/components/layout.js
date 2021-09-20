@@ -10,7 +10,7 @@ const Layout = ({ location, children }) => {
 	return (
 		<div className="container" data-is-root-path={isRootPath}>
 			<Header />
-			<Nav />
+			<Nav location={location} />
 			<main className="content">{children}</main>
 			<Footer />
 		</div>

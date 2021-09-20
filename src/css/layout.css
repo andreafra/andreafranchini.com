@@ -21,13 +21,8 @@ body {
 	font-family: var(--font-body);
 	font-size: var(--fontSize-normal);
 
-	color: var(--color-primary);
-	background: linear-gradient(
-		33deg,
-		var(--color-secondary-light) 0%,
-		var(--color-secondary) 100%
-	);
-	background-color: var(--color-secondary);
+	color: var(--color-secondary);
+	background-color: var(--color-primary);
 	background-attachment: fixed;
 }
 
@@ -44,7 +39,7 @@ a {
 	margin: auto;
 	padding: var(--space-2);
 
-	grid-template-columns: 3em auto;
+	grid-template-columns: var(--nav-width) auto;
 	grid-template-areas:
 		"nav header"
 		"nav content"
@@ -97,7 +92,8 @@ a {
 	grid-area: nav;
 	writing-mode: vertical-lr;
 	padding-top: var(--space-2);
-	border: var(--border-width) solid var(--color-primary);
+	background-color: var(--color-secondary);
+	/* border: var(--border-width) solid var(--color-primary); */
 }
 
 .nav ul {
@@ -120,8 +116,12 @@ a {
 	width: 100%;
 	font-weight: 500;
 	font-size: var(--fontSize-nav);
-	padding: 0 0 0 0.2em;
+	line-height: calc(var(--nav-width) - 1em);
 	color: var(--color-primary);
+}
+
+.nav ul li a.nav-active {
+	font-weight: 800;
 }
 
 /* [CONTENT] */
@@ -137,8 +137,6 @@ a {
 	color: var(--color-secondary);
 	/* background: var(--bg-primary); */
 	background-color: var(--color-primary);
-
-	/* border: var(--border-width) solid var(--color-primary); */
 }
 
 .content h1,
@@ -276,7 +274,7 @@ a {
 .footer {
 	display: block;
 	grid-area: footer;
-	padding: var(--space-1);
+	padding: var(--space-2) var(--space-1) var(--space-1) var(--space-1);
 	font-size: var(--fontSize-small);
 }
 
@@ -288,7 +286,7 @@ a {
 }
 
 .footer a {
-	color: var(--color-primary);
+	color: var(--color-secondary);
 	text-decoration: underline;
 }
 

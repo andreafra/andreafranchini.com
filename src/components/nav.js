@@ -1,18 +1,32 @@
 import React from "react"
 import { Link } from "gatsby"
 
-export default function Nav() {
+export default function Nav({ location }) {
+	let path = location.pathname
+
 	return (
 		<nav className="nav">
 			<ul>
 				<li>
-					<Link to="/">Home</Link>
+					<Link to="/" className={path === "/" ? "nav-active" : null}>
+						Home
+					</Link>
 				</li>
 				<li>
-					<Link to="/projects">Projects</Link>
+					<Link
+						to="/projects"
+						className={path.startsWith("/projects") ? "nav-active" : null}
+					>
+						Projects
+					</Link>
 				</li>
 				<li>
-					<Link to="/blog">Blog</Link>
+					<Link
+						to="/blog"
+						className={path.startsWith("/blog") ? "nav-active" : null}
+					>
+						Blog
+					</Link>
 				</li>
 				<li>
 					<a
