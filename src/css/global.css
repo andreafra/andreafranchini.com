@@ -11,6 +11,8 @@
   },
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
 @import "../css/typography.css";
 @import "../css/icons.css";
 
@@ -63,6 +65,11 @@
 		33deg,
 		var(--color-primary) 0%,
 		var(--color-primary-light) 100%
+	);
+	--bg-secondary: linear-gradient(
+		33deg,
+		var(--color-secondary-dark) 0%,
+		var(--color-secondary) 100%
 	);
 
 	--animation-duration: 0.33s;

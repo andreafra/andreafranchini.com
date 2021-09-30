@@ -5,7 +5,7 @@ module.exports = {
 			name: `Andrea Franchini`,
 			summary: ` is a Computer Science and Engineering Student at Polimi, Milan, Italy.`,
 		},
-		description: `My personal website. I write about random stuff.`,
+		description: `Mostly a showcase of my projects.`,
 		siteUrl: `https://andreafranchini.com/`,
 	},
 	plugins: [
@@ -75,13 +75,14 @@ module.exports = {
 				name: `Andrea Franchini`,
 				short_name: `Andrea Franchini`,
 				start_url: `/`,
-				background_color: `#ffffff`,
-				theme_color: `#663399`,
+				background_color: `#4245a3`,
+				theme_color: `#4245a3`,
 				display: `minimal-ui`,
 				icon: `content/assets/gatsby-icon.png`,
 			},
 		},
 		`gatsby-plugin-react-helmet`,
+		`gatsby-plugin-preload-fonts`,
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline
 		// `gatsby-plugin-offline`,
