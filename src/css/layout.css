@@ -90,11 +90,14 @@ a {
 /* [NAVBAR] */
 .nav {
 	display: block;
+	position: absolute;
+	width: var(--nav-width);
 	grid-area: nav;
 	writing-mode: vertical-lr;
-	padding-top: var(--space-2);
+	padding: var(--space-2) 0;
 	background: var(--bg-secondary);
 	background-color: var(--color-secondary);
+	border-radius: var(--space-2);
 	/* border: var(--border-width) solid var(--color-primary); */
 }
 
@@ -113,12 +116,16 @@ a {
 	margin-bottom: var(--space-1);
 }
 
+.nav ul li:last-child {
+	margin-bottom: 0;
+}
+
 .nav ul li a {
 	display: block;
 	width: 100%;
 	font-weight: 500;
 	font-size: var(--fontSize-nav);
-	line-height: calc(var(--nav-width) - 1em);
+	line-height: calc(var(--nav-width) - 0.9em);
 	color: var(--color-primary);
 }
 
@@ -163,7 +170,7 @@ a {
 	padding: 0 0 var(--space-1) 0;
 }
 
-.text p a {
+.text a {
 	display: inline;
 	text-decoration: underline;
 	position: relative;
@@ -206,7 +213,7 @@ a {
 	width: calc(100% + var(--space-2) * 2);
 	/* margin-left: -2rem; --space-2 * -1 */
 	position: relative;
-	border-bottom: var(--border-width) solid var(--color-primary);
+	border-bottom: var(--border-width) solid var(--color-secondary);
 }
 
 .content .post-item .title {
@@ -238,7 +245,11 @@ a {
 }
 
 .content .button {
-	border: 1px solid var(--color-secondary);
+	background: var(--bg-secondary);
+	padding: var(--space-0) var(--space-1) calc(var(--space-0) - 0.2em);
+	box-shadow: 0px 2px px 2px var(--color-secondary-dark);
+	border-radius: var(--space-2);
+	color: var(--color-primary);
 	display: inline-block;
 	font-size: var(--fontSize-normal);
 	font-style: italic;
@@ -247,7 +258,7 @@ a {
 	content: "→";
 	display: inline-block;
 	padding-left: var(--space-0);
-	transition: all ease-in var(--animation-duration);
+	transition: all ease-in-out var(--animation-duration);
 }
 .content .button:hover::after {
 	padding-left: var(--space-1);

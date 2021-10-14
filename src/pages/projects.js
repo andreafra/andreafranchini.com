@@ -21,11 +21,10 @@ const Blog = ({ data, location }) => {
 	return (
 		<Layout location={location} title={siteTitle}>
 			<Seo title="Projects" />
-			<p className="preface">
+			<p className="preface text">
 				Here there's a small collection of the most significant projects I
-				made. If you want for some twisted reasons see all the crap I coded
-				in these years, take a look at my{" "}
-				<Link to="//github.com/qub3x">GitHub page.</Link>
+				made. If you want to see all the crap I coded in these years, take a
+				look at my <a href="//github.com/qub3x">GitHub page</a>.
 			</p>
 			<ul className="posts">
 				{posts.map((post) => {
@@ -59,6 +58,11 @@ const Blog = ({ data, location }) => {
 										itemProp="description"
 									/>
 								</section>
+								<Link to={post.fields.slug} itemProp="url">
+									<span className="button" itemProp="button">
+										Read more
+									</span>
+								</Link>
 							</article>
 						</li>
 					)
