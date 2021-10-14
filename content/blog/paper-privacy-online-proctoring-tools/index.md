@@ -1,7 +1,7 @@
 ---
-subtitle: 'Andrea Franchini, February 2021'
+subtitle: "Andrea Franchini, February 2021"
 title: "Do online proctoring tools ensure students' privacy and
-  fair-treatment?"
+   fair-treatment?"
 date: "2021-01-14"
 description: "A paper I wrote for my Computer Ethics Class about remote exams and the tools used to monitor students' behavior, pondering whether this kind of software poses a threat to student privacy and equal conditions. It is not particularly long, but I woudln't say it's short either."
 ---
@@ -86,7 +86,7 @@ In this paper, I will try to offer compelling arguments on how
 students' right to privacy is often violated and how
 fairness is not always ensured when employing OPT.
 
-How OPT and Remote Exams work
+## How OPT and Remote Exams work
 
 Before introducing my arguments, I want to better explain what an OPT
 consists of and how a remote exam works.
@@ -214,12 +214,12 @@ to share a detailed recording of their room, then A has more to lose
 than B, namely B's privacy. If we consider the opposite
 case, though, since B does not care, A is in a better position. Thus, in
 this kind of situations, it is a better compromise to second
-B's needs.
+A's needs.
 
 We might also want to examine a possible reason for B lack of interest:
 perhaps B was not informed in a direct way of what are the implication
 of the use of OPT. While OPT clearly explain to students which of their
-data they will have access to, but how these data will be processed in
+data they will have access to, how these data will be processed in
 detail is not specified.
 
 While this example seems to work, we are not considering an important
@@ -526,38 +526,38 @@ over their data.
 
 Abrams, Lawrence. 2020. "ProctorU Confirms Data Breach
 after Database Leaked Online." BleepingComputer. August 9, 2020.
-[https://www.bleepingcomputer.com/news/security/proctoru-confirms-data-breach-after-database-leaked-online/](https://www.bleepingcomputer.com/news/security/proctoru-confirms-data-breach-after-database-leaked-online/).
+[https://www.bleepingcomputer.com/news/security/proctoru-confirms-data-breach-after-database-leaked-online/](https://www.bleepingcomputer.com/news/security/proctoru-confirms-data-breach-after-database-leaked-online/)
 
 Coghlan, Simon, Tim Miller, and Jeannie Paterson. 2020.
 "Good Proctor Or \"Big Brother\"? AI Ethics and Online Exam
-Supervision Technologies." ArXiv Preprint ArXiv:2011.07647.
+Supervision Technologies." ArXiv Preprint ArXiv:2011.07647
 
 Gebru, Timnit. 2019. "Oxford Handbook on AI Ethics Book
-Chapter on Race and Gender." ArXiv Preprint ArXiv:1908.06165.
+Chapter on Race and Gender." ArXiv Preprint ArXiv:1908.06165
 
 Hoepman, Jaap-Henk, and Bart Jacobs. 2007. "Increased
 Security through Open Source." Communications of the ACM 50 (1): 79--83.
-[https://doi.org/10.1145/1188913.1188921](https://doi.org/10.1145/1188913.1188921).
+[https://doi.org/10.1145/1188913.1188921](https://doi.org/10.1145/1188913.1188921)
 
 Kelley, Jason. 2020. "Students Are Pushing Back against
 Proctoring Surveillance Apps." Electronic Frontier Foundation. September
 25, 2020.
-[https://www.eff.org/deeplinks/2020/09/students-are-pushing-back-against-proctoring-surveillance-apps](https://www.eff.org/deeplinks/2020/09/students-are-pushing-back-against-proctoring-surveillance-apps).
+[https://www.eff.org/deeplinks/2020/09/students-are-pushing-back-against-proctoring-surveillance-apps](https://www.eff.org/deeplinks/2020/09/students-are-pushing-back-against-proctoring-surveillance-apps)
 
 Kolski, Tammi, and Jennifer Weible. 2018. "Examining the
 Relationship between Student Test Anxiety and Webcam Based Exam
-Proctoring." Online Journal of Distance Learning Administration 21.
+Proctoring." Online Journal of Distance Learning Administration 21
 
 ProctorExam. Last accessed Feb 2021.
-[https://proctorexam.com/](https://proctorexam.com/).
+[https://proctorexam.com/](https://proctorexam.com/)
 
 ProctorU. Last accessed Feb 2021.
-[https://www.proctoru.com/](https://www.proctoru.com/).
+[https://www.proctoru.com/](https://www.proctoru.com/)
 
 Respondus. Last accessed Feb 2021.
-[https://web.respondus.com](https://web.respondus.com).
+[https://web.respondus.com](https://web.respondus.com)
 
 Swauger, Shea. 2020. "Our Bodies Encoded: Algorithmic Test
 Proctoring in Higher Education." In Critical Digital Pedagogy.
 Pressbook.
-[https://cdpcollection.pressbooks.com/chapter/our-bodies-encoded-algorithmic-test-proctoring-in-higher-education/](https://cdpcollection.pressbooks.com/chapter/our-bodies-encoded-algorithmic-test-proctoring-in-higher-education/).
+[https://cdpcollection.pressbooks.com/chapter/our-bodies-encoded-algorithmic-test-proctoring-in-higher-education/](https://cdpcollection.pressbooks.com/chapter/our-bodies-encoded-algorithmic-test-proctoring-in-higher-education/)

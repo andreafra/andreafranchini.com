@@ -2,28 +2,30 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const NotFoundPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+	const siteTitle = data.site.siteMetadata.title
 
-  return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="404: Not Found" />
-      <h1>404: Not Found</h1>
-      <p><i>It's your fault, not mine!</i></p>
-    </Layout>
-  )
+	return (
+		<Layout location={location} title={siteTitle}>
+			<Seo title="404: Not Found" />
+			<h1>404: Not Found</h1>
+			<p>
+				<i>It's your fault, not mine!</i>
+			</p>
+		</Layout>
+	)
 }
 
 export default NotFoundPage
 
 export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
+	query {
+		site {
+			siteMetadata {
+				title
+			}
+		}
+	}
 `

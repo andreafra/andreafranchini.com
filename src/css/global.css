@@ -1,0 +1,103 @@
+/*
+  blue: {
+    light: "#7175ED",
+    DEFAULT: "#4245A3",
+    dark: "#1A1C56",
+  },
+  pink: {
+    light: "#FFE7F1",
+    DEFAULT: "#F9C9DE",
+    dark: "#E595B7",
+  },
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+@import "../css/typography.css";
+@import "../css/icons.css";
+
+:root {
+	--fontFamily-sans: "Agane", system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+	--fontFamily-serif: "Charis", "Charter", "Georgia", Cambria,
+		"Times New Roman", Times, serif;
+
+	--font-body: var(--fontFamily-sans);
+	--font-heading: var(--fontFamily-sans);
+
+	--lineHeight-none: 1;
+	--lineHeight-tight: 1.1;
+	--lineHeight-normal: 1.5;
+
+	--fontSize-small: 1rem;
+	--fontSize-normal: 1.2rem;
+	--fontSize-nav: 1.6rem;
+	--fontSize-big: 1.8rem;
+	--fontSize-giant: 2.2rem;
+
+	--letterSpacing-title: -0.025em;
+
+	--space-0: 0.5rem;
+	--space-1: 1rem;
+	--space-2: 2rem;
+	--space-3: 4rem;
+
+	--border-width: 0.15rem;
+	--nav-width: 3em;
+
+	--maxWidth-wrapper: 50rem;
+
+	--color-black: #0e0800;
+
+	--color-primary-light: #6063be;
+	--color-primary: #4245a3;
+	--color-primary-dark: #2f3274;
+
+	--color-secondary-light: #feeeec;
+	--color-secondary: #ffb1cf;
+	--color-secondary-dark: #e595b7;
+
+	--color-text: var(--color-primary-dark);
+
+	--bg-primary: linear-gradient(
+		33deg,
+		var(--color-primary) 0%,
+		var(--color-primary-light) 100%
+	);
+	--bg-secondary: linear-gradient(
+		33deg,
+		var(--color-secondary-dark) 0%,
+		var(--color-secondary) 100%
+	);
+
+	--animation-duration: 0.33s;
+}
+
+/* Animations */
+@keyframes dark-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes curtain-reveal {
+	0% {
+		opacity: 0;
+		clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
+	}
+	100% {
+		opacity: 1;
+		clip-path: polygon(0% 0%, 200% 0%, 0% 200%);
+	}
+}
+
+.anim-reveal {
+	animation: curtain-reveal var(--animation-duration) ease-out 0s;
+	animation-fill-mode: both;
+}
+
+@import "../css/layout.css";
