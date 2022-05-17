@@ -1,13 +1,7 @@
-.sass-cache
-.gitignore
 node_modules
-.vscode
-.DS_STORE
-# dist # needed for publishing
-
-# Yarn
-.yarn/*
-!.yarn/releases
-!.yarn/plugins
-.pnp.*
+*.log*
+.nuxt
+.nitro
 .cache
+.output
+.env

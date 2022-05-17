@@ -1,0 +1,16 @@
+{
+	"name": "my-website",
+	"private": true,
+	"description": "A website that is more like a zen garden than an actual website.",
+	"author": "Andrea Franchini <hello@andreafranchini.com>",
+	"homepage": "https://andreafranchini.com",
+	"version": "6.0.0",
+	"keywords": [
+		"jamstack"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/qub3x/qub3x.github.io.git"
+	},
+	"packageManager": "pnpm@6.11.0"
+}
