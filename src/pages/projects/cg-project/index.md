@@ -1,7 +1,11 @@
 ---
 title: Computer Graphics Project
-date: "2021"
+publishDate: 2021-01-01
 description: "Creating a WebGL2 app/game from scratch. Super cool! It even supports multiple lights! Btw, it was a 'Platform Maker' kind of game."
+tags:
+   - WebGL
+   - Game Engine
+   - GLSL
 ---
 
 Half of this exam grade was determined by this project.

@@ -1,0 +1,32 @@
+:root {
+	--color-primary-1: #ff00ff;
+
+	--color-dark-1: #222222;
+	--color-dark-2: #666666;
+
+	--color-text-1: var(--color-dark-1);
+	--color-text-2: var(--color-dark-2);
+
+	--font-family-serif: "EB Garamond", serif;
+	--font-family-sans: "Space Grotesk", sans-serif;
+
+	--font-size-root: 1.4rem;
+	--font-size-header: 1.2rem;
+
+	--gap: 1rem;
+
+	--border-radius: 12px;
+
+	--transition: all ease-in-out 0.2s;
+
+	--page-min-w: 42em;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-family-sans);
+	margin: 0;
+}

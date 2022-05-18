@@ -1,7 +1,16 @@
 ---
 title: Software Engineering II Project
-date: "2021"
+publishDate: 2021-01-01
 description: "RASD, DD, Implementation and Testing of a Software to handle queues for supermarkets during an epidemic."
+tags:
+   - Requirement Analysis
+   - Express
+   - MySQL
+   - REST
+   - Stateless
+   - Unit Testing
+   - Integration Testing
+   - System Testing
 ---
 
 This project completely replaced my exam of Software Engineering 2, and it was super-useful to understand how a RASD (Requirement Analysis and Specification Document), DD (Design Document) and other documentations work in Software Development; in particular, understanding the possible edge-cases of each proposal has been really interesting.

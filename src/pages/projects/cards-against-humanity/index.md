@@ -1,7 +1,10 @@
 ---
 title: CAHOnline
-date: "2016"
+publishDate: 2016-01-01
 description: "A web-based implementation of Cards against Humanity I did in high school."
+tags:
+   - AngularJS
+   - Socket.io
 ---
 
 This is ancient history.

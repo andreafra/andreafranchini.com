@@ -12,5 +12,22 @@
 		"type": "git",
 		"url": "git+https://github.com/qub3x/qub3x.github.io.git"
 	},
-	"packageManager": "pnpm@6.11.0"
+	"packageManager": "pnpm@6.11.0",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview"
+	},
+	"devDependencies": {
+		"@astrojs/preact": "^0.1.2",
+		"@astrojs/sitemap": "^0.1.0",
+		"@astrojs/solid-js": "^0.1.2",
+		"@astrojs/tailwind": "^0.2.1",
+		"astro": "^1.0.0-beta.29",
+		"sass": "^1.51.0"
+	},
+	"dependencies": {
+		"preact": "^10.7.2"
+	}
 }

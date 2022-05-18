@@ -1,9 +1,10 @@
 ---
+title: "Do online proctoring tools ensure students' privacy and fair-treatment?"
 subtitle: "Andrea Franchini, February 2021"
-title: "Do online proctoring tools ensure students' privacy and
-   fair-treatment?"
-date: "2021-01-14"
-description: "A paper I wrote for my Computer Ethics Class about remote exams and the tools used to monitor students' behavior, pondering whether this kind of software poses a threat to student privacy and equal conditions. It is not particularly long, but I woudln't say it's short either."
+publishDate: 2021-01-14
+description: "A paper I wrote for my Computer Ethics Class about remote exams and the tools used to monitor students' behavior, pondering whether this kind of software poses a threat to student privacy and equal conditions. It's not particularly long, around 3500 words."
+tags:
+   - ethics
 ---
 
 ### Abstract

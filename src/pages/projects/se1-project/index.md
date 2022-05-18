@@ -1,7 +1,11 @@
 ---
 title: Software Engineering I Project
-date: "2020"
+publishDate: 2020-01-01
 description: "An implementation in Java of the tabletop game Santorini, which was part of my bachelor's thesis."
+tags:
+   - Java
+   - JavaFX
+   - Game
 ---
 
 This was a mandatory project that served as a thesis for my bachelor's degree. I worked in team with two fine fellow engineers, [@ferrohd](https://github.com/ferrohd) and [@luigifusco](https://github.com/luigifusco).

@@ -1,0 +1,31 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Button from '../components/Button';
+import Layout from '../components/Layout';
+
+const { content } = Astro.props;
+---
+
+<html lang={content.lang || 'en'}>
+	<head>
+		<MainHead title={content.title} description={content.description} />
+	</head>
+	<body>
+		<Layout>
+		<div class="leadIn">
+			<div class="wrapper pt8 pb8 mb8 tac">
+				{content.tags.map((t) => <span class="tag">{t}</span>)}
+				<h3 class="tagline">{content.description}</h3>
+			</div>
+		</div>
+		<div class="wrapper wrapper__readable">
+			<div class="content"><slot /></div>
+		</div>
+		<footer class="tac mt6">
+			<a href="/projects">
+				<Button>View More</Button>
+			</a>
+		</footer>
+		</Layout>
+	</body>
+</html>

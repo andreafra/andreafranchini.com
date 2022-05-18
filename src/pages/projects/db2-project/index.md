@@ -1,7 +1,12 @@
 ---
 title: Database 2 Project
-date: "2021"
+publishDate: 2021-01-01
 description: "SQL Triggers, ORM/JPA, and boring Database design."
+tags:
+   - JPA
+   - MySQL
+   - Database
+   - Thymeleaf
 ---
 
 This is a relatively smaller project compared to the others, and nothing particularly complicated.
