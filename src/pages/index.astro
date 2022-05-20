@@ -1,29 +1,26 @@
 ---
-// Component Imports
-import MainHead from "@components/MainHead.astro";
-import Layout from "@components/Layout";
-import EntryList from "@components/EntryList";
-
-const projects = (await Astro.glob("./projects/**/*.md"))
-	.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+	// Component Imports
+	import MainHead from "@components/MainHead.astro";
+	import Layout from "@components/Layout";
+	import EntryList from "@components/EntryList/index.astro";
+	import Bio from "@components/Bio/index.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <html lang="en">
-	<head>
-		<MainHead 
-			title="Andrea Franchini" 
-			description="Andrea Franchini is a student in Computer Science and Engineering at the Polytechnic University of Milan"
-		/>
-	</head>
-	<body>
-		<Layout>
-			<p>I'm Andrea Franchini</p>
-			<section>
-				<EntryList entries={projects}/>
-			</section>
-		</Layout>
-	</body>
+
+<head>
+	<MainHead title="Andrea Franchini"
+		description="Andrea Franchini is a student in Computer Science and Engineering at the Polytechnic University of Milan" />
+</head>
+
+<body>
+	<Layout>
+		<Bio />
+		<EntryList />
+	</Layout>
+</body>
+
 </html>

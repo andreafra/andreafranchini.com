@@ -1,11 +1,11 @@
 import { h } from "preact"
-import Styles from "./styles.module.scss"
+import S from "./styles.module.scss"
 
 export default function Footer() {
 	return (
-		<footer className={Styles.footer}>
-			&copy; {new Date().getFullYear()} Andrea Franchini
-			<small className={Styles.byline}>🚀 Built by Astro</small>
+		<footer className={S.footer}>
+			Made by <em>Andrea Franchini</em> in{" "}
+			<em>{new Date().getFullYear()}</em>
 		</footer>
 	)
 }

@@ -1,0 +1,29 @@
+---
+	import Styles from "./styles.module.scss"
+
+	const projects = await Astro.glob("/src/pages/projects/**/*.md")
+	const articles = await Astro.glob("/src/pages/articles/**/*.md")
+	const entries = [...projects, ...articles]
+		.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+
+---
+
+<section class="entryList">
+	<ul class={Styles.list}>
+		{entries.map((entry, index) => (
+		<li class={Styles.item}>
+			<a href={entry.url} class={Styles.flex}>
+				<div class={Styles.date}>
+					{new Date(entry.frontmatter.publishDate).getFullYear()}
+				</div>
+				<div class={Styles.content}>
+					<h3 class={Styles.title}>{entry.frontmatter.title}</h3>
+					<p class={Styles.desc}>
+						{entry.frontmatter.description}
+					</p>
+				</div>
+			</a>
+		</li>
+		))}
+	</ul>
+</section>

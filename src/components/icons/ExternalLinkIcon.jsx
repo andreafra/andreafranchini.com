@@ -1,9 +1,9 @@
-import Styles from "./styles.module.scss"
+import S from "./styles.module.scss"
 
 export default () => (
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
-		className={Styles.icon}
+		className={S.icon}
 		fill="none"
 		viewBox="0 0 24 24"
 		stroke="currentColor"

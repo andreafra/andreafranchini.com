@@ -1,6 +1,6 @@
 ---
 title: Composer
-publishDate: 2020-01-01
+publishDate: 2020-08-01
 description: "A client-only web app I made as a university project with ReactJS + ReduxJS that allows to create scripted actions for robots."
 ---
 

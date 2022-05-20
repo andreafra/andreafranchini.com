@@ -1,6 +1,6 @@
 ---
 title: Computer Graphics Project
-publishDate: 2021-01-01
+publishDate: 2021-09-01
 description: "Creating a WebGL2 app/game from scratch. Super cool! It even supports multiple lights! Btw, it was a 'Platform Maker' kind of game."
 tags:
    - WebGL

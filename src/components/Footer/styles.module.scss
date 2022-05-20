@@ -1,7 +1,12 @@
 .footer {
-	background-color: yellow;
-}
+	position: relative;
+	margin: var(--gap) 0;
+	font-family: var(--font-family-serif);
+	font-style: italic;
+	text-align: right;
+	color: var(--color-text-2);
 
-.byline {
-	font-size: small;
+	em {
+		font-style: normal;
+	}
 }

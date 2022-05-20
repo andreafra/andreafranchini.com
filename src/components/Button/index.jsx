@@ -1,8 +1,8 @@
-import { h } from 'preact';
-import Styles from './styles.module.scss';
+import { h } from "preact"
+import S from "./styles.module.scss"
 
 function Button({ children }) {
-	return <span className={Styles.button}>{children}</span>;
+	return <span className={S.button}>{children}</span>
 }
 
-export default Button;
+export default Button

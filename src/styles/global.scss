@@ -1,8 +1,18 @@
-:root {
-	--color-primary-1: #ff00ff;
+$accent: red;
+$dark: rgb(37, 32, 32);
+$light: rgb(238, 247, 208);
 
-	--color-dark-1: #222222;
-	--color-dark-2: #666666;
+$max-width: 32em;
+
+:root {
+	--color-accent-1: #{$accent};
+	--color-accent-2: #{lighten($accent, 33)};
+	--color-light-1: #{$light};
+	--color-light-2: #{darken($light, 20)};
+	--color-dark-1: #{$dark};
+	--color-dark-2: #{lighten($dark, 20)};
+
+	--color-bg: var(--color-light-1);
 
 	--color-text-1: var(--color-dark-1);
 	--color-text-2: var(--color-dark-2);
@@ -12,14 +22,22 @@
 
 	--font-size-root: 1.4rem;
 	--font-size-header: 1.2rem;
+	--font-size-bio: clamp(2em, 5vmin, 3em);
+
+	// Font size to be used to make
+	// serif text have the same x-height
+	// of sans-serif text
+	--font-size-serif: 1.2em;
+
+	--page-max-w: 64em;
 
 	--gap: 1rem;
+	--gap-double: 2rem;
 
 	--border-radius: 12px;
 
 	--transition: all ease-in-out 0.2s;
-
-	--page-min-w: 42em;
+	--transition-slow: all ease-in-out 0.4s;
 }
 
 * {
@@ -27,6 +45,36 @@
 }
 
 body {
+	background-color: var(--color-bg);
 	font-family: var(--font-family-sans);
 	margin: 0;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: var(--gap) 0;
+}
+
+p {
+	margin: var(--gap-double) 0;
+}
+
+em {
+	font-family: var(--font-family-serif);
+	font-size: var(--font-size-serif);
+	font-style: italic;
+	line-height: calc(1 / var(--font-size-serif));
+}
+
+a {
+	color: var(--color-text-1);
+	text-decoration: none;
+	&:visited {
+		color: var(--color-text-1);
+	}
 }
