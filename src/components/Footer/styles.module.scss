@@ -1,12 +1,22 @@
 .footer {
 	position: relative;
 	margin: var(--gap) 0;
-	font-family: var(--font-family-serif);
-	font-style: italic;
+	font-family: var(--font-family-sans);
+	font-style: normal;
 	text-align: right;
 	color: var(--color-text-2);
+	& p {
+		margin: 0;
+		font-size: var(--font-size-small);
+	}
+}
 
-	em {
-		font-style: normal;
+.link {
+	font-family: var(--font-family-serif);
+	font-size: var(--font-size-serif);
+	color: var(--color-text-2);
+
+	&:visited {
+		color: var(--color-text-2);
 	}
 }
