@@ -1,11 +1,10 @@
 ---
-	import Styles from "./styles.module.scss"
+import Styles from "./EntryList.module.scss"
 
-	const projects = await Astro.glob("/src/pages/projects/**/*.md")
-	const articles = await Astro.glob("/src/pages/articles/**/*.md")
-	const entries = [...projects, ...articles]
-		.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
-
+const projects = await Astro.glob("/src/pages/projects/**/*.md")
+const articles = await Astro.glob("/src/pages/articles/**/*.md")
+const entries = [...projects, ...articles]
+	.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 ---
 
 <section class="entryList">

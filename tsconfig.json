@@ -14,7 +14,8 @@
 		// https://docs.astro.build/en/guides/aliases/
 		"baseUrl": ".",
 		"paths": {
-			"@components/*": ["src/components/*"]
+			"@components/*": ["src/components/*"],
+			"@layouts/*": ["src/layouts/*"]
 		}
 	}
 }

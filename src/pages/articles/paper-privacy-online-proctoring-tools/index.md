@@ -1,4 +1,5 @@
 ---
+layout: "@layouts/EntryLayout.astro"
 title: "Do online proctoring tools ensure students' privacy and fair-treatment?"
 subtitle: "Andrea Franchini, February 2021"
 publishDate: 2021-01-14
@@ -7,7 +8,7 @@ tags:
    - ethics
 ---
 
-### Abstract
+## Abstract
 
 This paper analyzes issues found in online proctoring tools (OPT),
 addressing in particular privacy and fairness concerns about this kind

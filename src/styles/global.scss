@@ -1,21 +1,24 @@
 $accent: #ee8700;
 $dark: #845575;
-$light: rgb(255, 255, 255);
+$light: #fdeff9;
 
 $max-width: 32em;
 
 :root {
 	--color-accent-1: #{$accent};
-	--color-accent-2: #{lighten($accent, 33)};
+	--color-accent-2: #{lighten($accent, 28)};
+	--color-accent-3: #{lighten($accent, 47)};
 	--color-light-1: #{$light};
 	--color-light-2: #{darken($light, 20)};
 	--color-dark-1: #{darken($dark, 20)};
 	--color-dark-2: #{$dark};
+	--color-dark-3: #{lighten($dark, 15)};
 
 	--color-bg: var(--color-light-1);
 
 	--color-text-1: var(--color-dark-1);
 	--color-text-2: var(--color-dark-2);
+	--color-text-3: var(--color-dark-3);
 
 	--font-family-serif: "Cardo", serif;
 	--font-family-sans: "Manrope", sans-serif;
@@ -24,6 +27,9 @@ $max-width: 32em;
 	--font-size-header: 1.2rem;
 	--font-size-intro: clamp(2em, 5vmin, 3em);
 	--font-size-small: 0.8rem;
+	--font-size-entry-title: 2rem;
+	--font-size-entry-date: 1.8rem;
+	--font-size-entry-body: 1.2rem;
 
 	// Font size to be used to make
 	// serif text have the same x-height
@@ -31,11 +37,17 @@ $max-width: 32em;
 	--font-size-serif: 1.2em;
 
 	--page-max-w: 64em;
+	--page-min-h: 90vh;
+
+	--entry-max-w: #{64rem * 0.66};
+	--entry-line-h: 1.5em;
 
 	--gap: 1rem;
 	--gap-double: 2rem;
 
 	--border-radius: 12px;
+
+	--text-deco-thickness: 3px;
 
 	--transition: all ease-in-out 0.2s;
 	--transition-slow: all ease-in-out 0.4s;
@@ -64,6 +76,10 @@ h6 {
 
 p {
 	margin: var(--gap-double) 0;
+
+	&:first-child {
+		margin: 0;
+	}
 }
 
 em {
@@ -75,8 +91,15 @@ em {
 
 a {
 	color: var(--color-text-1);
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-color: var(--color-accent-1);
+	text-decoration-thickness: var(--text-deco-thickness);
 	&:visited {
 		color: var(--color-text-1);
 	}
+}
+
+*::selection {
+	background-color: var(--color-accent-3);
+	color: var(--color-accent-1);
 }

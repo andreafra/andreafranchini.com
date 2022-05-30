@@ -1,0 +1,45 @@
+.container {
+	position: relative;
+	max-width: var(--page-max-w);
+	min-height: var(--page-min-h);
+	margin: var(--gap) auto 0;
+	padding: 0 var(--gap);
+}
+
+.title {
+	color: var(--color-text-1);
+	font-weight: bold;
+	font-size: var(--font-size-entry-title);
+	margin-bottom: 0;
+}
+
+.date {
+	color: var(--color-text-2);
+	font-weight: bold;
+	font-size: var(--font-size-entry-date);
+}
+
+.entryContainer {
+	max-width: var(--entry-max-w);
+	margin: auto;
+	font-size: var(--font-size-entry-body);
+	// Typography
+	p {
+		line-height: var(--entry-line-h);
+	}
+
+	em {
+		font-size: 1em;
+		font-family: var(--font-family-sans);
+		font-style: italic;
+	}
+
+	ul {
+		padding-left: var(--gap-double);
+		list-style: disc;
+		li {
+			margin: var(--gap) 0;
+			padding-left: var(--gap);
+		}
+	}
+}

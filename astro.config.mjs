@@ -1,8 +1,8 @@
 import { defineConfig } from "astro/config"
-import preact from "@astrojs/preact"
+import { astroImageTools } from "astro-imagetools"
 import sitemap from "@astrojs/sitemap"
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [preact(), sitemap()],
+	integrations: [sitemap(), astroImageTools],
 })

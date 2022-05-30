@@ -1,10 +1,11 @@
 .footer {
+	display: block;
 	position: relative;
-	margin: var(--gap) 0;
+	margin: var(--gap) auto;
 	font-family: var(--font-family-sans);
 	font-style: normal;
-	text-align: right;
-	color: var(--color-text-2);
+	text-align: center;
+	color: var(--color-text-3);
 	& p {
 		margin: 0;
 		font-size: var(--font-size-small);

@@ -1,0 +1,14 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import S from './styles.module.scss';
+
+const { content } = Astro.props;
+---
+
+<BaseLayout content>
+	<article class={S.entryContainer}>
+		<h1 class={S.title}>{content.title}</h1>
+		<span class={S.date}>{new Date(content.publishDate).getFullYear()}</span>
+		<slot />
+	</article>
+</BaseLayout>

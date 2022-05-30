@@ -1,4 +1,5 @@
 ---
+layout: "@layouts/EntryLayout.astro"
 title: CAHOnline
 publishDate: 2016-01-01
 description: "A web-based implementation of Cards against Humanity I did in high school."

@@ -1,4 +1,5 @@
 ---
+layout: "@layouts/EntryLayout.astro"
 title: Software Engineering I Project
 publishDate: 2020-01-01
 description: "An implementation in Java of the tabletop game Santorini, which was part of my bachelor's thesis."
@@ -24,4 +25,4 @@ Here's a little sneak peek at how it look (since you'd have to download the JAR'
 
 ### Relevant literature
 
-The book "[Game Programming Patterns](https://gameprogrammingpatterns.com/)" (which I recommend) from Bob Nystrom has helped me understand certain pattern uses in game development (especially the _flyweight_ and _command_ one).
+The book "[Game Programming Patterns](https://gameprogrammingpatterns.com/)" (which I recommend) from Bob Nystrom has helped me understand certain pattern used in game development (especially the _flyweight_ and _command_ one).

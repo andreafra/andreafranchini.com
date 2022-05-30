@@ -1,4 +1,5 @@
 ---
+layout: "@layouts/EntryLayout.astro"
 title: Database 2 Project
 publishDate: 2021-01-01
 description: "SQL Triggers, ORM/JPA, and boring Database design."

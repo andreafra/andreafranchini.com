@@ -1,16 +1,7 @@
 ---
-import Layout from '../components/Layout';
-import MainHead from '../components/MainHead.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<MainHead title="Not Found" />
-	</head>
-	<body>
-		<Layout>
-			<h1>Page Not Found</h1>
-			<p>Not found</p>
-		</Layout>
-	</body>
-</html>
+<BaseLayout content={{}}>
+	<h1>404 - Nothing here!</h1>
+</BaseLayout>
