@@ -8,6 +8,8 @@ tags:
    - ethics
 ---
 
+[Download as PDF](/docs/paper_privacy_proctoring_tools.pdf)
+
 ## Abstract
 
 This paper analyzes issues found in online proctoring tools (OPT),

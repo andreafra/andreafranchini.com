@@ -1,5 +1,7 @@
 .header {
-	display: block;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
 	margin: var(--gap) 0;
 }
 
@@ -19,8 +21,7 @@
 }
 
 .nav {
-	display: block;
-	float: right;
+	display: inline-block;
 }
 
 .link {
@@ -28,7 +29,9 @@
 	margin-left: var(--gap);
 	align-self: center;
 	font-size: var(--font-size-header);
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-thickness: var(--text-deco-thickness);
+	text-decoration-color: var(--color-accent-1);
 	color: var(--color-text-1);
 
 	&:first-child {

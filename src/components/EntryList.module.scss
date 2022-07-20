@@ -24,27 +24,6 @@
 	margin: 0;
 	text-decoration: none;
 	color: var(--color-text-1);
-	transition: var(--transition);
-
-	&::before {
-		display: block;
-		content: "";
-		height: 100%;
-		position: absolute;
-		width: 5em;
-		background-color: rgba(255, 255, 255, 0.3);
-		left: -20%;
-		transform: skewX(-10deg);
-	}
-}
-
-.flex:hover {
-	&::before {
-		left: 120%;
-		background-color: rgba(255, 255, 255, 0.7);
-		transform: skewX(-20deg);
-		transition: var(--transition-slow);
-	}
 }
 
 .date {
