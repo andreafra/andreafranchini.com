@@ -34,7 +34,7 @@ jobs:
 
          # Not using npm? Change `npm run build` to `yarn build` or `pnpm run build`
          - name: Build Astro
-           run: pnpm run build
+           run: pnpm run build --experimental-integrations
 
          - name: Deploy to GitHub Pages
            uses: peaceiris/actions-gh-pages@v3
