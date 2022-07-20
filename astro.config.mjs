@@ -7,4 +7,6 @@ export default defineConfig({
 	integrations: [sitemap(), astroImageTools],
 	// Deploy
 	site: "https://www.andreafranchini.com",
+	// Enable experimental integrations
+	experimental: { integrations: true },
 })
