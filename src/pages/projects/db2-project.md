@@ -27,4 +27,4 @@ I learned what an ORM is at least.
 
 ## Repo
 
-[Here's the link to the GitHub repository](https://github.com/QUB3X/Database-2-2021-Project).
+[Here's the link to the GitHub repository](https://github.com/andreafra/Database-2-2021-Project).

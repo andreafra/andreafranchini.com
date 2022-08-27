@@ -21,7 +21,7 @@ Let's not talk about the part in which the 2D/3D assets weren't licensed by the 
 
 Here's a little sneak peek at how it look (since you'd have to download the JAR's from GitHub to play it):
 
-`vimeo: https://vimeo.com/485526632`
+<div style="padding:81.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/485526632?h=9f7aaa3f45&loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 ### Relevant literature
 

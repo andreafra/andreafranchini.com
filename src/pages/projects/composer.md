@@ -11,6 +11,6 @@ The idea was to make a software that allowed users to obtain a runnable code to 
 
 It was made with extendability in mind, written and documented in TypeScript, and with standard libraries. It's been a good occasion to learn ReactJS and Redux, along with some good design patterns.
 
-Here's a [live demo](https://github.com/QUB3X/composer) of the project, hosted on Netlify.
+Here's a [live demo](https://github.com/andreafra/composer) of the project, hosted on Netlify.
 
-![A screenshot of the application](./screen1.png)
+![Example of the homepage of the project](/images/composer.png)

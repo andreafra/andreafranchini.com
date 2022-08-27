@@ -22,18 +22,18 @@ At the end a client could join a queue by signing up with their phone number, an
 
 We also performed full intergration testing of the project.
 
-While the architecture was pretty classic (3-tier web application, boring...), we experimented with REST APIs and Docker to setup this project. If you want to run it, there should be detailed instruction in the [repository readme file](//github.com/QUB3X/Software-Engineering-2-Project-2021). Nothing too complicated or fancy, it's just the usual "docker-compose" stuff.
+While the architecture was pretty classic (3-tier web application, boring...), we experimented with REST APIs and Docker to setup this project. If you want to run it, there should be detailed instruction in the [repository readme file](//github.com/andreafra/Software-Engineering-2-Project-2021). Nothing too complicated or fancy, it's just the usual "docker-compose" stuff.
 
 Finally we had to review another's team project testing practices and results.
 
 ## Files
 
-_The links here point to GitHub, btw._
+_The following links lead to GitHub, btw._
 
--  [RASD](https://github.com/QUB3X/Software-Engineering-2-Project-2021/blob/main/RASD/rasd.pdf)
--  [DD](https://github.com/QUB3X/Software-Engineering-2-Project-2021/blob/main/DeliveryFolder/dd_update-1.pdf)
--  [Implementation and Testing Document](https://github.com/QUB3X/Software-Engineering-2-Project-2021/blob/main/ITD/itd.pdf)
--  [Acceptance Test of the other Team's project](https://github.com/QUB3X/Software-Engineering-2-Project-2021/blob/main/DeliveryFolder/atd.pdf)
+-  [RASD](https://github.com/andreafra/Software-Engineering-2-Project-2021/blob/main/RASD/rasd.pdf)
+-  [DD](https://github.com/andreafra/Software-Engineering-2-Project-2021/blob/main/DeliveryFolder/dd_update-1.pdf)
+-  [Implementation and Testing Document](https://github.com/andreafra/Software-Engineering-2-Project-2021/blob/main/ITD/itd.pdf)
+-  [Acceptance Test of the other Team's project](https://github.com/andreafra/Software-Engineering-2-Project-2021/blob/main/DeliveryFolder/atd.pdf)
 
 ## Other Contributors
 
@@ -42,4 +42,4 @@ _The links here point to GitHub, btw._
 
 ## Repo
 
-[Here's the link to the GitHub repository](https://github.com/QUB3X/Software-Engineering-2-Project-2021).
+[Here's the link to the GitHub repository](https://github.com/andreafra/Software-Engineering-2-Project-2021).

@@ -45,7 +45,7 @@ $max-width: 32em;
 	--gap: 1rem;
 	--gap-double: 2rem;
 
-	--border-radius: 18px;
+	--border-radius: 9px;
 
 	--text-deco-thickness: 3px;
 
@@ -97,6 +97,11 @@ a {
 	&:visited {
 		color: var(--color-text-1);
 	}
+}
+
+img {
+	width: 100%;
+	border: var(--text-deco-thickness) solid var(--color-text-2);
 }
 
 *::selection {
