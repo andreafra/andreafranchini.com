@@ -20,15 +20,15 @@
 		"preview": "astro preview"
 	},
 	"devDependencies": {
-		"@astrojs/image": "^0.3.6",
-		"@astrojs/mdx": "^0.10.2",
+		"@astrojs/image": "^0.3.7",
+		"@astrojs/mdx": "^0.10.3",
 		"@astrojs/sitemap": "^0.1.2",
 		"@astrojs/tailwind": "^0.2.5",
-		"astro": "^1.1.1",
-		"sass": "^1.54.5"
+		"astro": "^1.9.2",
+		"sass": "^1.57.1"
 	},
 	"dependencies": {
-		"astro-imagetools": "^0.6.10",
-		"preact": "^10.10.6"
+		"astro-imagetools": "^0.6.17",
+		"preact": "^10.11.3"
 	}
 }

@@ -1,6 +1,9 @@
 ---
-    import "../styles/global.scss";
-    const { title = "Andrea Franchini", description = "Andrea Franchini is a student in Computer Science and Engineering at the Polytechnic University of Milan" } = Astro.props;
+import "../styles/global.scss"
+const {
+	title = "Andrea Franchini",
+	description = "Andrea Franchini is a student in Computer Science and Engineering at the Polytechnic University of Milan",
+} = Astro.props
 ---
 
 <title>{title}</title>
@@ -11,7 +14,13 @@
 <meta name="viewport" content="width=device-width" />
 
 <!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Manrope:wght@400;700&display=swap"
-    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+	href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Manrope:wght@400;700&display=swap"
+	rel="stylesheet"
+/>
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+<link rel="icon" type="image/png" href="public/favicon.svg" />
