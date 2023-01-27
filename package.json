@@ -24,7 +24,7 @@
 		"@astrojs/mdx": "^0.10.3",
 		"@astrojs/sitemap": "^0.1.2",
 		"@astrojs/tailwind": "^0.2.5",
-		"astro": "^1.9.2",
+		"astro": "^2.0.2",
 		"sass": "^1.57.1"
 	},
 	"dependencies": {
