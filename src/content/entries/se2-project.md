@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/EntryLayout.astro"
 title: Software Engineering II Project
 publishDate: 2021-02-01
 description: "RASD, DD, Implementation and Testing of a Software to handle queues for supermarkets during an epidemic."

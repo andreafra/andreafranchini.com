@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/EntryLayout.astro"
 title: Heroes API
 publishDate: 2019-01-01
 description: "An experiment to learn REST, an API for the game Heroes of the Storm and now a dead project."

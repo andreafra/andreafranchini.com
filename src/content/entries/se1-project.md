@@ -1,5 +1,4 @@
 ---
-layout: "@layouts/EntryLayout.astro"
 title: Software Engineering I Project
 publishDate: 2020-01-01
 description: "An implementation in Java of the tabletop game Santorini, which was part of my bachelor's thesis."

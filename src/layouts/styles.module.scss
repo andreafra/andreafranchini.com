@@ -22,6 +22,7 @@
 .entryContainer {
 	max-width: var(--entry-max-w);
 	margin: auto;
+	margin-bottom: var(--gap-double);
 	font-size: var(--font-size-entry-body);
 	// Typography
 	p {
@@ -41,5 +42,11 @@
 			margin: var(--gap) 0;
 			padding-left: var(--gap);
 		}
+	}
+
+	picture {
+		margin-bottom: var(--gap);
+		border-radius: var(--border-radius);
+		overflow: hidden;
 	}
 }

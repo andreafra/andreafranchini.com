@@ -1,0 +1,9 @@
+---
+import S from "./TagList.module.scss"
+
+const { tags } = Astro.props
+---
+
+<ul class={S.taglist}>
+	{tags.map((tag) => <li class={S.tag}>{tag}</li>)}
+</ul>

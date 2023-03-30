@@ -1,8 +1,10 @@
 ---
-layout: "@layouts/EntryLayout.astro"
 title: Composer
 publishDate: 2020-08-01
 description: "A client-only web app I made as a university project with ReactJS + ReduxJS that allows to create scripted actions for robots."
+tags: 
+    - Robots
+    - Arduino
 ---
 
 This project took me and [@chiarabia](https://github.com/chiarabia) a semester to complete, and there are still some issue that one day I'll iron out.

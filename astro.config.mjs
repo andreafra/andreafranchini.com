@@ -1,17 +1,17 @@
-import { defineConfig } from "astro/config"
-import { astroImageTools as imageTools } from "astro-imagetools"
-import sitemap from "@astrojs/sitemap"
+import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
+import { astroImageTools } from "astro-imagetools";
 
-import image from "@astrojs/image"
-import mdx from "@astrojs/mdx"
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [sitemap(), mdx(), imageTools],
-	// Deploy
-	site: "https://www.andreafranchini.com",
-	// Enable experimental integrations
-	experimental: {
-		integrations: true,
-	},
-})
+  integrations: [sitemap(), astroImageTools, mdx()],
+  // Deploy
+  site: "https://www.andreafranchini.com",
+  // Enable experimental integrations
+  experimental: {
+    integrations: true,
+    assets: true
+  }
+});

@@ -45,7 +45,7 @@ $max-width: 32em;
 	--gap: 1rem;
 	--gap-double: 2rem;
 
-	--border-radius: 9px;
+	--border-radius: 16px;
 
 	--text-deco-thickness: 3px;
 
@@ -75,7 +75,7 @@ h6 {
 }
 
 p {
-	margin: var(--gap-double) 0;
+	margin: var(--gap) 0;
 
 	&:first-child {
 		margin: 0;
@@ -101,7 +101,6 @@ a {
 
 img {
 	width: 100%;
-	border: var(--text-deco-thickness) solid var(--color-text-2);
 }
 
 *::selection {

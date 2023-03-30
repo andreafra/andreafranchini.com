@@ -1,28 +1,38 @@
 ---
-import Styles from "./EntryList.module.scss"
+import S from "./EntryList.module.scss"
 
-const projects = await Astro.glob("/src/pages/projects/**/*.md")
-const articles = await Astro.glob("/src/pages/articles/**/*.md")
-const entries = [...projects, ...articles]
-	.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+import { getCollection } from "astro:content"
+import TagList from "./TagList.astro"
+
+const entries = await getCollection("entries")
+
+const sortedEntries = entries.sort(
+	(a, b) =>
+		new Date(b.data.publishDate).valueOf() -
+		new Date(a.data.publishDate).valueOf()
+)
 ---
 
 <section class="entryList">
-	<ul class={Styles.list}>
-		{entries.map((entry, index) => (
-		<li class={Styles.item}>
-			<a href={entry.url} class={Styles.flex}>
-				<div class={Styles.date}>
-					{new Date(entry.frontmatter.publishDate).getFullYear()}
-				</div>
-				<div class={Styles.content}>
-					<h2 class={Styles.title}>{entry.frontmatter.title}</h2>
-					<p class={Styles.desc}>
-						{entry.frontmatter.description}
-					</p>
-				</div>
-			</a>
-		</li>
-		))}
+	<ul class={S.list}>
+		{
+			sortedEntries.map((entry) => (
+				<li class={S.item}>
+					<a href={entry.slug} class={S.flex}>
+						<time
+							class={S.date}
+							datetime={entry.data.publishDate.toISOString()}
+						>
+							{new Date(entry.data.publishDate).getFullYear()}
+						</time>
+						<div class={S.content}>
+							<h2 class={S.title}>{entry.data.title}</h2>
+							<p class={S.desc}>{entry.data.description}</p>
+							{entry.data.tags && <TagList tags={entry.data.tags} />}
+						</div>
+					</a>
+				</li>
+			))
+		}
 	</ul>
 </section>

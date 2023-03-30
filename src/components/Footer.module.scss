@@ -21,3 +21,12 @@
 		color: var(--color-text-2);
 	}
 }
+
+.copyright {
+	letter-spacing: 0.5em;
+	text-transform: uppercase;
+	&::before, &::after {
+		display: inline;
+		content: "—";
+	}
+}
