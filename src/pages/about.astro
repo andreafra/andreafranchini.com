@@ -2,43 +2,21 @@
 import Layout from "@layouts/Layout.astro"
 import { Picture } from "@astrojs/image/components"
 import pfp from "@assets/pfp.jpg"
-
-const yearsCoding =
-    new Date().getFullYear() - new Date("2013-01-01").getFullYear()
+import { Content as AboutContent } from "@assets/about.mdx"
 ---
 
 <Layout title="Andrea Franchini | About">
     <header>
         <div class="pt-12 px-2 md:px-8 text-clamp/[1.2]">
             <h1 class="text-accent">
-                <a href="/">Andrea Franchini</a>: About me
+                <a href="/">Andrea Franchini</a><br />
+                <b>About me</b>
             </h1>
         </div>
     </header>
     <main class="pt-6 px-2 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <section class="text-2xl/normal col-span-2">
-            <p>I'm a software engineer based in Milan, Italy.</p>
-            <p>
-                I'm currently a Research Fellow at the <em
-                    >Politecnico di Milano</em
-                >, where I got my master's degree. I work with <a
-                    href="//pradella.faculty.polimi.it/"
-                    >Prof. Matteo Pradella</a
-                >, <a href="https://michiari.github.io/">Michele Chiari</a> and Michele
-                De Pascalis on the topic of <em
-                    >Verification of Infrastructure-as-Code</em
-                >.
-            </p>
-            <p>
-                I'm also the maintainer of the verification tool of <a
-                    href="//piacere-project.eu">project PIACERE</a
-                >, an EU-sponsored DevSecOps framework through the Horizon 2020
-                program.
-            </p>
-            <p>
-                During the last {yearsCoding} years, I've been tinkering with many
-                technologies, in particular web-related ones.
-            </p>
+        <section class="about text-2xl/normal max-w-[70ch] col-span-2">
+            <AboutContent />
         </section>
         <section>
             <Picture
@@ -51,9 +29,20 @@ const yearsCoding =
         </section>
     </main>
 </Layout>
-
-<style>
-    main a {
+<style is:global>
+    .about > a {
         text-decoration: underline;
+    }
+    .about > p {
+        margin-bottom: 1rem;
+    }
+    .about > ul {
+        list-style: circle;
+        padding-left: 2rem;
+    }
+    .about > h2 {
+        font-weight: bolder;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
     }
 </style>

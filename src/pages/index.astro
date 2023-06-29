@@ -7,7 +7,7 @@ import ExternalLink from "@components/icons/ExternalLink.astro"
 const contacts = [
 	{ name: "About", url: "/about" },
 	{ name: "Works", url: "#works" },
-	{ name: "Articles", url: "/articles" },
+	{ name: "Articles", url: "#articles" },
 	{ name: "Contacts", url: "#contacts" },
 	{
 		name: "CV",
@@ -28,8 +28,8 @@ const contacts = [
 		<section class="pt-12 px-2 md:px-8">
 			<div class="text-clamp/[1.2]">
 				<p class="text-accent">
-					Andrea Franchini is a Research Fellow at Politecnico di
-					Milano, working on Formal Verification of
+					Andrea Franchini is a Software Engineer and Research Fellow
+					at Politecnico di Milano, working on Formal Verification of
 					Infrastructure-as-Code.
 				</p>
 				<p class="text-accent">
@@ -64,10 +64,24 @@ const contacts = [
 			<div class="block min-h-[300px] bg-red-500"></div>
 		</section>
 		<section id="works" class="px-2 md:px-8">
+			<h2 class="text-3xl font-bold py-4">Works</h2>
 			<WorkList />
 		</section>
 		<section id="articles" class="px-2 md:px-8">
+			<h2 class="text-3xl font-bold py-4">Articles</h2>
 			<ArticleList />
+		</section>
+		<section id="contacts" class="px-2 md:px-8 mb-4 max-w-[50ch] text-xl">
+			<h2 class="text-3xl font-bold py-4">Contacts</h2>
+			<p>
+				If you want to get in touch with me, feel free to send me an
+				email at:
+				<code>hello@andreafranchini.com</code>
+			</p>
+			<p>
+				Alternatively, you can contact me at my university email:
+				<code>andrea.franchini@polimi.it</code>
+			</p>
 		</section>
 	</main>
 </Layout>
