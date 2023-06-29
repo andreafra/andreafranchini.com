@@ -1,0 +1,44 @@
+---
+export interface Props {
+	href: string
+	title: string
+	description: string
+	date: Date
+	tags: string[]
+	showDate: boolean
+}
+
+const { href, title, description, date, tags, showDate } = Astro.props
+---
+
+<li itemscope>
+	<a href={href} class="flex text-slate-900 content-start gap-4">
+		<time
+			class=`inline-block pt-2 pb-6 pr-0 text-xl text-right border-dotted border-slate-900 border-t-2 basis-1/3 min-w-[10ch] ${showDate && 'invisible'}`
+			itemprop="publishDate"
+			datetime={date.toISOString()}
+			>{
+				date.toLocaleString(undefined, {
+					year: "numeric",
+				})
+			}</time
+		>
+		<div
+			class="inline-block pt-2 pb-6 pl-0 border-solid border-slate-900 border-t-2 basis-2/3"
+		>
+			<h2 class="font-extrabold text-xl">
+				{title}
+			</h2>
+			<p>
+				{description}
+			</p>
+			<ul class="space-x-1">
+				{
+					tags.map((tag) => (
+						<li class="inline-block text-slate-600">#{tag}</li>
+					))
+				}
+			</ul>
+		</div>
+	</a>
+</li>

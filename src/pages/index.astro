@@ -1,19 +1,73 @@
 ---
-// Component Imports
-import Layout from "@layouts/BaseLayout.astro"
-import EntryList from "@components/EntryList.astro"
-import Intro from "@components/Intro.astro"
+import WorkList from "@components/WorkList.astro"
+import ArticleList from "@components/ArticleList.astro"
+import Layout from "@layouts/Layout.astro"
+import ExternalLink from "@components/icons/ExternalLink.astro"
 
-const content = {
-	title: "Andrea Franchini",
-	description:
-		"Andrea Franchini is a software engineer and research fellow at the Polytechnic University of Milan",
-}
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+const contacts = [
+	{ name: "About", url: "/about" },
+	{ name: "Works", url: "#works" },
+	{ name: "Articles", url: "/articles" },
+	{ name: "Contacts", url: "#contacts" },
+	{
+		name: "CV",
+		url: "//drive.proton.me/urls/4BD01JK8XR#RLSTnpAiTG8X",
+		external: true,
+	},
+	{ name: "GitHub", url: "//github.com/andreafra", external: true },
+	{
+		name: "LinkedIn",
+		url: "//linkedin.com/in/andreafranchini",
+		external: true,
+	},
+]
 ---
 
-<Layout content>
-	<Intro />
-	<EntryList />
+<Layout title="Andrea Franchini's website">
+	<main class="">
+		<section class="pt-12 px-2 md:px-8">
+			<div class="text-clamp/[1.2]">
+				<p class="text-accent">
+					Andrea Franchini is a Research Fellow at Politecnico di
+					Milano, working on Formal Verification of
+					Infrastructure-as-Code.
+				</p>
+				<p class="text-accent">
+					He has a master's degree in Computer Science and
+					Engineering.
+				</p>
+			</div>
+			<ul class="block list-none text-left space-x-6 my-6">
+				{
+					contacts.map((item) => (
+						<li class="inline-block">
+							<a
+								class="block text-2xl decoration-accent decoration-4 underline-offset-[6px] hover:underline focus:underline"
+								href={item.url}
+								target={item.external ? "_blank" : ""}
+								referrerpolicy={
+									item.external ? "no-referrer" : ""
+								}
+							>
+								{item.name}
+								{item.external && (
+									<ExternalLink class="align-baseline inline-block -mb-0.5 h-6 w-6" />
+								)}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+		<section class="grid grid-cols-1 md:grid-cols-2">
+			<div class="block min-h-[300px] bg-accent"></div>
+			<div class="block min-h-[300px] bg-red-500"></div>
+		</section>
+		<section id="works" class="px-2 md:px-8">
+			<WorkList />
+		</section>
+		<section id="articles" class="px-2 md:px-8">
+			<ArticleList />
+		</section>
+	</main>
 </Layout>

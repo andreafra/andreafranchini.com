@@ -1,0 +1,38 @@
+---
+import "@fontsource/manrope"
+
+export interface Props {
+	title: string
+}
+
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="min-h-screen bg-neutral relative">
+		<div class="noise"></div>
+		<slot class="z-20" />
+	</body>
+</html>
+<style is:global>
+	.noise {
+		z-index: -20;
+		position: absolute;
+		inset: 0;
+		background-image: url(/assets/noise.webp);
+		background-repeat: repeat;
+		opacity: 0.8;
+		mix-blend-mode: overlay;
+		pointer-events: none;
+		top: 0;
+	}
+</style>

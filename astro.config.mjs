@@ -1,13 +1,10 @@
-import { defineConfig } from "astro/config"
-import sitemap from "@astrojs/sitemap"
-import { astroImageTools } from "astro-imagetools"
+import { defineConfig } from 'astro/config';
+import tailwind from "@astrojs/tailwind";
+import mdx from "@astrojs/mdx";
 
-import mdx from "@astrojs/mdx"
+import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [sitemap(), astroImageTools, mdx()],
-	compressHTML: true,
-	// Deploy
-	site: "https://andreafranchini.com",
-})
+  integrations: [tailwind(), mdx(), image()]
+});
