@@ -9,7 +9,7 @@ tags:
     - Proctoring Tools
 ---
 
-[Download as PDF](/docs/paper_privacy_proctoring_tools.pdf)
+[Download as PDF](https://drive.proton.me/urls/9NYECBC76G#jPlkLYKbWRvT)
 
 ## Abstract
 

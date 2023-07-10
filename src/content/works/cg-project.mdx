@@ -3,15 +3,12 @@ title: Computer Graphics Project
 publishDate: 2021-09-01
 description: "Creating a WebGL2 app/game from scratch. Super cool! It even supports multiple lights! Btw, it was a 'Platform Maker' kind of game."
 tags:
-   - WebGL
-   - Game Engine
-   - GLSL
+    - WebGL
+    - Game Engine
+    - GLSL
 ---
 
-import { Picture } from "astro-imagetools/components"
-
-
-Half of this exam grade was determined by this project.
+Half of the Computer Graphics exam grade was determined by this project.
 
 Once again, I and [@aleasto](https://github.com/aleasto) teamed up to tackle this project.
 
@@ -21,26 +18,20 @@ In less than a month, we had working (point, spot and directional) lights, a rou
 
 [**Click here to play the DEMO**](https://cpt-toad-maker.netlify.app/)
 
-_These are a couple of screenshots that show the final result:_
+_Here's a couple of screenshots that show the final result:_
 
-<Picture
-  src="/images/cg-project-game.png"
-  alt="Example of a game level during play mode"
-/>
-<Picture
-  src="/images/cg-project-editor.png"
-  alt="Example of the same level but in editor mode"
-/>
+![Example of a game level during play mode](../../assets/cg-project-game.png)
+![Example of the same level but in editor mode](../../assets/cg-project-editor.png)
 
 In particular, I worked mostly on:
 
--  the development environment setup, made with Webpack and with some loader to make it really simple to import GLSL shaders and OBJ files. I've also setup Typescript in order to avoid most of the type errors when working with the WebGL2 API.
--  the UI, because I always end up doing UIs. I should have studied design at university.
--  the raycast (for those familiar with Unity3D terminology) or simply a way to convert the screen space coordinates to world space coordinates. It was super-cool when it finally worked. To keep thing relatively simple, and given the relative short time to make this project work, I ended up using the AABB (Axis Aligned Bounding Boxes) method.
--  And also finding the models (that are totally *NOT* ripped from a certain Nintendo game; anyway, it's for didactic purposes) and fixing UV maps in Blender, ugh. Never again please.
+-   the development environment setup, made with Webpack and with some loader to make it really simple to import GLSL shaders and OBJ files. I've also setup Typescript in order to avoid most of the type errors when working with the WebGL2 API.
+-   the UI, because I always end up doing UIs. I should have studied design at university.
+-   the raycast (for those familiar with Unity3D terminology) or simply a way to convert the screen space coordinates to world space coordinates. It was super-cool when it finally worked. To keep thing relatively simple, and given the relative short time to make this project work, I ended up using the AABB (Axis Aligned Bounding Boxes) method.
+-   And also finding the models (that are totally _NOT_ ripped from a certain Nintendo game; anyway, it's for didactic purposes) and fixing UV maps in Blender, ugh. Never again please.
 
 At the end I now have a deeper understanding of how low-level things work in a 3D engine.
 
 ## Repo
 
-Source code and some more details are [on the GitHub repo](https://github.com/andreafra/computer-graphics-2021).
+Source code and some more details are available [on the GitHub repo](https://github.com/andreafra/computer-graphics-2021).

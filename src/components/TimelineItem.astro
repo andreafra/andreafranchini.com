@@ -12,9 +12,9 @@ const { href, title, description, date, tags, showDate } = Astro.props
 ---
 
 <li itemscope>
-	<a href={href} class="flex text-slate-900 content-start gap-4">
+	<a href={href} class="flex content-start gap-4">
 		<time
-			class=`inline-block pt-2 pb-6 pr-0 text-xl text-right border-dotted border-slate-900 border-t-2 basis-1/3 min-w-[10ch] ${showDate && 'invisible'}`
+			class=`inline-block pt-2 pb-6 pr-0 text-xl text-right border-dotted border-slate-900 dark:border-teal-100 border-t-2 basis-1/3 min-w-[10ch] ${showDate && 'invisible'}`
 			itemprop="publishDate"
 			datetime={date.toISOString()}
 			>{
@@ -24,7 +24,7 @@ const { href, title, description, date, tags, showDate } = Astro.props
 			}</time
 		>
 		<div
-			class="inline-block pt-2 pb-6 pl-0 border-solid border-slate-900 border-t-2 basis-2/3"
+			class="inline-block pt-2 pb-6 pl-0 border-solid border-slate-900 dark:border-teal-100 border-t-2 basis-2/3"
 		>
 			<h2 class="font-extrabold text-xl">
 				{title}
@@ -32,10 +32,12 @@ const { href, title, description, date, tags, showDate } = Astro.props
 			<p>
 				{description}
 			</p>
-			<ul class="space-x-1">
+			<ul class="flex justify-start gap-1 mt-2 flex-wrap">
 				{
 					tags.map((tag) => (
-						<li class="inline-block text-slate-600">#{tag}</li>
+						<li class="inline-block px-2 rounded-full text-accent dark:text-accent-dark border-[1px] border-accent dark:border-accent-dark">
+							{tag}
+						</li>
 					))
 				}
 			</ul>

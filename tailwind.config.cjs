@@ -8,6 +8,7 @@ module.exports = {
 			colors: {
 				neutral: "#E1E1E1",
 				accent: "#0C57D4",
+				"accent-dark": "#3aaa8c",
 			},
 			fontFamily: {
 				sans: ["Manrope", ...defaultTheme.fontFamily.sans],

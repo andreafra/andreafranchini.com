@@ -1,0 +1,114 @@
+---
+import { getCollection } from "astro:content"
+import Layout from "@layouts/Layout.astro"
+import Nav from "@components/Nav.astro"
+import Header from "@components/Header.astro"
+
+export async function getStaticPaths() {
+    const works = await getCollection("works")
+    const articles = await getCollection("articles")
+
+    const entries = [...works, ...articles]
+
+    entries.sort(
+        (a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime()
+    )
+
+    return entries.map((entry, index, all) => {
+        const nextEntry = index > 0 ? all[index - 1] : null
+        const prevEntry = index < all.length - 1 ? all[index + 1] : null
+        return {
+            params: { slug: entry.slug },
+            props: { entry, nextEntry, prevEntry },
+        }
+    })
+}
+
+const { entry, prevEntry, nextEntry } = Astro.props
+const { Content } = await entry.render()
+
+const publishDate = new Date(entry.data.publishDate)
+---
+
+<Layout title={entry.data.title}>
+    <Header />
+    <main class="pt-6 px-2 md:px-8 max-w-[74ch]">
+        <article class="entry text-xl">
+            <h1
+                class="block text-accent dark:text-accent-dark font-bold text-3xl mt-2"
+            >
+                {entry.data.title}
+            </h1>
+            <time
+                class="inline-block my-4 text-lg align-middle font-normal text-accent dark:text-accent-dark border-[1px] border-accent dark:border-accent-dark px-2 py-0.5 rounded-lg"
+            >
+                {publishDate.getMonth() + 1}
+                /
+                {publishDate.getFullYear()}</time
+            >
+            <Content />
+        </article>
+        <section class="mt-12">
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
+                {
+                    prevEntry && (
+                        <a
+                            class="block bg-accent/[0.1] shadow-md border-2 border-accent dark:border-accent-dark p-4 rounded-2xl hover:shadow-lg transition-shadow"
+                            href={prevEntry.slug}
+                        >
+                            <span>Previous</span>
+                            <h3 class="text-xl font-bold text-accent dark:text-accent-dark">
+                                ← {prevEntry.data.title}
+                            </h3>
+                        </a>
+                    )
+                }
+                {
+                    nextEntry && (
+                        <a
+                            class="block bg-accent/[0.1] shadow-md border-2 border-accent dark:border-accent-dark p-4 rounded-2xl text-right hover:shadow-lg transition-shadow"
+                            href={nextEntry.slug}
+                        >
+                            <span>Next</span>
+                            <h3 class="text-xl font-bold text-accent dark:text-accent-dark">
+                                {nextEntry.data.title} →
+                            </h3>
+                        </a>
+                    )
+                }
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style is:global>
+    .entry * + * {
+        @apply mt-4;
+    }
+
+    .entry h1,
+    .entry h2,
+    .entry h3 {
+        @apply font-bold text-accent dark:text-accent-dark;
+    }
+
+    .entry h1 {
+        @apply text-3xl;
+    }
+    .entry h2 {
+        @apply text-2xl;
+    }
+    .entry h3 {
+        @apply text-xl;
+    }
+    .entry a {
+        @apply underline decoration-accent dark:decoration-accent-dark underline-offset-4 break-words;
+    }
+    .entry ul {
+        @apply list-disc pl-8 flex flex-col gap-2;
+    }
+
+    .entry img {
+        @apply rounded-2xl shadow-lg;
+    }
+</style>
