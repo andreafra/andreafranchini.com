@@ -2,43 +2,44 @@
 import Layout from "@layouts/Layout.astro"
 import pfp from "@assets/pfp.jpg"
 import { Content as AboutContent } from "@assets/about.mdx"
-import Header from "@components/Header.astro"
 ---
 
 <Layout title="Andrea Franchini | About">
-    <Header />
-    <main class="pt-6 px-2 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <section class="about text-2xl/normal max-w-[70ch] col-span-2">
-            <h1 class="text-accent dark:text-accent-dark font-bold text-3xl">
-                About me
-            </h1>
-            <AboutContent />
-        </section>
-        <section>
-            <img
-                src={pfp.src}
-                width={pfp.width}
-                height={pfp.height}
-                alt="portrait of Andrea, wearing a nice shirt."
-                class="rounded-3xl shadow-lg"
-            />
-        </section>
-    </main>
+	<main
+		class="px-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-textcolor-2 dark:text-textcolor-2-dark"
+	>
+		<section class="about text-lg md:text-xl col-span-2">
+			<h1
+				class="inline-block font-bold text-3xl text-textcolor-1 dark:text-textcolor-1-dark border-textcolor-2 dark:border-textcolor-2-dark border-b-[1px] mb-3"
+			>
+				About me
+			</h1>
+			<AboutContent />
+		</section>
+		<section>
+			<img
+				src={pfp.src}
+				width={pfp.width}
+				height={pfp.height}
+				alt="portrait of Andrea, wearing a nice shirt."
+				class="rounded-3xl shadow-lg"
+			/>
+		</section>
+	</main>
 </Layout>
 <style is:global>
-    .about > a {
-        @apply underline decoration-accent dark:decoration-accent-dark dark:text-accent-dark underline-offset-4;
-    }
-    .about > p {
-        @apply mt-4;
-    }
-    .about > ul {
-        @apply list-disc pl-8 flex flex-col gap-2;
+	.about > a {
+		@apply underline decoration-textcolor-1 dark:decoration-textcolor-1-dark dark:text-textcolor-1-dark underline-offset-4;
+	}
+	.about > p {
+		@apply mt-1.5;
+	}
+	.about > ul {
+		@apply list-disc pl-8 flex flex-col gap-2 marker:text-primary dark:marker:text-primary-dark;
 
-        list-style: circle;
-        padding-left: 2rem;
-    }
-    .about > h2 {
-        @apply text-2xl font-bold mt-8 mb-4;
-    }
+		list-style: disc;
+	}
+	.about > h2 {
+		@apply text-2xl font-bold mt-6 mb-1.5;
+	}
 </style>

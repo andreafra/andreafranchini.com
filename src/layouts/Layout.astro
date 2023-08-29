@@ -1,8 +1,8 @@
 ---
 import Footer from "@components/Footer.astro"
+import Header from "@components/Header.astro"
 import "@fontsource/manrope/400.css"
-import "@fontsource/manrope/800.css"
-
+import "@fontsource/manrope/600.css"
 export interface Props {
 	title: string
 }
@@ -22,23 +22,26 @@ const { title } = Astro.props
 		<title>{title}</title>
 	</head>
 	<body
-		class="min-h-screen bg-neutral dark:bg-teal-950 relative text-slate-800 dark:text-teal-100"
+		class="min-h-screen bg-tertiary dark:bg-tertiary-dark relative text-textcolor-1 dark:text-textcolor-1-dark"
 	>
-		<!-- <div class="noise"></div> -->
-		<slot class="z-20" />
-		<Footer />
+		<div class="noise"></div>
+		<div class="container mx-auto">
+			<Header />
+			<slot />
+			<Footer />
+		</div>
+		<style is:global>
+			.noise {
+				z-index: -20;
+				position: absolute;
+				inset: 0;
+				background-image: url(/assets/noise.webp);
+				background-repeat: repeat;
+				opacity: 0.8;
+				mix-blend-mode: overlay;
+				pointer-events: none;
+				top: 0;
+			}
+		</style>
 	</body>
 </html>
-<style is:global>
-	.noise {
-		z-index: -20;
-		position: absolute;
-		inset: 0;
-		background-image: url(/assets/noise.webp);
-		background-repeat: repeat;
-		opacity: 0.8;
-		mix-blend-mode: overlay;
-		pointer-events: none;
-		top: 0;
-	}
-</style>

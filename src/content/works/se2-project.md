@@ -3,14 +3,11 @@ title: Software Engineering II Project
 publishDate: 2021-02-01
 description: "RASD, DD, Implementation and Testing of a Software to handle queues for supermarkets during an epidemic."
 tags:
-   - Requirement Analysis
-   - Express
-   - MySQL
-   - REST
-   - Stateless
-   - Unit Testing
-   - Integration Testing
-   - System Testing
+    - Requirement Analysis
+    - Express
+    - MySQL
+    - REST
+    - Testing
 ---
 
 This project completely replaced my exam of Software Engineering 2, and it was super-useful to understand how a RASD (Requirement Analysis and Specification Document), DD (Design Document) and other documentations work in Software Development; in particular, understanding the possible edge-cases of each proposal has been really interesting.
@@ -29,15 +26,15 @@ Finally we had to review another's team project testing practices and results.
 
 _The following links lead to GitHub, btw._
 
--  [RASD](https://github.com/andreafra/Software-Engineering-2-Project-2021/blob/main/RASD/rasd.pdf)
--  [DD](https://github.com/andreafra/Software-Engineering-2-Project-2021/blob/main/DeliveryFolder/dd_update-1.pdf)
--  [Implementation and Testing Document](https://github.com/andreafra/Software-Engineering-2-Project-2021/blob/main/ITD/itd.pdf)
--  [Acceptance Test of the other Team's project](https://github.com/andreafra/Software-Engineering-2-Project-2021/blob/main/DeliveryFolder/atd.pdf)
+-   [RASD](https://github.com/andreafra/Software-Engineering-2-Project-2021/blob/main/RASD/rasd.pdf)
+-   [DD](https://github.com/andreafra/Software-Engineering-2-Project-2021/blob/main/DeliveryFolder/dd_update-1.pdf)
+-   [Implementation and Testing Document](https://github.com/andreafra/Software-Engineering-2-Project-2021/blob/main/ITD/itd.pdf)
+-   [Acceptance Test of the other Team's project](https://github.com/andreafra/Software-Engineering-2-Project-2021/blob/main/DeliveryFolder/atd.pdf)
 
 ## Other Contributors
 
--  [Luigi Fusco](https://github.com/LuigiFusco)
--  [Ian Di Dio Lavore](https://github.com/ian-ofgod)
+-   [Luigi Fusco](https://github.com/LuigiFusco)
+-   [Ian Di Dio Lavore](https://github.com/ian-ofgod)
 
 ## Repo
 

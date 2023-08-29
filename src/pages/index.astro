@@ -2,93 +2,66 @@
 import WorkList from "@components/WorkList.astro"
 import ArticleList from "@components/ArticleList.astro"
 import Layout from "@layouts/Layout.astro"
-import Nav from "@components/Nav.astro"
-import ExternalLink from "@components/icons/ExternalLink.astro"
+
+const contactLinks = [
+	{ title: "GitHub → @andreafra", url: "https://github.com/andreafra" },
+	{
+		title: "Linkedin → /in/andreafranchini",
+		url: "https://linkedin.com/in/andreafranchini",
+	},
+	{
+		title: "Email → hello@andreafranchini.com",
+		url: "mailto:hello@andreafranchini.com",
+	},
+	{
+		title: "Uni Email → andrea.franchini@polimi.it",
+		url: "mailto:andrea.franchini@polimi.it",
+	},
+	{
+		title: "CV/Resumé → Download",
+		url: "https://drive.proton.me/urls/4BD01JK8XR#RLSTnpAiTG8X",
+	},
+]
 ---
 
 <Layout title="Andrea Franchini's website">
-	<main class="">
-		<section class="pt-12 px-2 md:px-8">
-			<div class="text-clamp/[1.2]">
-				<p class="text-accent dark:text-accent-dark">
-					Andrea Franchini is a Software Engineer and Research Fellow
-					at Politecnico di Milano, working on Formal Verification of
-					Infrastructure-as-Code.
-				</p>
-				<p class="text-accent dark:text-accent-dark">
-					He has a master's degree in Computer Science and
-					Engineering.
-				</p>
-			</div>
-		</section>
-		<Nav />
-		<section class="grid grid-cols-1 md:grid-cols-2">
-			<div class="block min-h-[300px] bg-accent"></div>
-			<div class="block min-h-[300px] bg-red-500"></div>
-		</section>
-		<section id="works" class="px-2 md:px-8">
-			<h2 class="text-3xl font-bold py-4">Works</h2>
-			<WorkList />
-		</section>
-		<section id="articles" class="px-2 md:px-8">
-			<h2 class="text-3xl font-bold py-4">Articles</h2>
-			<ArticleList />
-		</section>
-		<section
-			id="contacts"
-			class="bg-accent dark:bg-teal-800 text-neutral dark:text-teal-100 py-8"
-		>
-			<div class="px-2 md:px-8 mx-auto max-w-[48ch] text-xl">
-				<h2 class="text-3xl font-bold my-4">Contacts</h2>
-				<p>
-					If you want to get in touch with me, feel free to send me an
-					email at:
-					<code class="block my-2">hello@andreafranchini.com</code>
-				</p>
-				<p>
-					Alternatively, you can contact me at my university email:
-					<code class="block my-2">andrea.franchini@polimi.it</code>
-				</p>
-				<p class="mt-8">
-					You can find me also on
-					<a
-						href="//github.com/andreafra"
-						referrerpolicy="no-referrer"
-						target="_blank"
-					>
-						<span class="underline underline-offset-4">GitHub</span>
-						<ExternalLink
-							class="align-baseline inline-block h-5 w-5 -mb-0.5 md:h-6 md:w-6"
-						/>
-					</a> and
-					<a
-						href="//linkedin/in/andreafranchini"
-						referrerpolicy="no-referrer"
-						target="_blank"
-					>
-						<span class="underline underline-offset-4"
-							>LinkedIn</span
-						>
-						<ExternalLink
-							class="align-baseline inline-block h-5 w-5 -mb-0.5 md:h-6 md:w-6"
-						/>
-					</a>.
-					<p class="mt-8">
-						My <b>CV</b> is available <a
-							class="underline underline-offset-4"
-							href="https://drive.proton.me/urls/4BD01JK8XR#RLSTnpAiTG8X"
-							referrerpolicy="no-referrer"
-							target="_blank"
-							><span class="underline underline-offset-4"
-								>here</span
+	<main class="grid md:grid-cols-2 h-full">
+		<section class="px-6">
+			<p class="text-2xl">
+				is a Software Engineer and Research Fellow at Politecnico di
+				Milano, exploring Formal Verification of Infrastructure-as-Code.
+			</p>
+			<p class="text-2xl">
+				He has a master&rsquo;s degree in Computer Science and
+				Engineering.
+			</p>
+			<ul
+				class="text-xl text-textcolor-2 dark:text-textcolor-2-dark pt-4 mt-4 border-t-2 border-textcolor-2 dark:border-textcolor-2-dark"
+			>
+				{
+					contactLinks.map((l) => (
+						<li>
+							<a
+								href={l.url}
+								target="_blank"
+								referrerpolicy="no-referrer"
 							>
-							<ExternalLink
-								class="align-baseline inline-block h-5 w-5 -mb-0.5 md:h-6 md:w-6"
-							/></a
-						>.
-					</p>
-				</p>
-			</div>
+								{l.title}
+							</a>
+						</li>
+					))
+				}
+			</ul>
 		</section>
+		<!-- <section
+			class="bg-primary dark:bg-primary-dark overflow-x-hidden scroll-mt-16"
+		>
+			<div id="works">
+				<WorkList />
+			</div>
+			<div id="articles">
+				<ArticleList />
+			</div>
+		</section> -->
 	</main>
 </Layout>

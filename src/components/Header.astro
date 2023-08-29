@@ -1,12 +1,43 @@
 ---
-import Nav from "./Nav.astro"
+const links = [
+	{
+		name: "About",
+		url: "/about",
+		style: "hover:border-accent-1 focus:border-accent-1 hover:bg-accent-1/30 focus:bg-accent-1/30",
+	},
+	{
+		name: "Works",
+		url: "/works",
+		style: "hover:border-accent-2 focus:border-accent-2 hover:bg-accent-2/30 focus:bg-accent-2/30",
+	},
+	{
+		name: "Articles",
+		url: "/articles",
+		style: "hover:border-accent-3 focus:border-accent-3 hover:bg-accent-3/30 focus:bg-accent-3/30",
+	},
+]
 ---
 
-<header>
-    <div class="pt-4 md:pt-12 px-2 md:px-8 text-clamp/[1.2]">
-        <h1 class="text-accent dark:text-accent-dark">
-            <a href="/">Andrea Franchini</a>
-        </h1>
-    </div>
-    <Nav />
+<header class="grid grid-cols-1 md:grid-cols-2 md:py-4 pt-2 pb-1 items-center">
+	<div class="block pl-6">
+		<h1 class="md:text-4xl text-2xl font-bold">
+			<a href="/">Andrea Franchini</a>
+		</h1>
+	</div>
+	<nav class="block md:pl-0 pl-3 md:border-x-[1px] md:border-textcolor-1">
+		<ul class="flex list-none justify-left md:justify-center flex-wrap">
+			{
+				links.map((item) => (
+					<li class="inline-block">
+						<a
+							class={`block text-lg font-bold md:text-xl px-3 py-2 rounded-full ${item.style} border-[1px] border-transparent`}
+							href={item.url}
+						>
+							{item.name}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</nav>
 </header>
