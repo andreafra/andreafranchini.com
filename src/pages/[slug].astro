@@ -53,7 +53,7 @@ const publishDate = new Date(entry.data.publishDate)
 					prevEntry && (
 						<a
 							class="block bg-primary/10 shadow-md border-[1px] border-textcolor-2 dark:border-textcolor-2-dark rounded-2xl hover:shadow-lg transition-shadow overflow-hidden"
-							href={prevEntry.slug}
+							href=`/${prevEntry.slug}`
 						>
 							<span class="block text-center text-tertiary dark:text-tertiary-dark w-full bg-textcolor-2 dark:bg-textcolor-2">
 								&larr; Previous
@@ -68,7 +68,7 @@ const publishDate = new Date(entry.data.publishDate)
 					nextEntry && (
 						<a
 							class="block bg-primary/10 shadow-md border-[1px] border-textcolor-2 dark:border-textcolor-2-dark rounded-2xl text-right hover:shadow-lg transition-shadow overflow-hidden"
-							href={nextEntry.slug}
+							href=`/${nextEntry.slug}`
 						>
 							<span class="block text-center text-tertiary dark:text-tertiary-dark w-full bg-textcolor-2 dark:bg-textcolor-2">
 								Next &rarr;

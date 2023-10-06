@@ -12,7 +12,7 @@ const { href, title, description, date, tags, showDate } = Astro.props
 ---
 
 <li itemscope>
-	<a href={href} class="flex content-start gap-4 hover:bg-secondary/80">
+	<a href=`/${href}` class="flex content-start gap-4 hover:bg-secondary/80">
 		<time
 			class={`inline-block pt-2 pb-6 pl-6 pr-0 text-xl text-right border-dotted border-textcolor-1 dark:border-textcolor-1-dark border-t-2 ${
 				showDate && "invisible"
