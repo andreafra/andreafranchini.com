@@ -1,0 +1,103 @@
+---
+import type { Entry } from "../content/config"
+import Button from "./Button.astro"
+import smartquotes from "smartquotes-ts"
+import { Octokit } from "octokit"
+import Star from "./icons/Star.astro"
+
+export interface Props {
+	post: Entry
+}
+
+const github_token = import.meta.env.GITHUB_TOKEN
+
+const { post } = Astro.props
+
+const octokit = new Octokit({
+	auth: github_token,
+})
+
+const getStars = async () => {
+	if (post.data.sourceUrl) {
+		const repoPath = post.data.sourceUrl.split("/")
+		const repo = repoPath[repoPath.length - 1]
+		try {
+			const stargazers = await octokit.request(
+				"GET /repos/{owner}/{repo}/stargazers",
+				{
+					owner: "andreafra",
+					repo,
+					headers: {
+						"X-GitHub-Api-Version": "2022-11-28",
+					},
+				}
+			)
+			return stargazers.data.length
+		} catch {
+			return 0
+		}
+	}
+}
+
+const postUrl = post.data.empty ? post.data.sourceUrl : `/${post.slug}`
+---
+
+<li itemscope class="col-span-full md:col-span-1">
+	<a href={postUrl} class="">
+		<article
+			class="flex flex-col h-full border-text border-[3px] rounded-xl px-3"
+		>
+			<header class="flex justify-between text-lg mt-3">
+				<time datetime={post.data.publishDate.toISOString()}>
+					{post.data.publishDate.getFullYear()}
+				</time>
+				{
+					post.data.sourceUrl && (
+						<span class="flex content-center">
+							<span class="self-center mr-1">
+								{await getStars()}
+							</span>
+							<Star class="self-center h-6 w-6" />
+						</span>
+					)
+				}
+			</header>
+			<h1 class="font-bold text-lg leading-tight mb-3">
+				{smartquotes(post.data.title)}
+			</h1>
+			<p class="text-text">
+				{post.data.description}
+			</p>
+			<footer class="mt-auto">
+				<ul class="flex py-3">
+					{
+						post.data.sourceUrl && (
+							<li class="inline-block mr-1.5">
+								<Button
+									title="Source"
+									url={post.data.sourceUrl}
+								/>
+							</li>
+						)
+					}
+					{
+						post.data.demoUrl && (
+							<li class="inline-block mr-1.5">
+								<Button title="Demo" url={post.data.demoUrl} />
+							</li>
+						)
+					}
+				</ul>
+			</footer>
+			<!-- <ul class="flex text-text justify-start gap-1 mt-2 flex-wrap">
+			{
+				post.data.tags.map((tag) => (
+				<li class="inline-block px-2 rounded-full border-[1px] border-text">
+					{tag}
+				</li>
+				))
+			}
+		</ul> -->
+		</article>
+	</a>
+</li>

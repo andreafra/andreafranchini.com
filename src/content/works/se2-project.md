@@ -1,7 +1,8 @@
 ---
 title: Software Engineering II Project
 publishDate: 2021-02-01
-description: "RASD, DD, Implementation and Testing of a Software to handle queues for supermarkets during an epidemic."
+description: "Requirement Analysis, Design, Implementation and Testing of a service to handle queues for supermarkets during an epidemic."
+sourceUrl: https://github.com/andreafra/Software-Engineering-2-Project-2021
 tags:
     - Requirement Analysis
     - Express
@@ -16,9 +17,9 @@ The project consisted in designing a system to allow customers of a supermarket 
 
 At the end a client could join a queue by signing up with their phone number, and get a ticket for their reservation. Store employees could then verify that ticket by scanning its QR code and validating it against the DB.
 
-We also performed full intergration testing of the project.
+We also performed full unit and intergration testing of the project.
 
-While the architecture was pretty classic (3-tier web application, boring...), we experimented with REST APIs and Docker to setup this project. If you want to run it, there should be detailed instruction in the [repository readme file](//github.com/andreafra/Software-Engineering-2-Project-2021). Nothing too complicated or fancy, it's just the usual "docker-compose" stuff.
+While the architecture was pretty classic (3-tier web application), we experimented with REST APIs, Docker and Stateless design to setup this project. If you want to run it, there are detailed instruction in the [repository readme file](//github.com/andreafra/Software-Engineering-2-Project-2021). Nothing too complicated, just the usual "docker-compose up -d" stuff.
 
 Finally we had to review another's team project testing practices and results.
 

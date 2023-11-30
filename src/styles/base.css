@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "TeX Gyre Heros";
+	src: url("/fonts/texgyreheros-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "TeX Gyre Heros";
+	src: url("/fonts/texgyreheros-italic-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: "TeX Gyre Heros";
+	src: url("/fonts/texgyreheros-bold-webfont.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "TeX Gyre Heros";
+	src: url("/fonts/texgyreheros-bolditalic-webfont.woff") format("woff");
+	font-weight: bold;
+	font-style: italic;
+}
+
+@layer base {
+	:root {
+		--text: #040301;
+		--background: #faf6ef;
+		--primary: #07da93;
+		--secondary: #dbd9d6;
+		--accent: #e51710;
+	}
+	.dark {
+		--text: #fefdfb;
+		--background: #100c05;
+		--primary: #25f8b2;
+		--secondary: #292724;
+		--accent: #ef211a;
+	}
+}

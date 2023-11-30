@@ -1,0 +1,47 @@
+---
+import Entry from "./Entry.astro"
+import { type CollectionEntry } from "astro:content"
+
+interface Props {
+	items: Array<any>
+	sortByYear: boolean
+}
+
+const { items, sortByYear } = Astro.props
+
+const groupByYear = (_items: any[]) =>
+	Array.from(
+		_items
+			.reduce((acc, item) => {
+				let year = item.data.publishDate.getFullYear()
+				;(acc.get(year) || acc.set(year, []).get(year))?.push(item)
+				return acc
+			}, new Map<Number, Array<any>>())
+			.entries()
+	)
+		.map((e: any) => ({ year: e[0], entries: e[1] }))
+		.sort((a, b) => b.year - a.year)
+---
+
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+	{
+		sortByYear
+			? groupByYear(items).map((e) => (
+					<>
+						<li class="col-span-2 block text-text text-2xl font-bold mt-12 first:mt-0">
+							{e.year}
+						</li>
+						{e.entries.map((e2: CollectionEntry<"articles">) => (
+							<Entry post={e2} />
+						))}
+					</>
+			  ))
+			: items
+					.sort(
+						(a, b) =>
+							b.data.publishDate.getTime() -
+							a.data.publishDate.getTime()
+					)
+					.map((e) => <Entry post={e} />)
+	}
+</ul>

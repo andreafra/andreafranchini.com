@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content"
 import Layout from "@layouts/Layout.astro"
+import smartquotes from "smartquotes-ts"
 
 export async function getStaticPaths() {
 	const works = await getCollection("works")
@@ -28,91 +29,86 @@ const { Content } = await entry.render()
 const publishDate = new Date(entry.data.publishDate)
 ---
 
-<Layout title={entry.data.title}>
-	<main class="px-6 max-w-[74ch]">
-		<article
-			class="entry text-xl text-textcolor-2 dark:text-textcolor-2-dark"
+<Layout title={smartquotes(entry.data.title)}>
+	<article
+		class="entry text-lg text-text"
+	>
+		<h1
+			class="block font-bold text-textcolor-1"
 		>
-			<h1
-				class="block font-bold text-3xl text-textcolor-1 dark:text-textcolor-1-dark"
-			>
-				{entry.data.title}
-			</h1>
-			<time
-				class="inline-block my-4 text-lg align-middle font-normal text-textcolor-1 dark:text-textcolor-1-dark border-[1px] border-textcolor-1 dark:border-textcolor-1-dark px-2 py-0.5 rounded-lg"
-			>
-				{publishDate.getMonth() + 1}
-				/
-				{publishDate.getFullYear()}</time
-			>
-			<Content />
-		</article>
-		<section class="mt-12">
-			<div class="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
-				{
-					prevEntry && (
-						<a
-							class="block bg-primary/10 shadow-md border-[1px] border-textcolor-2 dark:border-textcolor-2-dark rounded-2xl hover:shadow-lg transition-shadow overflow-hidden"
-							href=`/${prevEntry.slug}`
-						>
-							<span class="block text-center text-tertiary dark:text-tertiary-dark w-full bg-textcolor-2 dark:bg-textcolor-2">
-								&larr; Previous
-							</span>
-							<h3 class="text-xl font-bold text-textcolor-2 dark:text-textcolor-2-dark px-4 py-2">
-								{prevEntry.data.title}
-							</h3>
-						</a>
-					)
-				}
-				{
-					nextEntry && (
-						<a
-							class="block bg-primary/10 shadow-md border-[1px] border-textcolor-2 dark:border-textcolor-2-dark rounded-2xl text-right hover:shadow-lg transition-shadow overflow-hidden"
-							href=`/${nextEntry.slug}`
-						>
-							<span class="block text-center text-tertiary dark:text-tertiary-dark w-full bg-textcolor-2 dark:bg-textcolor-2">
-								Next &rarr;
-							</span>
-							<h3 class="text-xl font-bold text-textcolor-2 dark:text-textcolor-2-dark  px-4 py-2">
-								{nextEntry.data.title}
-							</h3>
-						</a>
-					)
-				}
-			</div>
-		</section>
-	</main>
+			{entry.data.title}
+		</h1>
+		<time
+			class="text-2xl"
+		>
+			{publishDate.toLocaleDateString("en", {month: "long"})} {publishDate.getFullYear()}</time
+		>
+		<Content />
+	</article>
+	<section class="mt-12">
+		<div class="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
+			{
+				prevEntry && (
+					<a
+						class="block bg-background shadow-md border-[3px] border-text rounded-2xl hover:shadow-lg transition-shadow overflow-hidden"
+						href=`/${prevEntry.slug}`
+					>
+						<span class="block text-center text-text w-full bg-background">
+							&larr; Previous
+						</span>
+						<h3 class="text-xl font-bold text-text px-4 py-2">
+							{prevEntry.data.title}
+						</h3>
+					</a>
+				)
+			}
+			{
+				nextEntry && (
+					<a
+						class="block bg-background shadow-md border-[3px] border-text rounded-2xl text-right hover:shadow-lg transition-shadow overflow-hidden"
+						href=`/${nextEntry.slug}`
+					>
+						<span class="block text-center text-text w-full bg-background">
+							Next &rarr;
+						</span>
+						<h3 class="text-xl font-bold text-text px-4 py-2">
+							{nextEntry.data.title}
+						</h3>
+					</a>
+				)
+			}
+		</div>
+	</section>
 </Layout>
 
 <style is:global>
-	.entry * + * {
+	.entry > * + * {
 		@apply mt-4;
 	}
 
 	.entry h2,
 	.entry h3 {
-		@apply font-bold text-textcolor-2 dark:text-textcolor-2-dark;
+		@apply font-bold text-text;
 	}
 
 	.entry h1 {
-		@apply text-3xl;
+		@apply text-2xl md:text-3xl;
 	}
 	.entry h2 {
-		@apply text-2xl;
+		@apply text-xl md:text-2xl;
 	}
 	.entry h3 {
-		@apply text-xl;
+		@apply text-lg md:text-xl;
 	}
 	.entry a {
-		@apply text-secondary dark:text-secondary-dark underline decoration-textcolor-2 dark:decoration-textcolor-2-dark underline-offset-4 break-words;
+		@apply text-accent underline decoration-accent decoration-2 break-words;
 	}
 	.entry ul {
-		@apply list-disc pl-8 flex flex-col gap-2 marker:text-primary dark:marker:text-primary-dark;
-
+		@apply list-disc pl-8 flex flex-col gap-2 marker:text-text;
 		list-style: disc;
 	}
 
 	.entry img {
-		@apply rounded-2xl shadow-lg;
+		@apply rounded-2xl shadow-lg mt-4;
 	}
 </style>

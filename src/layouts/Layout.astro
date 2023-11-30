@@ -1,36 +1,39 @@
 ---
 import Footer from "@components/Footer.astro"
 import Header from "@components/Header.astro"
+import "../styles/base.css"
 import "@fontsource/manrope/400.css"
 import "@fontsource/manrope/600.css"
 export interface Props {
 	title: string
+	description?: string
 }
 
+const defaultDescription =
+	"Andrea Franchini is a Software Engineer. Web, Cloud, Functional & Concurrent programming, Privacy, Design, Game Development."
+
 const { title } = Astro.props
+const { description } = Astro.props ?? defaultDescription
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body
-		class="min-h-screen bg-tertiary dark:bg-tertiary-dark relative text-textcolor-1 dark:text-textcolor-1-dark"
-	>
-		<div class="noise"></div>
-		<div class="container mx-auto">
-			<Header />
+	<body class="min-h-screen bg-background relative text-text pb-16">
+		<Header />
+		<main class="mx-auto max-w-[70ch] px-3 md:px-0">
 			<slot />
-			<Footer />
-		</div>
-		<style is:global>
+		</main>
+		<Footer />
+		<!-- <style is:global>
 			.noise {
 				z-index: -20;
 				position: absolute;
@@ -42,6 +45,6 @@ const { title } = Astro.props
 				pointer-events: none;
 				top: 0;
 			}
-		</style>
+		</style> -->
 	</body>
 </html>
