@@ -1,68 +1,63 @@
 ---
-import WorkList from "@components/WorkList.astro"
-import ArticleList from "@components/ArticleList.astro"
 import Layout from "@layouts/Layout.astro"
 
 const contactLinks = [
-	{ title: "GitHub → @andreafra", url: "https://github.com/andreafra" },
 	{
-		title: "Linkedin → /in/andreafranchini",
+		title: "GitHub",
+		value: "@andreafra",
+		url: "https://github.com/andreafra",
+	},
+	{
+		title: "Linkedin",
+		value: "/in/andreafranchini",
 		url: "https://linkedin.com/in/andreafranchini",
 	},
 	{
-		title: "Email → hello@andreafranchini.com",
+		title: "Email",
+		value: "hello@andreafranchini.com",
 		url: "mailto:hello@andreafranchini.com",
 	},
 	{
-		title: "Uni Email → andrea.franchini@polimi.it",
+		title: "Academic Email",
+		value: "andrea.franchini@polimi.it",
 		url: "mailto:andrea.franchini@polimi.it",
 	},
 	{
-		title: "CV/Resumé → Download",
+		title: "CV/Resumé",
+		value: "Download",
 		url: "https://drive.proton.me/urls/4BD01JK8XR#RLSTnpAiTG8X",
 	},
 ]
 ---
 
 <Layout title="Andrea Franchini's website">
-	<main class="grid md:grid-cols-2 h-full">
-		<section class="px-6">
-			<p class="text-2xl">
-				is a Software Engineer and Research Fellow at Politecnico di
-				Milano, exploring Formal Verification of Infrastructure-as-Code.
-			</p>
-			<p class="text-2xl">
-				He has a master&rsquo;s degree in Computer Science and
-				Engineering.
-			</p>
-			<ul
-				class="text-xl text-textcolor-2 dark:text-textcolor-2-dark pt-4 mt-4 border-t-2 border-textcolor-2 dark:border-textcolor-2-dark"
-			>
-				{
-					contactLinks.map((l) => (
-						<li>
-							<a
-								href={l.url}
-								target="_blank"
-								referrerpolicy="no-referrer"
-								class="block py-1"
-							>
-								{l.title}
-							</a>
-						</li>
-					))
-				}
-			</ul>
-		</section>
-		<!-- <section
-			class="bg-primary dark:bg-primary-dark overflow-x-hidden scroll-mt-16"
+	<section class="grid md:grid-cols-2 row-auto gap-4">
+		<p class="text-lg mt-4 col-span-1">
+			I'm a Research Fellow at Politecnico di Milano, where I got my
+			master&rsquo;s degree in Computer Science and Engineering.
+		</p>
+		<p class="text-lg mt-4 col-span-1">
+			My fields of interest are Web Technologies, Functional and
+			Concurrent Programming, Serverless & Edge Computing and
+			Infrastructure-as-Code.
+		</p>
+		<ul
+			class="text-lg text-text col-span-2 border-t-[3px] border-t-text pt-4 mt-4 md:border-none leading-none space-y-2"
 		>
-			<div id="works">
-				<WorkList />
-			</div>
-			<div id="articles">
-				<ArticleList />
-			</div>
-		</section> -->
-	</main>
+			{
+				contactLinks.map((l) => (
+					<li>
+						<a
+							href={l.url}
+							target="_blank"
+							referrerpolicy="no-referrer"
+							class="inline-block px-4 py-2 border-2 rounded-full border-text hover:bg-text hover:text-background transition"
+						>
+							<b>{l.title}</b> → {l.value}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</section>
 </Layout>

@@ -1,14 +1,16 @@
 ---
-title: Software Engineering I Project
+title: 'Software Engineering I Project: "Santorini"'
 publishDate: 2020-01-01
-description: "An implementation in Java of the tabletop game Santorini, which was part of my bachelor's thesis."
+description: "An implementation in Java of the tabletop game Santorini. Part of my bachelor's thesis."
+sourceUrl: https://github.com/andreafra/ing-sw-2020-ferrara-franchini-fusco
+demoUrl: https://player.vimeo.com/video/485526632
 tags:
-   - Java
-   - JavaFX
-   - Game
+    - Java
+    - JavaFX
+    - Game
 ---
 
-This was a mandatory project that served as a thesis for my bachelor's degree. I worked in team with two fine fellow engineers, [@ferrohd](https://github.com/ferrohd) and [@luigifusco](https://github.com/luigifusco).
+This was a mandatory project that served as a thesis for my bachelor's degree. I worked in team with two great fellow engineers, [@ferrohd](https://github.com/ferrohd) and [@luigifusco](https://github.com/luigifusco).
 
 It consisted of a digital implementation of the tabletop game "[Santorini](https://boardgamegeek.com/boardgame/194655/santorini)", an indeed very boring game.
 
@@ -16,7 +18,7 @@ The scope of the project was to achieve a working Java implementation of a serve
 
 The part I feel most proud of is the perfectly working 3D view of the game using JavaFX (which definitely is not to be used for 3D games, as it lack a decently writted API documentation).
 
-Let's not talk about the part in which the 2D/3D assets weren't licensed by the university, or so I've been told. Hmm, I wonder [where they come from](https://apps.apple.com/us/app/santorini-board-game/id1456647343).
+Let's not talk about the part in which the 2D/3D assets weren't properly licensed, or so I've been told. Hmm, I wonder [where'd they come from](https://apps.apple.com/us/app/santorini-board-game/id1456647343).
 
 Here's a little sneak peek at how it look (since you'd have to download the JAR's from GitHub to play it):
 
