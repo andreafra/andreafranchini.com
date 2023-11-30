@@ -1,10 +1,9 @@
 ---
 import type { Entry } from "../content/config"
 import Button from "./Button.astro"
-import smartquotes from "smartquotes-ts"
 import { Octokit } from "octokit"
 import Star from "./icons/Star.astro"
-
+import { smartquotes } from "../lib/smartquotes"
 export interface Props {
 	post: Entry
 }
