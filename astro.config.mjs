@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config"
+import { defineConfig, squooshImageService } from "astro/config"
 import tailwind from "@astrojs/tailwind"
 import mdx from "@astrojs/mdx"
 
@@ -6,6 +6,9 @@ import sitemap from "@astrojs/sitemap"
 
 // https://astro.build/config
 export default defineConfig({
+	image: {
+		service: squooshImageService(),
+	},
 	integrations: [tailwind(), mdx(), sitemap()],
 	site: "https://andreafranchini.com",
 })
