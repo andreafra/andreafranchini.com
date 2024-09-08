@@ -1,0 +1,65 @@
+[data-logo]::after {
+	display: inline-block;
+	content: "";
+	height: 40px;
+	width: 40px;
+	background-image: url("/assets/logo-sprites.png");
+	background-repeat: no-repeat;
+	background-size: 40px;
+	vertical-align: bottom;
+	transform: scale(0.6);
+}
+
+[data-logo="angular"]::after {
+	background-position-y: 0;
+}
+
+[data-logo="elixir"]::after {
+	background-position-y: -40px;
+}
+
+[data-logo="erlang"]::after {
+	background-position-y: -80px;
+}
+
+[data-logo="gleam"]::after {
+	background-position-y: -120px;
+}
+
+[data-logo="godot"]::after {
+	background-position-y: -160px;
+}
+
+[data-logo="haskell"]::after {
+	background-position-y: -200px;
+}
+
+[data-logo="piacere"]::after {
+	background-position-y: -240px;
+}
+
+[data-logo="racket"]::after {
+	background-position-y: -280px;
+}
+
+[data-logo="react"]::after {
+	background-position-y: -320px;
+	height: 35px;
+	margin-bottom: 2px;
+}
+
+[data-logo="svelte"]::after {
+	background-position-y: -356px;
+}
+
+[data-logo="swift"]::after {
+	background-position-y: -396px;
+}
+
+[data-logo="unity"]::after {
+	background-position-y: -436px;
+}
+
+[data-logo="vue"]::after {
+	background-position-y: -476px;
+}

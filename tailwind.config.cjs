@@ -14,14 +14,17 @@ module.exports = {
 			},
 			fontFamily: {
 				sans: [
-					"TeX Gyre Heros",
-					"Manrope",
+					// "TeX Gyre Heros",
+					"neue-haas-grotesk-display",
+					// "Manrope Variable",
 					"Helvetica Neue",
 					...defaultTheme.fontFamily.sans,
 				],
 			},
 			fontSize: {
 				clamp: "clamp(1.5rem,8vmin,3.5rem)",
+				base: "1.5rem",
+				jumbo: "5rem",
 			},
 			gridTemplateColumns: {
 				headerBox: "8px 1fr",

@@ -1,3 +1,9 @@
+---
+import { Image } from "astro:assets"
+import astro from "@assets/astro-logo.svg"
+import cloudflare from "@assets/cloudflare-logo.svg"
+---
+
 <footer class="w-full py-2 text-text opacity-50 absolute bottom-0">
 	<p class="text-center">
 		Built by me with
@@ -5,12 +11,28 @@
 			class="font-bold"
 			href="//astro.build"
 			referrerpolicy="no-referrer"
-			target="_blank">Astro</a
-		> and hosted on <a
+			target="_blank"
+		>
+			<Image
+				class="inline-block align-middle"
+				src={astro}
+				height="24"
+				alt="Astro"
+			/>
+		</a>
+
+		and hosted on <a
 			class="font-bold"
 			href="//cloudflare.com"
 			referrerpolicy="no-referrer"
-			target="_blank">Cloudflare</a
-		>.
+			target="_blank"
+		>
+			<Image
+				class="inline-block align-baseline mx-2"
+				src={cloudflare}
+				height="24"
+				alt="Cloudflare"
+			/>
+		</a>
 	</p>
 </footer>

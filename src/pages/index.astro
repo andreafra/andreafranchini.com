@@ -1,63 +1,157 @@
 ---
 import Layout from "@layouts/Layout.astro"
 
-const contactLinks = [
-	{
-		title: "GitHub",
-		value: "@andreafra",
-		url: "https://github.com/andreafra",
-	},
-	{
-		title: "Linkedin",
-		value: "/in/andreafranchini",
-		url: "https://linkedin.com/in/andreafranchini",
-	},
-	{
-		title: "Email",
-		value: "hello@andreafranchini.com",
-		url: "mailto:hello@andreafranchini.com",
-	},
-	{
-		title: "Academic Email",
-		value: "andrea.franchini@polimi.it",
-		url: "mailto:andrea.franchini@polimi.it",
-	},
-	{
-		title: "CV/Resumé",
-		value: "Download",
-		url: "https://drive.proton.me/urls/4BD01JK8XR#RLSTnpAiTG8X",
-	},
-]
+import meImg from "@assets/me.png"
+import polimiImg from "@assets/polimi.jpg"
+import { Image } from "astro:assets"
+
+const yearsCoding =
+	new Date().getFullYear() - new Date("2013-01-01").getFullYear()
 ---
 
+<script src="../lib/home_animations.ts"></script>
+
 <Layout title="Andrea Franchini's website">
-	<section class="grid md:grid-cols-2 row-auto gap-4">
-		<p class="text-lg mt-4 col-span-1">
-			I'm a Research Fellow at Politecnico di Milano, where I got my
-			master&rsquo;s degree in Computer Science and Engineering.
-		</p>
-		<p class="text-lg mt-4 col-span-1">
-			My fields of interest are Web Technologies, Functional and
-			Concurrent Programming, Serverless & Edge Computing and
-			Infrastructure-as-Code.
-		</p>
-		<ul
-			class="text-lg text-text col-span-2 border-t-[3px] border-t-text pt-4 mt-4 md:border-none leading-none space-y-2"
-		>
-			{
-				contactLinks.map((l) => (
-					<li>
-						<a
-							href={l.url}
-							target="_blank"
-							referrerpolicy="no-referrer"
-							class="inline-block px-4 py-2 border-2 rounded-full border-text hover:bg-text hover:text-background transition"
+	<div class="text-base">
+		<article class="max-w-[50ch] mx-auto">
+			<section class="grid h-screen text-left px-2 relative">
+				<div class="self-center gsap-intro relative">
+					<div class="relative bottom-0">
+						<h1
+							class="absolute block text-jumbo md:text-[7rb] font-bold m-0 gsap-title leading-none -z-10 bottom-0 left-0
+							text-transparent bg-clip-text bg-gradient-to-b from-black/15 to-black/40"
 						>
-							<b>{l.title}</b> → {l.value}
-						</a>
-					</li>
-				))
-			}
-		</ul>
-	</section>
+							Andrea
+							<br />
+							Franchini
+						</h1>
+						<Image
+							id="gsap-me-img"
+							data-flip-id="me-img"
+							class="w-[18rb] opacity-90 z-10 rounded-md mix-blend-multiply"
+							src={meImg}
+							alt="Portrait of Andrea"
+						/>
+					</div>
+					<p class="block gsap-subtitle mt-4">
+						a Software Engineer<br /> based in Milan, Italy
+					</p>
+				</div>
+				<div id="gsap-scroll-down" class="absolute top-2 px-4 text-black/30">
+					↓ Scroll down ↓
+				</div>
+			</section>
+			<section class="gsap-job px-4 mb-[20vh] scroll-mt-16" id="job">
+				<p>I work in the</p>
+				<div class="gsap-sdtf block">
+					<b> Digital </b>
+					<b> Transition </b>
+					<b> Strategy </b>
+					&
+					<b> Integration </b>
+					<b> Framework </b>
+				</div>
+				<p>
+					team at
+					<b class="gsap-polimi">Politecnico di Milano</b>
+				</p>
+				<div class="block gsap-polimi-img overflow-hidden">
+					<Image
+						class="border-8 border-accent rounded-md"
+						src={polimiImg}
+						alt="Central building of the Politecnico of Milano"
+					/>
+				</div>
+				<p>
+					leading the change to modern front-end and back-end frameworks,
+					improving the developer experience and reducing technical debt.
+				</p>
+			</section>
+			<section class="gsap-fields px-4 mb-16">
+				<p>
+					My fields of interest are <b>Web</b> Technologies in general, <b
+						>Functional</b
+					> and <b>Concurrent</b> Programming, Serverless & Edge Computing and Infrastructure-as-Code.
+				</p>
+			</section>
+			<section class="gsap-research px-4 mb-16">
+				<p>
+					Previously, I was a Research Fellow working with prof.
+					<a href="https://pradella.faculty.polimi.it/"> Matteo Pradella</a>,
+					<a href="https://michiari.github.io/">Michele Chiari</a> and
+					<a href="https://github.com/mikidep/">Michele De Pascalis</a>) on the
+					topic of <b>Verification</b> of <b>Infrastructure-as-Code</b>.
+				</p>
+				<p>
+					I was also the maintainer of the Verification Tool of
+					<a href="https://piacere-project.eu"
+						><b data-bg="bg-yellow-200" data-logo="piacere">Project PIACERE</b
+						></a
+					>
+					, a <b>DevSecOps</b>
+					framework funded with €4.4M by the European Union.
+				</p>
+			</section>
+			<section class="gsap-uni px-4 mb-16">
+				I've held the
+				<a href="https://github.com/andreafra/ppl"> exercise sessions</a>
+				for the 2023/24
+				<a href="https://pradella.faculty.polimi.it/PL.html">
+					Principles of Programming Languages
+				</a> class at Polimi, showcasing <b
+					data-bg="bg-blue-300"
+					data-logo="racket">Scheme/Racket</b
+				>, <b data-bg="bg-purple-300" data-logo="haskell">Haskell</b> and
+				<b data-bg="bg-red-300" data-logo="erlang">Erlang</b>.
+			</section>
+			<section class="gsap-tech-1 px-4 mb-16">
+				<p class="my-4">
+					I pick up new stuff very quickly, therefore in the last <b
+						>{yearsCoding}
+						years of experience</b
+					> I've found myself tinkering with many technologies.
+				</p>
+			</section>
+			<section class="gsap-tech-2 px-4 mb-16">
+				<p class="my-4">
+					I've been working and exploring various frontend frameworks (
+					<b data-bg="bg-cyan-200" data-logo="react">React</b>,
+					<b data-bg="bg-orange-300" data-logo="svelte">Svelte</b>,
+					<b data-bg="bg-green-300" data-logo="vue"> Vue</b>
+					and
+					<b data-bg="bg-red-300" data-logo="angular">Angular</b>
+					), as well as various backend solutions (Express, Koa, Hono, Sequelize,
+					Prisma, Websockets, Serverless Functions).
+				</p>
+			</section>
+			<section class="gsap-tech-3 px-4 mb-16">
+				<p class="my-4">
+					I had a brief experience of programming for iOS both with <b
+						data-bg="bg-orange-300"
+						data-logo="swift">Swift</b
+					> and React Native, too.
+				</p>
+				<p class="my-4">
+					More recently, I'm experimenting with concurrent programming with
+					<b data-bg="bg-violet-300" data-logo="elixir">Elixir</b> (mostly the Phoenix
+					framework) and
+					<b data-bg="bg-pink-300" data-logo="gleam">Gleam</b>
+					.
+				</p>
+			</section>
+			<section class="gsap-gaming px-4 mb-[30vh]">
+				<p>
+					I've also a fairly good knowledge of game development and design, and
+					a <b>massive</b>
+					knowledge of videogames in general, as well as experience with
+					<a href="https://unity.com/"
+						><b data-bg="bg-gray-300" data-logo="unity">Unity</b></a
+					>,
+					<a href="https://godotengine.org/"
+						><b data-bg="bg-sky-300" data-logo="godot">Godot</b></a
+					>, and a bit of WebGL from scratch.
+				</p>
+			</section>
+		</article>
+	</div>
 </Layout>

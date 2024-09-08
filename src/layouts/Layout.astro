@@ -2,8 +2,8 @@
 import Footer from "@components/Footer.astro"
 import Header from "@components/Header.astro"
 import "../styles/base.css"
-import "@fontsource/manrope/400.css"
-import "@fontsource/manrope/600.css"
+import "../styles/icons.css"
+// import "@fontsource-variable/manrope"
 export interface Props {
 	title: string
 	description?: string
@@ -24,27 +24,27 @@ const { description } = Astro.props ?? defaultDescription
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link rel="stylesheet" href="https://use.typekit.net/brp1lci.css" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<style>
+			body {
+				visibility: hidden;
+			}
+		</style>
 	</head>
-	<body class="min-h-screen bg-background relative text-text pb-16">
+	<body class="bg-background text-text relative min-h-screen pb-16">
 		<Header />
-		<main class="mx-auto max-w-[70ch] px-3 md:px-0">
+		<main class="w-screen">
 			<slot />
 		</main>
 		<Footer />
-		<!-- <style is:global>
-			.noise {
-				z-index: -20;
-				position: absolute;
-				inset: 0;
-				background-image: url(/assets/noise.webp);
-				background-repeat: repeat;
-				opacity: 0.8;
-				mix-blend-mode: overlay;
-				pointer-events: none;
-				top: 0;
-			}
-		</style> -->
 	</body>
+	<noscript>
+		<style>
+			body {
+				visibility: visible;
+			}
+		</style>
+	</noscript>
 </html>

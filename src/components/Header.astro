@@ -1,68 +1,86 @@
 ---
-const links = [
+const contactLinks = [
 	{
-		name: "About",
-		url: "/about",
-		style: "bg-orange-500/70 backdrop-blur-md",
-	},
-	{
-		name: "Works",
+		title: "Works",
 		url: "/works",
-		style: "bg-cyan-500/70 backdrop-blur-md",
+		style: "hover:bg-teal-300 active:bg-teal-300",
 	},
 	{
-		name: "Articles",
+		title: "Articles",
 		url: "/articles",
-		style: "bg-green-500/70 backdrop-blur-md",
+		style: "hover:bg-red-300 active:bg-red-300",
+	},
+	{
+		spacer: true,
+	},
+	{
+		title: "GitHub",
+		value: "@andreafra",
+		url: "https://github.com/andreafra",
+		style: "hover:bg-orange-300 active:bg-orange-300",
+	},
+	{
+		title: "Linkedin",
+		value: "/in/andreafranchini",
+		url: "https://linkedin.com/in/andreafranchini",
+		style: "hover:bg-cyan-300 active:bg-cyan-300",
+	},
+	{
+		title: "Email",
+		value: "hello@andreafranchini.com",
+		url: "mailto:hello@andreafranchini.com",
+		style: "hover:bg-pink-300 active:bg-pink-300",
+	},
+	{
+		title: "Work Email",
+		value: "andrea.franchini@polimi.it",
+		url: "mailto:andrea.franchini@polimi.it",
+		style: "hover:bg-yellow-300 active:bg-yellow-300",
+	},
+	{
+		title: "CV • Resumé",
+		value: "Download",
+		url: "https://drive.proton.me/urls/4BD01JK8XR#RLSTnpAiTG8X",
+		style: "hover:bg-green-300 active:bg-green-300",
 	},
 ]
-
-const currentPath = new URL(Astro.request.url).pathname
 ---
 
-<header class="block pt-4">
-	<div class="mx-auto max-w-[70ch] px-3 md:px-0">
-		<a
-			class="inline-grid grid-cols-headerBox grid-flow-row bg-text border-[3px] border-black rounded-lg rounded-br-none rounded-tr-[48px] gap-[3px]"
-			href="/"
-		>
-			<span
-				class="col-span-1 row-span-2 block h-full w-full bg-primary border-text rounded-md"
-			></span>
-			<h1
-				class="block bg-white text-3xl pl-4 py-2 pb-4 rounded-md rounded-tr-[45px] rounded-r-none font-bold"
-			>
-				Andrea<br />Franchini
-			</h1>
-			<span
-				class="block bg-secondary text-xl pl-4 py-2 pr-8 rounded-md rounded-r-none uppercase italic"
-				>Software Engineer</span
-			>
-		</a>
-	</div>
-</header>
-<nav
-	class="sticky top-0 block py-3 mb-6 before:absolute before:top-0 before:block before:left-0 before:w-full before:h-1/2 before:box-border before:backdrop-blur-md before:border-b-[3px] before:border-text before:-z-10"
+<header
+	class="flex w-full bg-black text-white gsap-header overflow-hidden fixed z-10 py-2 px-2 gap-2"
 >
-	<ul class="space-x-3 mx-auto max-w-[70ch] px-3 md:px-0">
-		{
-			links.map((item) => (
-				<li class="inline-block">
-					<a
-						class={`block md:min-w-[12ch] relative text-center font-bold text-lg md:text-xl px-5 py-2 rounded-full overflow-hidden before:transition  before:absolute before:hover:border-[3px] before:hover:border-text border-text border-[3px] before:top-[3px] before:bottom-[3px] before:left-[3px] before:right-[3px] before:rounded-full ${
-							item.style
-						} 
-						${
-							item.url === currentPath
-								? ` before:border-[3px] before:border-text  `
-								: ` before:border-[3px] before:border-transparent  before:scale-125 before:hover:scale-100`
-						}`}
-						href={item.url}
-					>
-						{item.name}
-					</a>
-				</li>
-			))
-		}
-	</ul>
-</nav>
+	<h1
+		class="shrink-0 inline-block text-left text-xl font-bold self-center justify-between"
+	>
+		A
+		<span class="hidden md:inline">ndrea</span>
+		<span class="inline md:hidden">.</span>
+		Franchini
+	</h1>
+	<nav
+		class="flex mt-0 pl-2 md:pl-0 md:inline-block self-center overflow-x-auto whitespace-nowrap [scrollbar-width:none]"
+	>
+		<ul
+			class="rounded-full overflow-x-auto whitespace-nowrap [scrollbar-width:none]"
+		>
+			{
+				contactLinks.map((cl) =>
+					cl.spacer ? (
+						<span class="text-background mr-2">•</span>
+					) : (
+						<li
+							class={`inline-block bg-background text-black pl-3 pr-1 py-1 rounded-full mr-2 ${cl.style}`}
+						>
+							<a href={cl.url}>
+								{cl.title}{" "}
+								<span class="inline-block bg-black w-6 text-center text-background rounded-full">
+									→
+								</span>
+							</a>
+						</li>
+					)
+				)
+			}
+		</ul>
+	</nav>
+</header>
