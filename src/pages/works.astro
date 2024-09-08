@@ -8,6 +8,8 @@ const works = await getCollection("works")
 ---
 
 <Layout title="Andrea Franchini | Works">
-	<h2 class="text-3xl font-bold pt-4 md:pt-9 pb-4 md:pb-3">Works</h2>
-	<EntryList items={works} sortByYear={false} />
+	<article class="px-2 pt-16 mx-auto max-w-[70ch]">
+		<h2 class="text-3xl font-bold mb-4">Works</h2>
+		<EntryList items={works} sortByYear={false} />
+	</article>
 </Layout>

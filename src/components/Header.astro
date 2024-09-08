@@ -47,18 +47,18 @@ const contactLinks = [
 ---
 
 <header
-	class="flex w-full bg-black text-white gsap-header overflow-hidden fixed z-10 py-2 px-2 gap-2"
+	class="flex items-center w-full bg-black text-white gsap-header overflow-hidden fixed z-10 py-2 px-2 gap-2 md:gap-4"
 >
-	<h1
-		class="shrink-0 inline-block text-left text-xl font-bold self-center justify-between"
-	>
-		A
-		<span class="hidden md:inline">ndrea</span>
-		<span class="inline md:hidden">.</span>
-		Franchini
-	</h1>
+	<a class="shrink-0" href="/">
+		<h1 class="inline-block text-left text-xl font-bold justify-between">
+			A
+			<span class="hidden md:inline -ml-[2.8px]">ndrea</span>
+			<span class="inline md:hidden">.</span>
+			Franchini
+		</h1>
+	</a>
 	<nav
-		class="flex mt-0 pl-2 md:pl-0 md:inline-block self-center overflow-x-auto whitespace-nowrap [scrollbar-width:none]"
+		class="flex mt-0 pl-2 md:pl-0 md:inline-block overflow-x-auto whitespace-nowrap [scrollbar-width:none]"
 	>
 		<ul
 			class="rounded-full overflow-x-auto whitespace-nowrap [scrollbar-width:none]"

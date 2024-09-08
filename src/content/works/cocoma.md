@@ -2,7 +2,7 @@
 title: "Cocoma"
 publishDate: 2023-06-01
 description: "A COokie COnsent MAnager web extension, for Firefox and Chrome."
-sourceUrl: https://github.com/andreafra/ppl
+sourceUrl: https://github.com/andreafra/cocoma
 tags:
     - WebExtension
     - JavaScript

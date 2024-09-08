@@ -2,7 +2,7 @@
 title: "D&D Spellbook"
 publishDate: 2023-02-01
 description: "Manage spell lists for Dungeons & Dragons. A serverless application."
-sourceUrl: https://github.com/andreafra/ppl
+sourceUrl: https://github.com/andreafra/dnd-spellbook
 demoUrl: https://dndspellbook.vercel.app
 tags:
     - TypeScript

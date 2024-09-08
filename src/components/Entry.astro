@@ -42,20 +42,16 @@ const postUrl = post.data.empty ? post.data.sourceUrl : `/${post.slug}`
 ---
 
 <li itemscope class="col-span-full md:col-span-1">
-	<a href={postUrl} class="">
-		<article
-			class="flex flex-col h-full border-text border-[3px] rounded-xl px-3"
-		>
+	<a href={postUrl} class="no-underline">
+		<article class="flex flex-col h-full border-text border-2 rounded-xl px-3">
 			<header class="flex justify-between text-lg mt-3">
 				<time datetime={post.data.publishDate.toISOString()}>
 					{post.data.publishDate.getFullYear()}
 				</time>
 				{
-					post.data.sourceUrl && (
+					post.data.sourceUrl && !post.data.hideStarCounter && (
 						<span class="flex content-center">
-							<span class="self-center mr-1">
-								{await getStars()}
-							</span>
+							<span class="self-center mr-1">{await getStars()}</span>
 							<Star class="self-center h-6 w-6" />
 						</span>
 					)
@@ -72,10 +68,7 @@ const postUrl = post.data.empty ? post.data.sourceUrl : `/${post.slug}`
 					{
 						post.data.sourceUrl && (
 							<li class="inline-block mr-1.5">
-								<Button
-									title="Source"
-									url={post.data.sourceUrl}
-								/>
+								<Button title="Source" url={post.data.sourceUrl} />
 							</li>
 						)
 					}
