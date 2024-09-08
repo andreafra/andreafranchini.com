@@ -31,7 +31,7 @@ const publishDate = new Date(entry.data.publishDate)
 
 <Layout title={smartquotes(entry.data.title)}>
 	<article
-		class="entry text-lg text-text"
+		class="px-2 pt-16 mx-auto max-w-[70ch] entry text-lg text-text"
 	>
 		<h1
 			class="block font-bold text-textcolor-1"
@@ -45,12 +45,12 @@ const publishDate = new Date(entry.data.publishDate)
 		>
 		<Content />
 	</article>
-	<section class="mt-12">
+	<section class="px-2 mx-auto mt-12 max-w-[70ch]">
 		<div class="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
 			{
 				prevEntry && (
 					<a
-						class="block bg-background shadow-md border-[3px] border-text rounded-2xl hover:shadow-lg transition-shadow overflow-hidden"
+						class="block bg-background no-underline shadow-md border-[3px] border-text rounded-2xl hover:shadow-lg transition-shadow overflow-hidden"
 						href=`/${prevEntry.slug}`
 					>
 						<span class="block text-center text-text w-full bg-background">
@@ -65,7 +65,7 @@ const publishDate = new Date(entry.data.publishDate)
 			{
 				nextEntry && (
 					<a
-						class="block bg-background shadow-md border-[3px] border-text rounded-2xl text-right hover:shadow-lg transition-shadow overflow-hidden"
+						class="block bg-background no-underline shadow-md border-[3px] border-text rounded-2xl text-right hover:shadow-lg transition-shadow overflow-hidden"
 						href=`/${nextEntry.slug}`
 					>
 						<span class="block text-center text-text w-full bg-background">
@@ -101,7 +101,7 @@ const publishDate = new Date(entry.data.publishDate)
 		@apply text-lg md:text-xl;
 	}
 	.entry a {
-		@apply text-accent underline decoration-accent decoration-2 break-words;
+		@apply font-bold underline decoration-accent decoration-2 break-words;
 	}
 	.entry ul {
 		@apply list-disc pl-8 flex flex-col gap-2 marker:text-text;
