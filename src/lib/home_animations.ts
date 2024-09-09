@@ -58,7 +58,7 @@ function createGsapForSections() {
 				{
 					opacity: 1,
 					width: "100%",
-					stagger: 0.1,
+					stagger: 0.2,
 				},
 				"start+=2"
 			)
